@@ -150,8 +150,6 @@
 				75CF78C128635FDD0011F933 /* Features */,
 				75CF78BE28635F710011F933 /* Resources */,
 				75CF78BC28635F320011F933 /* Application */,
-				75CF7890285BB8800011F933 /* ViewController.swift */,
-				75CF7892285BB8800011F933 /* Main.storyboard */,
 			);
 			path = HealthyPet;
 			sourceTree = "<group>";
@@ -237,6 +235,8 @@
 		75CF78C328635FFA0011F933 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				75CF7890285BB8800011F933 /* ViewController.swift */,
+				75CF7892285BB8800011F933 /* Main.storyboard */,
 			);
 			path = Home;
 			sourceTree = "<group>";
