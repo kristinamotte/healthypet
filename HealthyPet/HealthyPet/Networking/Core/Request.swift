@@ -31,7 +31,6 @@ extension Request {
     var asURLRequest: URLRequest {
         var request = URLRequest(url: url.with(queryItems: queryItems))
         request.httpMethod = method.rawValue
-        request.allHTTPHeaderFields = headers
         request.httpBody = body
         return request
     }

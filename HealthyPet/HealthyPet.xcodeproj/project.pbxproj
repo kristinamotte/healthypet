@@ -24,6 +24,7 @@
 		75CF78D628636DC50011F933 /* DataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF78D528636DC50011F933 /* DataCache.swift */; };
 		75CF78D828636FEA0011F933 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF78D728636FEA0011F933 /* DataSource.swift */; };
 		75CF78DB2863705F0011F933 /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF78DA2863705F0011F933 /* TimeInterval+Extensions.swift */; };
+		75CF78DD2863717B0011F933 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF78DC2863717B0011F933 /* URL+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		75CF78D528636DC50011F933 /* DataCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCache.swift; sourceTree = "<group>"; };
 		75CF78D728636FEA0011F933 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		75CF78DA2863705F0011F933 /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
+		75CF78DC2863717B0011F933 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				75CF78DA2863705F0011F933 /* TimeInterval+Extensions.swift */,
+				75CF78DC2863717B0011F933 /* URL+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75CF7891285BB8800011F933 /* ViewController.swift in Sources */,
+				75CF78DD2863717B0011F933 /* URL+Extensions.swift in Sources */,
 				75CF78CB28636A440011F933 /* Networking.swift in Sources */,
 				75CF78D628636DC50011F933 /* DataCache.swift in Sources */,
 				75CF78C9286368090011F933 /* Request.swift in Sources */,
