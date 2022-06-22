@@ -25,6 +25,9 @@
 		75CF78D828636FEA0011F933 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF78D728636FEA0011F933 /* DataSource.swift */; };
 		75CF78DB2863705F0011F933 /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF78DA2863705F0011F933 /* TimeInterval+Extensions.swift */; };
 		75CF78DD2863717B0011F933 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF78DC2863717B0011F933 /* URL+Extensions.swift */; };
+		85E76A5D7C403D8684027031 /* Pods_HealthyPetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 905886FF269EC2A57630C6A2 /* Pods_HealthyPetTests.framework */; };
+		D22852B770444BA135B2CF2B /* Pods_HealthyPet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B85FEE692495B2FCE600552 /* Pods_HealthyPet.framework */; };
+		FDB03406474457BCF4140FD7 /* Pods_HealthyPet_HealthyPetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8CEAA463E950A3022CA93A6 /* Pods_HealthyPet_HealthyPetUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B85FEE692495B2FCE600552 /* Pods_HealthyPet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthyPet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		302B24886AA338FA514E8AF0 /* Pods-HealthyPet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyPet.debug.xcconfig"; path = "Target Support Files/Pods-HealthyPet/Pods-HealthyPet.debug.xcconfig"; sourceTree = "<group>"; };
+		461E8673757921F4763EDC99 /* Pods-HealthyPetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyPetTests.release.xcconfig"; path = "Target Support Files/Pods-HealthyPetTests/Pods-HealthyPetTests.release.xcconfig"; sourceTree = "<group>"; };
+		65714C1432747EE62431B0F0 /* Pods-HealthyPet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyPet.release.xcconfig"; path = "Target Support Files/Pods-HealthyPet/Pods-HealthyPet.release.xcconfig"; sourceTree = "<group>"; };
 		75CF7889285BB8800011F933 /* HealthyPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthyPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75CF788C285BB8800011F933 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75CF788E285BB8800011F933 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +74,11 @@
 		75CF78D728636FEA0011F933 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		75CF78DA2863705F0011F933 /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
 		75CF78DC2863717B0011F933 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
+		7ED8903CB75201291BAD0690 /* Pods-HealthyPet-HealthyPetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyPet-HealthyPetUITests.debug.xcconfig"; path = "Target Support Files/Pods-HealthyPet-HealthyPetUITests/Pods-HealthyPet-HealthyPetUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		905886FF269EC2A57630C6A2 /* Pods_HealthyPetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthyPetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8CEAA463E950A3022CA93A6 /* Pods_HealthyPet_HealthyPetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthyPet_HealthyPetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE86D6DDB88C935220B3DBAB /* Pods-HealthyPetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyPetTests.debug.xcconfig"; path = "Target Support Files/Pods-HealthyPetTests/Pods-HealthyPetTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E48020F310C2F9A8972A2074 /* Pods-HealthyPet-HealthyPetUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyPet-HealthyPetUITests.release.xcconfig"; path = "Target Support Files/Pods-HealthyPet-HealthyPetUITests/Pods-HealthyPet-HealthyPetUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D22852B770444BA135B2CF2B /* Pods_HealthyPet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85E76A5D7C403D8684027031 /* Pods_HealthyPetTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,12 +102,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDB03406474457BCF4140FD7 /* Pods_HealthyPet_HealthyPetUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5174831CCE17DC73E8D6F05A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B85FEE692495B2FCE600552 /* Pods_HealthyPet.framework */,
+				A8CEAA463E950A3022CA93A6 /* Pods_HealthyPet_HealthyPetUITests.framework */,
+				905886FF269EC2A57630C6A2 /* Pods_HealthyPetTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		75CF7880285BB87F0011F933 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +126,8 @@
 				75CF78A2285BB8810011F933 /* HealthyPetTests */,
 				75CF78AC285BB8810011F933 /* HealthyPetUITests */,
 				75CF788A285BB8800011F933 /* Products */,
+				A8FE651BB10D717CE74567EE /* Pods */,
+				5174831CCE17DC73E8D6F05A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -282,6 +309,19 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		A8FE651BB10D717CE74567EE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				302B24886AA338FA514E8AF0 /* Pods-HealthyPet.debug.xcconfig */,
+				65714C1432747EE62431B0F0 /* Pods-HealthyPet.release.xcconfig */,
+				7ED8903CB75201291BAD0690 /* Pods-HealthyPet-HealthyPetUITests.debug.xcconfig */,
+				E48020F310C2F9A8972A2074 /* Pods-HealthyPet-HealthyPetUITests.release.xcconfig */,
+				DE86D6DDB88C935220B3DBAB /* Pods-HealthyPetTests.debug.xcconfig */,
+				461E8673757921F4763EDC99 /* Pods-HealthyPetTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -289,9 +329,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75CF78B3285BB8810011F933 /* Build configuration list for PBXNativeTarget "HealthyPet" */;
 			buildPhases = (
+				01D64FD66751C5A1D1B87287 /* [CP] Check Pods Manifest.lock */,
 				75CF7885285BB8800011F933 /* Sources */,
 				75CF7886285BB8800011F933 /* Frameworks */,
 				75CF7887285BB8800011F933 /* Resources */,
+				9DDEA4ED1C8F6FFE6C0BBDB0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -306,6 +348,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75CF78B6285BB8810011F933 /* Build configuration list for PBXNativeTarget "HealthyPetTests" */;
 			buildPhases = (
+				07BD72EFDC3BB77FFE83813B /* [CP] Check Pods Manifest.lock */,
 				75CF789B285BB8810011F933 /* Sources */,
 				75CF789C285BB8810011F933 /* Frameworks */,
 				75CF789D285BB8810011F933 /* Resources */,
@@ -324,9 +367,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75CF78B9285BB8810011F933 /* Build configuration list for PBXNativeTarget "HealthyPetUITests" */;
 			buildPhases = (
+				2C7F5BBDE8E93ADDF38E289B /* [CP] Check Pods Manifest.lock */,
 				75CF78A5285BB8810011F933 /* Sources */,
 				75CF78A6285BB8810011F933 /* Frameworks */,
 				75CF78A7285BB8810011F933 /* Resources */,
+				0A20209A345E53C5737B9385 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -407,6 +452,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01D64FD66751C5A1D1B87287 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HealthyPet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		07BD72EFDC3BB77FFE83813B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HealthyPetTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0A20209A345E53C5737B9385 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HealthyPet-HealthyPetUITests/Pods-HealthyPet-HealthyPetUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HealthyPet-HealthyPetUITests/Pods-HealthyPet-HealthyPetUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HealthyPet-HealthyPetUITests/Pods-HealthyPet-HealthyPetUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2C7F5BBDE8E93ADDF38E289B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HealthyPet-HealthyPetUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DDEA4ED1C8F6FFE6C0BBDB0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HealthyPet/Pods-HealthyPet-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HealthyPet/Pods-HealthyPet-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HealthyPet/Pods-HealthyPet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		75CF7885285BB8800011F933 /* Sources */ = {
@@ -596,6 +744,7 @@
 		};
 		75CF78B4285BB8810011F933 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 302B24886AA338FA514E8AF0 /* Pods-HealthyPet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -625,6 +774,7 @@
 		};
 		75CF78B5285BB8810011F933 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65714C1432747EE62431B0F0 /* Pods-HealthyPet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -654,8 +804,9 @@
 		};
 		75CF78B7285BB8810011F933 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE86D6DDB88C935220B3DBAB /* Pods-HealthyPetTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -674,8 +825,9 @@
 		};
 		75CF78B8285BB8810011F933 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 461E8673757921F4763EDC99 /* Pods-HealthyPetTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -694,8 +846,9 @@
 		};
 		75CF78BA285BB8810011F933 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7ED8903CB75201291BAD0690 /* Pods-HealthyPet-HealthyPetUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UU59F7V66K;
@@ -712,8 +865,9 @@
 		};
 		75CF78BB285BB8810011F933 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E48020F310C2F9A8972A2074 /* Pods-HealthyPet-HealthyPetUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UU59F7V66K;

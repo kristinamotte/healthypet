@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>798115062087-kf0c3oso2ov9auujahf9euhmvvgr43qd.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.798115062087-kf0c3oso2ov9auujahf9euhmvvgr43qd</string>
+	<key>API_KEY</key>
+	<string>AIzaSyChhCd11glvdWJOI-JrFAZlD1sY2VKboQo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>798115062087</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>pet.healthy.coursework.HealthyPet</string>
+	<key>PROJECT_ID</key>
+	<string>healthypet-9c04e</string>
+	<key>STORAGE_BUCKET</key>
+	<string>healthypet-9c04e.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:798115062087:ios:787cfab73e2dd94f75ec62</string>
+	<key>DATABASE_URL</key>
+	<string>https://healthypet-9c04e-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>
