@@ -19,20 +19,21 @@ final class API {
     // MARK: - Execute network request
     func execute<ResponseType>(_ request: Request,
                                parse: @escaping (Data) throws -> ResponseType,
-                               cache: ((Data) -> Void)? = nil,
-                               completion: @escaping APICompletion<ResponseType>) {
-        networking.sendRequest(request) { result in
-            switch result {
-            case .success(let data):
-                do {
-                    let response = try parse(data)
-                    cache?(data)
-                    completion(.success(response))
-                } catch let error {
-                    completion(.error(error))
+                               cache: ((Data) -> Void)? = nil) async -> APIResult<ResponseType> {
+        return await withCheckedContinuation { continuation in
+            networking.sendRequest(request) { result in
+                switch result {
+                case .success(let data):
+                    do {
+                        let response = try parse(data)
+                        cache?(data)
+                        continuation.resume(returning: .success(response))
+                    } catch let error {
+                        continuation.resume(returning: .error(error))
+                    }
+                case .error(let error):
+                    continuation.resume(returning: .error(error))
                 }
-            case .error(let error):
-                completion(.error(error))
             }
         }
     }
