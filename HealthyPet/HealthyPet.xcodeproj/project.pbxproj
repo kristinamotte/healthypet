@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		75CF788D285BB8800011F933 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF788C285BB8800011F933 /* AppDelegate.swift */; };
 		75CF788F285BB8800011F933 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF788E285BB8800011F933 /* SceneDelegate.swift */; };
-		75CF7891285BB8800011F933 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF7890285BB8800011F933 /* ViewController.swift */; };
+		75CF7891285BB8800011F933 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF7890285BB8800011F933 /* HomeViewController.swift */; };
 		75CF7894285BB8800011F933 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75CF7892285BB8800011F933 /* Main.storyboard */; };
 		75CF7896285BB8810011F933 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75CF7895285BB8810011F933 /* Assets.xcassets */; };
 		75CF7899285BB8810011F933 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75CF7897285BB8810011F933 /* LaunchScreen.storyboard */; };
@@ -32,6 +32,17 @@
 		75CF78E9286471960011F933 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF78E8286471960011F933 /* APIError.swift */; };
 		75CF78EB286473D50011F933 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF78EA286473D50011F933 /* Cache.swift */; };
 		75CF78ED286474300011F933 /* DataType+Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF78EC286474300011F933 /* DataType+Decoder.swift */; };
+		75CF78F02864796C0011F933 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF78EF2864796C0011F933 /* Coordinator.swift */; };
+		75CF78F2286479930011F933 /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF78F1286479930011F933 /* CoordinatorDelegate.swift */; };
+		75CF78F4286479A20011F933 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF78F3286479A20011F933 /* TabBarItem.swift */; };
+		75CF78FC286485950011F933 /* Theme+Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF78FB286485950011F933 /* Theme+Fonts.swift */; };
+		75CF78FE28648A740011F933 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF78FD28648A740011F933 /* UIImage+Extensions.swift */; };
+		75CF790028648B2F0011F933 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF78FF28648B2F0011F933 /* TabBarViewController.swift */; };
+		75CF790228648CB00011F933 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF790128648CB00011F933 /* HomeCoordinator.swift */; };
+		75CF790528648D5C0011F933 /* StoryboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF790428648D5C0011F933 /* StoryboardController.swift */; };
+		75CF790728648D800011F933 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF790628648D800011F933 /* Storyboard.swift */; };
+		75CF790928648DF60011F933 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF790828648DF60011F933 /* ApplicationCoordinator.swift */; };
+		75CF790B28648E3A0011F933 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF790A28648E3A0011F933 /* TabBarCoordinator.swift */; };
 		85E76A5D7C403D8684027031 /* Pods_HealthyPetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 905886FF269EC2A57630C6A2 /* Pods_HealthyPetTests.framework */; };
 		D22852B770444BA135B2CF2B /* Pods_HealthyPet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B85FEE692495B2FCE600552 /* Pods_HealthyPet.framework */; };
 		FDB03406474457BCF4140FD7 /* Pods_HealthyPet_HealthyPetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8CEAA463E950A3022CA93A6 /* Pods_HealthyPet_HealthyPetUITests.framework */; };
@@ -62,7 +73,7 @@
 		75CF7889285BB8800011F933 /* HealthyPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthyPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75CF788C285BB8800011F933 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75CF788E285BB8800011F933 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		75CF7890285BB8800011F933 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		75CF7890285BB8800011F933 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		75CF7893285BB8800011F933 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		75CF7895285BB8810011F933 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75CF7898285BB8810011F933 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -88,6 +99,17 @@
 		75CF78E8286471960011F933 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		75CF78EA286473D50011F933 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		75CF78EC286474300011F933 /* DataType+Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataType+Decoder.swift"; sourceTree = "<group>"; };
+		75CF78EF2864796C0011F933 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		75CF78F1286479930011F933 /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
+		75CF78F3286479A20011F933 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		75CF78FB286485950011F933 /* Theme+Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme+Fonts.swift"; sourceTree = "<group>"; };
+		75CF78FD28648A740011F933 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		75CF78FF28648B2F0011F933 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		75CF790128648CB00011F933 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		75CF790428648D5C0011F933 /* StoryboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardController.swift; sourceTree = "<group>"; };
+		75CF790628648D800011F933 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		75CF790828648DF60011F933 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		75CF790A28648E3A0011F933 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		7ED8903CB75201291BAD0690 /* Pods-HealthyPet-HealthyPetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyPet-HealthyPetUITests.debug.xcconfig"; path = "Target Support Files/Pods-HealthyPet-HealthyPetUITests/Pods-HealthyPet-HealthyPetUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		905886FF269EC2A57630C6A2 /* Pods_HealthyPetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthyPetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8CEAA463E950A3022CA93A6 /* Pods_HealthyPet_HealthyPetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthyPet_HealthyPetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,6 +211,8 @@
 		75CF78BC28635F320011F933 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				75CF78FA286485750011F933 /* Theme */,
+				75CF78EE2864795E0011F933 /* Coordination */,
 				75CF78C028635FA50011F933 /* Supporting files */,
 				75CF78BD28635F4D0011F933 /* AppDelegate */,
 			);
@@ -231,6 +255,7 @@
 		75CF78C128635FDD0011F933 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				75CF78F52864841E0011F933 /* TabBar */,
 				75CF78C52863600B0011F933 /* BreedsList */,
 				75CF78C4286360000011F933 /* AddNewPet */,
 				75CF78C328635FFA0011F933 /* Home */,
@@ -250,7 +275,8 @@
 		75CF78C328635FFA0011F933 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				75CF7890285BB8800011F933 /* ViewController.swift */,
+				75CF7890285BB8800011F933 /* HomeViewController.swift */,
+				75CF790128648CB00011F933 /* HomeCoordinator.swift */,
 				75CF7892285BB8800011F933 /* Main.storyboard */,
 			);
 			path = Home;
@@ -305,6 +331,7 @@
 		75CF78D328636DA40011F933 /* Systems */ = {
 			isa = PBXGroup;
 			children = (
+				75CF790328648D480011F933 /* Storyboard */,
 				75CF78D428636DAD0011F933 /* DataStorage */,
 			);
 			path = Systems;
@@ -326,6 +353,7 @@
 				75CF78DA2863705F0011F933 /* TimeInterval+Extensions.swift */,
 				75CF78EC286474300011F933 /* DataType+Decoder.swift */,
 				75CF78DC2863717B0011F933 /* URL+Extensions.swift */,
+				75CF78FD28648A740011F933 /* UIImage+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -344,6 +372,43 @@
 				75CF78E42864662B0011F933 /* GetDogBreedsRequest.swift */,
 			);
 			path = Requests;
+			sourceTree = "<group>";
+		};
+		75CF78EE2864795E0011F933 /* Coordination */ = {
+			isa = PBXGroup;
+			children = (
+				75CF78EF2864796C0011F933 /* Coordinator.swift */,
+				75CF78F1286479930011F933 /* CoordinatorDelegate.swift */,
+				75CF790828648DF60011F933 /* ApplicationCoordinator.swift */,
+				75CF78F3286479A20011F933 /* TabBarItem.swift */,
+			);
+			path = Coordination;
+			sourceTree = "<group>";
+		};
+		75CF78F52864841E0011F933 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				75CF78FF28648B2F0011F933 /* TabBarViewController.swift */,
+				75CF790A28648E3A0011F933 /* TabBarCoordinator.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		75CF78FA286485750011F933 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				75CF78FB286485950011F933 /* Theme+Fonts.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		75CF790328648D480011F933 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				75CF790428648D5C0011F933 /* StoryboardController.swift */,
+				75CF790628648D800011F933 /* Storyboard.swift */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		A8FE651BB10D717CE74567EE /* Pods */ = {
@@ -598,23 +663,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75CF7891285BB8800011F933 /* ViewController.swift in Sources */,
+				75CF7891285BB8800011F933 /* HomeViewController.swift in Sources */,
 				75CF78DF286463FD0011F933 /* API+Breeds.swift in Sources */,
+				75CF78FE28648A740011F933 /* UIImage+Extensions.swift in Sources */,
+				75CF78F2286479930011F933 /* CoordinatorDelegate.swift in Sources */,
 				75CF78DD2863717B0011F933 /* URL+Extensions.swift in Sources */,
+				75CF790928648DF60011F933 /* ApplicationCoordinator.swift in Sources */,
+				75CF78F4286479A20011F933 /* TabBarItem.swift in Sources */,
+				75CF790528648D5C0011F933 /* StoryboardController.swift in Sources */,
 				75CF78E9286471960011F933 /* APIError.swift in Sources */,
 				75CF78CB28636A440011F933 /* Networking.swift in Sources */,
+				75CF790B28648E3A0011F933 /* TabBarCoordinator.swift in Sources */,
 				75CF78E7286466ED0011F933 /* Headers.swift in Sources */,
+				75CF790028648B2F0011F933 /* TabBarViewController.swift in Sources */,
 				75CF78D628636DC50011F933 /* DataCache.swift in Sources */,
 				75CF78C9286368090011F933 /* Request.swift in Sources */,
 				75CF78CD28636A840011F933 /* APIResult.swift in Sources */,
 				75CF788D285BB8800011F933 /* AppDelegate.swift in Sources */,
 				75CF78EB286473D50011F933 /* Cache.swift in Sources */,
 				75CF78CF28636BF00011F933 /* NetworkingFactory.swift in Sources */,
+				75CF78F02864796C0011F933 /* Coordinator.swift in Sources */,
 				75CF78DB2863705F0011F933 /* TimeInterval+Extensions.swift in Sources */,
 				75CF78D228636C200011F933 /* API.swift in Sources */,
+				75CF790228648CB00011F933 /* HomeCoordinator.swift in Sources */,
 				75CF78E52864662B0011F933 /* GetDogBreedsRequest.swift in Sources */,
 				75CF78D828636FEA0011F933 /* DataSource.swift in Sources */,
+				75CF78FC286485950011F933 /* Theme+Fonts.swift in Sources */,
 				75CF788F285BB8800011F933 /* SceneDelegate.swift in Sources */,
+				75CF790728648D800011F933 /* Storyboard.swift in Sources */,
 				75CF78E2286464520011F933 /* DogBreed.swift in Sources */,
 				75CF78ED286474300011F933 /* DataType+Decoder.swift in Sources */,
 			);
