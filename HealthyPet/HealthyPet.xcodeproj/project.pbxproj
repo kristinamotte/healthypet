@@ -25,6 +25,13 @@
 		75CF78D828636FEA0011F933 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF78D728636FEA0011F933 /* DataSource.swift */; };
 		75CF78DB2863705F0011F933 /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF78DA2863705F0011F933 /* TimeInterval+Extensions.swift */; };
 		75CF78DD2863717B0011F933 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF78DC2863717B0011F933 /* URL+Extensions.swift */; };
+		75CF78DF286463FD0011F933 /* API+Breeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF78DE286463FD0011F933 /* API+Breeds.swift */; };
+		75CF78E2286464520011F933 /* DogBreed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF78E1286464510011F933 /* DogBreed.swift */; };
+		75CF78E52864662B0011F933 /* GetDogBreedsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF78E42864662B0011F933 /* GetDogBreedsRequest.swift */; };
+		75CF78E7286466ED0011F933 /* Headers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF78E6286466EC0011F933 /* Headers.swift */; };
+		75CF78E9286471960011F933 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF78E8286471960011F933 /* APIError.swift */; };
+		75CF78EB286473D50011F933 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF78EA286473D50011F933 /* Cache.swift */; };
+		75CF78ED286474300011F933 /* DataType+Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF78EC286474300011F933 /* DataType+Decoder.swift */; };
 		85E76A5D7C403D8684027031 /* Pods_HealthyPetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 905886FF269EC2A57630C6A2 /* Pods_HealthyPetTests.framework */; };
 		D22852B770444BA135B2CF2B /* Pods_HealthyPet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B85FEE692495B2FCE600552 /* Pods_HealthyPet.framework */; };
 		FDB03406474457BCF4140FD7 /* Pods_HealthyPet_HealthyPetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8CEAA463E950A3022CA93A6 /* Pods_HealthyPet_HealthyPetUITests.framework */; };
@@ -74,6 +81,13 @@
 		75CF78D728636FEA0011F933 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		75CF78DA2863705F0011F933 /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
 		75CF78DC2863717B0011F933 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
+		75CF78DE286463FD0011F933 /* API+Breeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Breeds.swift"; sourceTree = "<group>"; };
+		75CF78E1286464510011F933 /* DogBreed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreed.swift; sourceTree = "<group>"; };
+		75CF78E42864662B0011F933 /* GetDogBreedsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDogBreedsRequest.swift; sourceTree = "<group>"; };
+		75CF78E6286466EC0011F933 /* Headers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Headers.swift; sourceTree = "<group>"; };
+		75CF78E8286471960011F933 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		75CF78EA286473D50011F933 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		75CF78EC286474300011F933 /* DataType+Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataType+Decoder.swift"; sourceTree = "<group>"; };
 		7ED8903CB75201291BAD0690 /* Pods-HealthyPet-HealthyPetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyPet-HealthyPetUITests.debug.xcconfig"; path = "Target Support Files/Pods-HealthyPet-HealthyPetUITests/Pods-HealthyPet-HealthyPetUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		905886FF269EC2A57630C6A2 /* Pods_HealthyPetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthyPetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8CEAA463E950A3022CA93A6 /* Pods_HealthyPet_HealthyPetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthyPet_HealthyPetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +158,7 @@
 		75CF788B285BB8800011F933 /* HealthyPet */ = {
 			isa = PBXGroup;
 			children = (
+				75CF78E0286464430011F933 /* Models */,
 				75CF78D92863704B0011F933 /* Extensions */,
 				75CF78D328636DA40011F933 /* Systems */,
 				75CF78C6286367870011F933 /* Networking */,
@@ -258,6 +273,7 @@
 		75CF78C6286367870011F933 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				75CF78E3286466150011F933 /* Requests */,
 				75CF78D028636C160011F933 /* API */,
 				75CF78C7286367900011F933 /* Core */,
 			);
@@ -268,9 +284,11 @@
 			isa = PBXGroup;
 			children = (
 				75CF78C8286368090011F933 /* Request.swift */,
+				75CF78E6286466EC0011F933 /* Headers.swift */,
 				75CF78CA28636A440011F933 /* Networking.swift */,
 				75CF78CE28636BF00011F933 /* NetworkingFactory.swift */,
 				75CF78CC28636A840011F933 /* APIResult.swift */,
+				75CF78E8286471960011F933 /* APIError.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -279,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				75CF78D128636C200011F933 /* API.swift */,
+				75CF78DE286463FD0011F933 /* API+Breeds.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -295,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				75CF78D528636DC50011F933 /* DataCache.swift */,
+				75CF78EA286473D50011F933 /* Cache.swift */,
 				75CF78D728636FEA0011F933 /* DataSource.swift */,
 			);
 			path = DataStorage;
@@ -304,9 +324,26 @@
 			isa = PBXGroup;
 			children = (
 				75CF78DA2863705F0011F933 /* TimeInterval+Extensions.swift */,
+				75CF78EC286474300011F933 /* DataType+Decoder.swift */,
 				75CF78DC2863717B0011F933 /* URL+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		75CF78E0286464430011F933 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				75CF78E1286464510011F933 /* DogBreed.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		75CF78E3286466150011F933 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				75CF78E42864662B0011F933 /* GetDogBreedsRequest.swift */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 		A8FE651BB10D717CE74567EE /* Pods */ = {
@@ -562,17 +599,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				75CF7891285BB8800011F933 /* ViewController.swift in Sources */,
+				75CF78DF286463FD0011F933 /* API+Breeds.swift in Sources */,
 				75CF78DD2863717B0011F933 /* URL+Extensions.swift in Sources */,
+				75CF78E9286471960011F933 /* APIError.swift in Sources */,
 				75CF78CB28636A440011F933 /* Networking.swift in Sources */,
+				75CF78E7286466ED0011F933 /* Headers.swift in Sources */,
 				75CF78D628636DC50011F933 /* DataCache.swift in Sources */,
 				75CF78C9286368090011F933 /* Request.swift in Sources */,
 				75CF78CD28636A840011F933 /* APIResult.swift in Sources */,
 				75CF788D285BB8800011F933 /* AppDelegate.swift in Sources */,
+				75CF78EB286473D50011F933 /* Cache.swift in Sources */,
 				75CF78CF28636BF00011F933 /* NetworkingFactory.swift in Sources */,
 				75CF78DB2863705F0011F933 /* TimeInterval+Extensions.swift in Sources */,
 				75CF78D228636C200011F933 /* API.swift in Sources */,
+				75CF78E52864662B0011F933 /* GetDogBreedsRequest.swift in Sources */,
 				75CF78D828636FEA0011F933 /* DataSource.swift in Sources */,
 				75CF788F285BB8800011F933 /* SceneDelegate.swift in Sources */,
+				75CF78E2286464520011F933 /* DogBreed.swift in Sources */,
+				75CF78ED286474300011F933 /* DataType+Decoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

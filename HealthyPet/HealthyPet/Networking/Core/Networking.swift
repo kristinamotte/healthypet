@@ -29,19 +29,34 @@ final class Networking: NSObject, NetworkingType {
     func sendRequest(_ request: Request, completion: @escaping (APIResult<Data>) -> Void) {
         let urlRequest = request.asURLRequest
         
-        let task = session.dataTask(with: urlRequest) { [callbackQueue] data, response, error in
-            guard let data = data, error == nil else {
+        // validate request
+        for case let .request(validation) in request.validations {
+            if case let .error(error) = validation(urlRequest) {
                 callbackQueue.async {
-                    completion(.error(error ?? NSError(domain: "", code: 403)))
+                    completion(.error(APIError(code: error, request: request)))
                 }
+                
                 return
+            }
+        }
+
+        let task = session.dataTask(with: urlRequest) { [callbackQueue] data, response, error in
+            // validate response
+            for case let .response(validation) in request.validations {
+                if case let .error(error) = validation(data, response, error) {
+                    callbackQueue.async {
+                        completion(.error(APIError(code: error, request: request)))
+                    }
+                    
+                    return
+                }
             }
             
             callbackQueue.async {
-                completion(.success(data))
+                completion(.success(data ?? Data()))
             }
         }
-        
+
         task.resume()
     }
 }

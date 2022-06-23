@@ -10,5 +10,5 @@ import Foundation
 /// Represents universal API result
 enum APIResult<T> {
     case success(T)
-    case error(Error)
+    case error(APIError)
 }
