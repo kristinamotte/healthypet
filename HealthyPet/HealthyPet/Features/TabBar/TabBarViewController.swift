@@ -42,9 +42,9 @@ class TabBarViewController: UITabBarController {
         tabBar.backgroundColor = Theme.Colors.white
         tabBar.shadowImage = UIImage()
         tabBar.layer.shadowOffset = CGSize(width: 0, height: 0)
-        tabBar.layer.shadowRadius = 12
+        tabBar.layer.shadowRadius = Theme.Constants.shadowRadius
         tabBar.layer.shadowColor = Theme.Colors.lightGrey.cgColor
-        tabBar.layer.shadowOpacity = 0.5
+        tabBar.layer.shadowOpacity = Theme.Constants.shadowOpacity
         
         if #available(iOS 15.0, *) {
             tabBar.backgroundImage = UIImage.init(color: Theme.Colors.white, size: CGSize(width: view.frame.width, height: tabBar.frame.height))
@@ -54,7 +54,7 @@ class TabBarViewController: UITabBarController {
         
         let imageView = UIImageView(image: #imageLiteral(resourceName: "ic_line"))
         indicatorImage = imageView
-        indicatorImage.center.y = 50.0
+        indicatorImage.center.y = Theme.Constants.indicatorImagePos
         tabBar.addSubview(indicatorImage)
     }
 
@@ -65,11 +65,11 @@ class TabBarViewController: UITabBarController {
         home.delegate = self
 
         let addNew = HomeCoordinator(presenter: UINavigationController())
-        addNew.controller.tabBarItem = UITabBarItem(title: "", image: #imageLiteral(resourceName: "ic_home_unselected"), selectedImage: #imageLiteral(resourceName: "ic_home_selected"))
+        addNew.controller.tabBarItem = UITabBarItem(title: "", image: #imageLiteral(resourceName: "ic_addNew_unselected"), selectedImage: #imageLiteral(resourceName: "ic_addNew_selected"))
         addNew.start()
 
         let breeds = HomeCoordinator(presenter: UINavigationController())
-        breeds.controller.tabBarItem = UITabBarItem(title: "", image: #imageLiteral(resourceName: "ic_home_unselected"), selectedImage: #imageLiteral(resourceName: "ic_home_selected"))
+        breeds.controller.tabBarItem = UITabBarItem(title: "", image: #imageLiteral(resourceName: "ic_breeds_unselected"), selectedImage: #imageLiteral(resourceName: "ic_breeds_selected"))
         breeds.start()
 
         coordinators = [home, addNew, breeds]
@@ -118,7 +118,7 @@ extension TabBarViewController: UITabBarControllerDelegate {
                 lastSelectIndex = index
             }
             
-            UIView.animate(withDuration: 0.3) {
+            UIView.animate(withDuration: Theme.Constants.defaultAnimationDuration) {
                 let number = -(items.firstIndex(of: item)?.distance(to: 0) ?? 0) + 1
                 let itemsCount = CGFloat(items.count)
                 

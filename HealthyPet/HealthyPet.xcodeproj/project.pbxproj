@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		753EB7F92865BE1100C0F529 /* Theme+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753EB7F82865BE1100C0F529 /* Theme+Constants.swift */; };
 		75CF788D285BB8800011F933 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF788C285BB8800011F933 /* AppDelegate.swift */; };
 		75CF788F285BB8800011F933 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF788E285BB8800011F933 /* SceneDelegate.swift */; };
 		75CF7891285BB8800011F933 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF7890285BB8800011F933 /* HomeViewController.swift */; };
@@ -70,6 +71,7 @@
 		302B24886AA338FA514E8AF0 /* Pods-HealthyPet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyPet.debug.xcconfig"; path = "Target Support Files/Pods-HealthyPet/Pods-HealthyPet.debug.xcconfig"; sourceTree = "<group>"; };
 		461E8673757921F4763EDC99 /* Pods-HealthyPetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyPetTests.release.xcconfig"; path = "Target Support Files/Pods-HealthyPetTests/Pods-HealthyPetTests.release.xcconfig"; sourceTree = "<group>"; };
 		65714C1432747EE62431B0F0 /* Pods-HealthyPet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyPet.release.xcconfig"; path = "Target Support Files/Pods-HealthyPet/Pods-HealthyPet.release.xcconfig"; sourceTree = "<group>"; };
+		753EB7F82865BE1100C0F529 /* Theme+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme+Constants.swift"; sourceTree = "<group>"; };
 		75CF7889285BB8800011F933 /* HealthyPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthyPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75CF788C285BB8800011F933 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75CF788E285BB8800011F933 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -398,6 +400,7 @@
 			isa = PBXGroup;
 			children = (
 				75CF78FB286485950011F933 /* Theme+Fonts.swift */,
+				753EB7F82865BE1100C0F529 /* Theme+Constants.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -671,6 +674,7 @@
 				75CF790928648DF60011F933 /* ApplicationCoordinator.swift in Sources */,
 				75CF78F4286479A20011F933 /* TabBarItem.swift in Sources */,
 				75CF790528648D5C0011F933 /* StoryboardController.swift in Sources */,
+				753EB7F92865BE1100C0F529 /* Theme+Constants.swift in Sources */,
 				75CF78E9286471960011F933 /* APIError.swift in Sources */,
 				75CF78CB28636A440011F933 /* Networking.swift in Sources */,
 				75CF790B28648E3A0011F933 /* TabBarCoordinator.swift in Sources */,
