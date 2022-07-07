@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FilterView" customModule="HealthyPet" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y6H-ls-5sY">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="nl7-0V-ZKs">
+                            <rect key="frame" x="0.0" y="0.0" width="219" height="44"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khA-j5-L8L" customClass="FilterButton" customModule="HealthyPet" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="48" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="oin-p1-hUr"/>
+                                    </constraints>
+                                    <color key="tintColor" systemColor="labelColor"/>
+                                    <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain">
+                                        <attributedString key="attributedTitle">
+                                            <fragment content="All">
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" size="14" name="OpenSans-Regular"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <directionalEdgeInsets key="contentInsets" top="0.0" leading="16" bottom="0.0" trailing="16"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="style">
+                                            <integer key="value" value="0"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="didTapAllButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="jqB-6T-4Yd"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJF-gp-lMO" customClass="FilterButton" customModule="HealthyPet" customModuleProvider="target">
+                                    <rect key="frame" x="71" y="0.0" width="65" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="G3C-iQ-SiB"/>
+                                    </constraints>
+                                    <color key="tintColor" systemColor="labelColor"/>
+                                    <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain">
+                                        <attributedString key="attributedTitle">
+                                            <fragment content="Dogs">
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="OpenSans-Regular"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <directionalEdgeInsets key="contentInsets" top="0.0" leading="16" bottom="0.0" trailing="16"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="style">
+                                            <integer key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="didTapDogsButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="WWY-Yg-ACW"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CbM-Lw-sko" customClass="FilterButton" customModule="HealthyPet" customModuleProvider="target">
+                                    <rect key="frame" x="158.5" y="0.0" width="60.5" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="0XU-AI-dFB"/>
+                                    </constraints>
+                                    <color key="tintColor" systemColor="labelColor"/>
+                                    <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain">
+                                        <attributedString key="attributedTitle">
+                                            <fragment content="Cats">
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="OpenSans-Regular"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <directionalEdgeInsets key="contentInsets" top="0.0" leading="16" bottom="0.0" trailing="16"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="style">
+                                            <integer key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="didTapCatsButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="dWm-VJ-VrY"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="nl7-0V-ZKs" firstAttribute="leading" secondItem="y6H-ls-5sY" secondAttribute="leading" id="X0n-1x-JvM"/>
+                        <constraint firstItem="nl7-0V-ZKs" firstAttribute="top" secondItem="y6H-ls-5sY" secondAttribute="top" id="Xsw-Yj-jyW"/>
+                        <constraint firstAttribute="bottom" secondItem="nl7-0V-ZKs" secondAttribute="bottom" id="ZDC-ET-nj3"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="y6H-ls-5sY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="49u-u7-cl3"/>
+                <constraint firstItem="y6H-ls-5sY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Gj0-6r-oc2"/>
+                <constraint firstAttribute="trailing" secondItem="y6H-ls-5sY" secondAttribute="trailing" id="avn-Ha-845"/>
+                <constraint firstAttribute="bottom" secondItem="y6H-ls-5sY" secondAttribute="bottom" id="wgE-fI-nPf"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="allButton" destination="khA-j5-L8L" id="Yjm-U8-sn6"/>
+                <outlet property="catsButton" destination="CbM-Lw-sko" id="zR3-XA-wDo"/>
+                <outlet property="dogsButton" destination="cJF-gp-lMO" id="nec-b6-s9G"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="300.66964285714283"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

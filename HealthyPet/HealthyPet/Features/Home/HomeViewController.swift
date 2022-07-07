@@ -8,10 +8,15 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    @IBOutlet weak var filterView: UIView!
+    @IBOutlet weak var petsTableView: UITableView!
+    @IBOutlet weak var emptyStateContainerView: UIView!
+    lazy var searchView: SearchView = SearchView.instanceFromNib()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
+        filterView.add(subview: searchView)
     }
 }
 

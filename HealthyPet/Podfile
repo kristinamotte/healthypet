@@ -6,6 +6,8 @@ target 'HealthyPet' do
   use_frameworks!
 
   # Pods for HealthyPet
+  
+  pod 'lottie-ios'
 
   # Firebase
   pod 'Firebase/Database'

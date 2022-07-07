@@ -16,9 +16,44 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CHo-4I-ynJ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="141"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="141" id="KlY-rq-Ogc"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jrX-LC-nHX">
+                                <rect key="frame" x="0.0" y="185" width="414" height="677"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CG3-p9-KKH">
+                                <rect key="frame" x="0.0" y="185" width="414" height="677"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CG3-p9-KKH" secondAttribute="bottom" id="1KS-qK-DYW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jrX-LC-nHX" secondAttribute="bottom" id="AeF-Gc-sKf"/>
+                            <constraint firstItem="jrX-LC-nHX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FtX-Oy-RC3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CG3-p9-KKH" secondAttribute="trailing" id="HlL-bE-4cR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CHo-4I-ynJ" secondAttribute="trailing" id="P73-s8-NUp"/>
+                            <constraint firstItem="jrX-LC-nHX" firstAttribute="top" secondItem="CHo-4I-ynJ" secondAttribute="bottom" id="QY1-z5-TRN"/>
+                            <constraint firstItem="CHo-4I-ynJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SNQ-qX-gT6"/>
+                            <constraint firstItem="CHo-4I-ynJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Vxd-WM-8fL"/>
+                            <constraint firstItem="CG3-p9-KKH" firstAttribute="top" secondItem="CHo-4I-ynJ" secondAttribute="bottom" id="cxP-DO-M0g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jrX-LC-nHX" secondAttribute="trailing" id="lXo-YJ-NI0"/>
+                            <constraint firstItem="CG3-p9-KKH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="swY-YY-ytJ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emptyStateContainerView" destination="CG3-p9-KKH" id="IGa-hr-Hjw"/>
+                        <outlet property="filterView" destination="CHo-4I-ynJ" id="TOc-5L-nVP"/>
+                        <outlet property="petsTableView" destination="jrX-LC-nHX" id="Mx9-PE-VKB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -27,7 +62,7 @@
         <!--Tab Bar View Controller-->
         <scene sceneID="UWd-Uo-4nw">
             <objects>
-                <tabBarController id="W1L-4W-kpw" customClass="TabBarViewController" customModule="Mit_Telenor" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="W1L-4W-kpw" customClass="TabBarViewController" customModule="HealthyPet" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ab3-Hr-jSN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

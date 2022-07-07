@@ -15,5 +15,7 @@ extension Theme {
         static let shadowRadius: CGFloat = 12
         static let indicatorImagePos: CGFloat = 50
         static let defaultAnimationDuration = 0.3
+        static let noBorderWidth = 0.0
+        static let defaultBorderWidth = 1.0
     }
 }
