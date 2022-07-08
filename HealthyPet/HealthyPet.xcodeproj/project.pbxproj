@@ -61,6 +61,7 @@
 		75E8EF862876D3B000FBB28D /* FilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75E8EF852876D3B000FBB28D /* FilterView.xib */; };
 		75E8EF882876D46800FBB28D /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E8EF872876D46800FBB28D /* FilterView.swift */; };
 		75E8EF8A2876D4F400FBB28D /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E8EF892876D4F400FBB28D /* FilterButton.swift */; };
+		75E8EF8C2878650C00FBB28D /* Theme+Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E8EF8B2878650C00FBB28D /* Theme+Dimensions.swift */; };
 		85E76A5D7C403D8684027031 /* Pods_HealthyPetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 905886FF269EC2A57630C6A2 /* Pods_HealthyPetTests.framework */; };
 		D22852B770444BA135B2CF2B /* Pods_HealthyPet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B85FEE692495B2FCE600552 /* Pods_HealthyPet.framework */; };
 		FDB03406474457BCF4140FD7 /* Pods_HealthyPet_HealthyPetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8CEAA463E950A3022CA93A6 /* Pods_HealthyPet_HealthyPetUITests.framework */; };
@@ -140,6 +141,7 @@
 		75E8EF852876D3B000FBB28D /* FilterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterView.xib; sourceTree = "<group>"; };
 		75E8EF872876D46800FBB28D /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		75E8EF892876D4F400FBB28D /* FilterButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
+		75E8EF8B2878650C00FBB28D /* Theme+Dimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme+Dimensions.swift"; sourceTree = "<group>"; };
 		7ED8903CB75201291BAD0690 /* Pods-HealthyPet-HealthyPetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyPet-HealthyPetUITests.debug.xcconfig"; path = "Target Support Files/Pods-HealthyPet-HealthyPetUITests/Pods-HealthyPet-HealthyPetUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		905886FF269EC2A57630C6A2 /* Pods_HealthyPetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthyPetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8CEAA463E950A3022CA93A6 /* Pods_HealthyPet_HealthyPetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthyPet_HealthyPetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -442,6 +444,7 @@
 				75CF78FB286485950011F933 /* Theme+Colors.swift */,
 				75E8EF6E2875C07700FBB28D /* Theme+Fonts.swift */,
 				753EB7F82865BE1100C0F529 /* Theme+Constants.swift */,
+				75E8EF8B2878650C00FBB28D /* Theme+Dimensions.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -769,6 +772,7 @@
 				75CF78DF286463FD0011F933 /* API+Breeds.swift in Sources */,
 				75CF78FE28648A740011F933 /* UIImage+Extensions.swift in Sources */,
 				75CF78F2286479930011F933 /* CoordinatorDelegate.swift in Sources */,
+				75E8EF8C2878650C00FBB28D /* Theme+Dimensions.swift in Sources */,
 				75E8EF882876D46800FBB28D /* FilterView.swift in Sources */,
 				75CF78DD2863717B0011F933 /* URL+Extensions.swift in Sources */,
 				75CF790928648DF60011F933 /* ApplicationCoordinator.swift in Sources */,

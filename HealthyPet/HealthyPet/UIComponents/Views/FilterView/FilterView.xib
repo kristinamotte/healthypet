@@ -17,8 +17,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y6H-ls-5sY">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="nl7-0V-ZKs">
-                            <rect key="frame" x="0.0" y="0.0" width="219" height="44"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nl7-0V-ZKs">
+                            <rect key="frame" x="0.0" y="0.0" width="211" height="44"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khA-j5-L8L" customClass="FilterButton" customModule="HealthyPet" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="48" height="44"/>
@@ -49,7 +49,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJF-gp-lMO" customClass="FilterButton" customModule="HealthyPet" customModuleProvider="target">
-                                    <rect key="frame" x="71" y="0.0" width="65" height="44"/>
+                                    <rect key="frame" x="67" y="0.0" width="65" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="G3C-iQ-SiB"/>
                                     </constraints>
@@ -76,7 +76,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CbM-Lw-sko" customClass="FilterButton" customModule="HealthyPet" customModuleProvider="target">
-                                    <rect key="frame" x="158.5" y="0.0" width="60.5" height="44"/>
+                                    <rect key="frame" x="150.5" y="0.0" width="60.5" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="0XU-AI-dFB"/>
                                     </constraints>
