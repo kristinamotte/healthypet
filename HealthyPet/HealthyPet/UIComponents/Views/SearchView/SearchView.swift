@@ -24,13 +24,27 @@ class SearchView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        searchContainerView.isHidden = true
-        findPetContainerView.isHidden = false
-        filterContainerView.add(subview: filterView)
+        configureUI()
         searchImageView.isUserInteractionEnabled = true
         crossImageView.isUserInteractionEnabled = true
         searchImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapSearch)))
         crossImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapCloseSearch)))
+    }
+    
+    private func configureUI() {
+        searchContainerView.isHidden = true
+        findPetContainerView.isHidden = false
+        filterContainerView.add(subview: filterView)
+        searchTextField.delegate = self
+        searchTextField.font = Theme.Fonts.openSansLight16
+        searchTextField.tintColor = Theme.Colors.rose
+        configureTextFieldWithPlaceholder()
+    }
+    
+    private func configureTextFieldWithPlaceholder() {
+        searchTextField.resignFirstResponder()
+        searchTextField.textColor = Theme.Colors.textGrey
+        searchTextField.text = "Start typing"
     }
     
     @objc private func didTapSearch() {
@@ -45,9 +59,19 @@ class SearchView: UIView {
     @objc private func didTapCloseSearch() {
         searchContainerView.alpha = 0
         findPetContainerView.alpha = 1
+        configureTextFieldWithPlaceholder()
         UIView.animate(withDuration: Theme.Constants.defaultAnimationDuration, delay: 0.0, options: .curveEaseInOut) {
             self.searchContainerView.isHidden = true
             self.findPetContainerView.isHidden = false
+        }
+    }
+}
+
+extension SearchView: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField.textColor == Theme.Colors.textGrey {
+            textField.text = nil
+            textField.textColor = Theme.Colors.black
         }
     }
 }

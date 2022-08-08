@@ -17,5 +17,7 @@ class Theme {
         static let lightGrey   = #colorLiteral(red: 0.9411765933, green: 0.9411765337, blue: 0.9411766529, alpha: 1) // #F0F0F0
         static let black       = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1) // #000000
         static let lightBlue   = #colorLiteral(red: 0.8945770264, green: 0.9585335851, blue: 0.979328692, alpha: 1) // #E7F4F9
+        static let textGrey    = #colorLiteral(red: 0.4784314632, green: 0.4784314632, blue: 0.4784314632, alpha: 1) // #7A7A7A
+        static let rose        = #colorLiteral(red: 1, green: 0.5513415337, blue: 0.5869708657, alpha: 1) // #F89398
     }
 }
