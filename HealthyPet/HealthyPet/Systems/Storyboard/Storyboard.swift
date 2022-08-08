@@ -9,4 +9,5 @@ import Foundation
 
 enum Storyboard: String, CaseIterable {
     case Main
+    case AddNewPet
 }

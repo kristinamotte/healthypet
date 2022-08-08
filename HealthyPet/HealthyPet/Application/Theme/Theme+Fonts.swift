@@ -24,5 +24,7 @@ extension Theme {
         static var openSansBold14: UIFont = OpenSans.bold.font(size: 14)
         static var openSansRegular14: UIFont = OpenSans.regular.font(size: 14)
         static var openSansLight16: UIFont = OpenSans.light.font(size: 16)
+        static var openSansLight12: UIFont = OpenSans.light.font(size: 12)
+        static var openSansLight24: UIFont = OpenSans.light.font(size: 24)
     }
 }

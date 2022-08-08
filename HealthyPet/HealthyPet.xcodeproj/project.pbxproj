@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		753EB7F92865BE1100C0F529 /* Theme+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753EB7F82865BE1100C0F529 /* Theme+Constants.swift */; };
 		753EB7FE2865C1E000C0F529 /* loadInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 753EB7FD2865C1E000C0F529 /* loadInfo.json */; };
+		75BFA4BA28A190FA002122E8 /* AddNewPet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75BFA4B928A190FA002122E8 /* AddNewPet.storyboard */; };
+		75BFA4BC28A195CB002122E8 /* AddNewPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFA4BB28A195CB002122E8 /* AddNewPetViewController.swift */; };
+		75BFA4BE28A19A3B002122E8 /* AddNewPetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFA4BD28A19A3B002122E8 /* AddNewPetCoordinator.swift */; };
 		75CF788D285BB8800011F933 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF788C285BB8800011F933 /* AppDelegate.swift */; };
 		75CF788F285BB8800011F933 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF788E285BB8800011F933 /* SceneDelegate.swift */; };
 		75CF7891285BB8800011F933 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF7890285BB8800011F933 /* HomeViewController.swift */; };
@@ -91,6 +94,9 @@
 		65714C1432747EE62431B0F0 /* Pods-HealthyPet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyPet.release.xcconfig"; path = "Target Support Files/Pods-HealthyPet/Pods-HealthyPet.release.xcconfig"; sourceTree = "<group>"; };
 		753EB7F82865BE1100C0F529 /* Theme+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme+Constants.swift"; sourceTree = "<group>"; };
 		753EB7FD2865C1E000C0F529 /* loadInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loadInfo.json; sourceTree = "<group>"; };
+		75BFA4B928A190FA002122E8 /* AddNewPet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddNewPet.storyboard; sourceTree = "<group>"; };
+		75BFA4BB28A195CB002122E8 /* AddNewPetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPetViewController.swift; sourceTree = "<group>"; };
+		75BFA4BD28A19A3B002122E8 /* AddNewPetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPetCoordinator.swift; sourceTree = "<group>"; };
 		75CF7889285BB8800011F933 /* HealthyPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthyPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75CF788C285BB8800011F933 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75CF788E285BB8800011F933 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -328,6 +334,9 @@
 		75CF78C4286360000011F933 /* AddNewPet */ = {
 			isa = PBXGroup;
 			children = (
+				75BFA4B928A190FA002122E8 /* AddNewPet.storyboard */,
+				75BFA4BB28A195CB002122E8 /* AddNewPetViewController.swift */,
+				75BFA4BD28A19A3B002122E8 /* AddNewPetCoordinator.swift */,
 			);
 			path = AddNewPet;
 			sourceTree = "<group>";
@@ -631,6 +640,7 @@
 				75E8EF652875B37D00FBB28D /* SearchView.xib in Resources */,
 				753EB7FE2865C1E000C0F529 /* loadInfo.json in Resources */,
 				75CF7896285BB8810011F933 /* Assets.xcassets in Resources */,
+				75BFA4BA28A190FA002122E8 /* AddNewPet.storyboard in Resources */,
 				75E8EF862876D3B000FBB28D /* FilterView.xib in Resources */,
 				75CF7894285BB8800011F933 /* Main.storyboard in Resources */,
 				75E8EF772875DCBD00FBB28D /* OpenSans-Light.otf in Resources */,
@@ -799,6 +809,8 @@
 				75CF78D228636C200011F933 /* API.swift in Sources */,
 				75CF790228648CB00011F933 /* HomeCoordinator.swift in Sources */,
 				75CF78E52864662B0011F933 /* GetDogBreedsRequest.swift in Sources */,
+				75BFA4BC28A195CB002122E8 /* AddNewPetViewController.swift in Sources */,
+				75BFA4BE28A19A3B002122E8 /* AddNewPetCoordinator.swift in Sources */,
 				75CF78D828636FEA0011F933 /* DataSource.swift in Sources */,
 				75CF78FC286485950011F933 /* Theme+Colors.swift in Sources */,
 				75CF788F285BB8800011F933 /* SceneDelegate.swift in Sources */,

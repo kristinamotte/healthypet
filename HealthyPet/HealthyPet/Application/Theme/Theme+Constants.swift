@@ -17,5 +17,6 @@ extension Theme {
         static let defaultAnimationDuration = 0.3
         static let noBorderWidth = 0.0
         static let defaultBorderWidth = 1.0
+        static let cornerRadius = 4.0
     }
 }

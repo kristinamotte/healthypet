@@ -64,7 +64,7 @@ class TabBarViewController: UITabBarController {
         home.start()
         home.delegate = self
 
-        let addNew = HomeCoordinator(presenter: UINavigationController())
+        let addNew = AddNewPetCoordinator(presenter: UINavigationController())
         addNew.controller.tabBarItem = UITabBarItem(title: "", image: #imageLiteral(resourceName: "ic_addNew_unselected"), selectedImage: #imageLiteral(resourceName: "ic_addNew_selected"))
         addNew.start()
 
