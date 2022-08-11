@@ -12,6 +12,9 @@
 		75BFA4BA28A190FA002122E8 /* AddNewPet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75BFA4B928A190FA002122E8 /* AddNewPet.storyboard */; };
 		75BFA4BC28A195CB002122E8 /* AddNewPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFA4BB28A195CB002122E8 /* AddNewPetViewController.swift */; };
 		75BFA4BE28A19A3B002122E8 /* AddNewPetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFA4BD28A19A3B002122E8 /* AddNewPetCoordinator.swift */; };
+		75BFA4C128A43A36002122E8 /* HealthyTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75BFA4C028A43A36002122E8 /* HealthyTextField.xib */; };
+		75BFA4C328A43AC8002122E8 /* HealthyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFA4C228A43AC8002122E8 /* HealthyTextField.swift */; };
+		75BFA4C528A43B7C002122E8 /* TextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFA4C428A43B7C002122E8 /* TextFieldType.swift */; };
 		75CF788D285BB8800011F933 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF788C285BB8800011F933 /* AppDelegate.swift */; };
 		75CF788F285BB8800011F933 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF788E285BB8800011F933 /* SceneDelegate.swift */; };
 		75CF7891285BB8800011F933 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF7890285BB8800011F933 /* HomeViewController.swift */; };
@@ -97,6 +100,9 @@
 		75BFA4B928A190FA002122E8 /* AddNewPet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddNewPet.storyboard; sourceTree = "<group>"; };
 		75BFA4BB28A195CB002122E8 /* AddNewPetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPetViewController.swift; sourceTree = "<group>"; };
 		75BFA4BD28A19A3B002122E8 /* AddNewPetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPetCoordinator.swift; sourceTree = "<group>"; };
+		75BFA4C028A43A36002122E8 /* HealthyTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HealthyTextField.xib; sourceTree = "<group>"; };
+		75BFA4C228A43AC8002122E8 /* HealthyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyTextField.swift; sourceTree = "<group>"; };
+		75BFA4C428A43B7C002122E8 /* TextFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldType.swift; sourceTree = "<group>"; };
 		75CF7889285BB8800011F933 /* HealthyPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthyPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75CF788C285BB8800011F933 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75CF788E285BB8800011F933 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -199,6 +205,16 @@
 				753EB7FD2865C1E000C0F529 /* loadInfo.json */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		75BFA4BF28A43A15002122E8 /* HealthyTextField */ = {
+			isa = PBXGroup;
+			children = (
+				75BFA4C028A43A36002122E8 /* HealthyTextField.xib */,
+				75BFA4C228A43AC8002122E8 /* HealthyTextField.swift */,
+				75BFA4C428A43B7C002122E8 /* TextFieldType.swift */,
+			);
+			path = HealthyTextField;
 			sourceTree = "<group>";
 		};
 		75CF7880285BB87F0011F933 = {
@@ -478,6 +494,7 @@
 		75E8EF632875B35F00FBB28D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				75BFA4BF28A43A15002122E8 /* HealthyTextField */,
 				75E8EF702875D21B00FBB28D /* SearchView */,
 				75E8EF7E2876CAE800FBB28D /* FilterView */,
 			);
@@ -639,6 +656,7 @@
 				75E8EF7B2875DCC300FBB28D /* OpenSans-Regular.otf in Resources */,
 				75E8EF652875B37D00FBB28D /* SearchView.xib in Resources */,
 				753EB7FE2865C1E000C0F529 /* loadInfo.json in Resources */,
+				75BFA4C128A43A36002122E8 /* HealthyTextField.xib in Resources */,
 				75CF7896285BB8810011F933 /* Assets.xcassets in Resources */,
 				75BFA4BA28A190FA002122E8 /* AddNewPet.storyboard in Resources */,
 				75E8EF862876D3B000FBB28D /* FilterView.xib in Resources */,
@@ -811,6 +829,8 @@
 				75CF78E52864662B0011F933 /* GetDogBreedsRequest.swift in Sources */,
 				75BFA4BC28A195CB002122E8 /* AddNewPetViewController.swift in Sources */,
 				75BFA4BE28A19A3B002122E8 /* AddNewPetCoordinator.swift in Sources */,
+				75BFA4C528A43B7C002122E8 /* TextFieldType.swift in Sources */,
+				75BFA4C328A43AC8002122E8 /* HealthyTextField.swift in Sources */,
 				75CF78D828636FEA0011F933 /* DataSource.swift in Sources */,
 				75CF78FC286485950011F933 /* Theme+Colors.swift in Sources */,
 				75CF788F285BB8800011F933 /* SceneDelegate.swift in Sources */,

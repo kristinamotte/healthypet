@@ -11,23 +11,19 @@ class AddNewPetViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var photoContainerView: UIView!
     @IBOutlet weak var addPhotoLabel: UILabel!
-    @IBOutlet weak var petNameTitle: UILabel!
-    @IBOutlet weak var petNameTextField: UITextField!
+    @IBOutlet weak var petNameContainerView: UIView!
     @IBOutlet weak var animalKindLabel: UILabel!
     @IBOutlet weak var animalKindContainerView: UIView!
     @IBOutlet weak var animalKindValueLabel: UILabel!
     @IBOutlet weak var chooseBreedContainerView: UIView!
     @IBOutlet weak var chooseBreedLabel: UILabel!
     @IBOutlet weak var chooseBreedValueLabel: UILabel!
-    @IBOutlet weak var birthdayDateLabel: UILabel!
-    @IBOutlet weak var birthdayDateTextField: UITextField!
+    @IBOutlet weak var birthdayContainerView: UIView!
     @IBOutlet weak var genderLabel: UILabel!
     @IBOutlet weak var genderContainerView: UIView!
     @IBOutlet weak var genderValueLabel: UILabel!
-    @IBOutlet weak var ownerNameLabel: UILabel!
-    @IBOutlet weak var ownerNameTextField: UITextField!
-    @IBOutlet weak var ownerNumberLabel: UILabel!
-    @IBOutlet weak var ownerNumberTextField: UITextField!
+    @IBOutlet weak var ownerNameContainerView: UIView!
+    @IBOutlet weak var ownerPhoneContainerView: UIView!
     @IBOutlet weak var addNewAnimalButton: UIButton!
     
     override func viewDidLoad() {
@@ -42,24 +38,10 @@ class AddNewPetViewController: UIViewController {
         titleLabel.font = Theme.Fonts.openSansLight24
         titleLabel.textColor = Theme.Colors.black
         
-        let placeholders: [UILabel] = [petNameTitle, animalKindLabel, chooseBreedLabel, birthdayDateLabel, genderLabel, ownerNameLabel, animalKindValueLabel, genderValueLabel, addPhotoLabel, ownerNumberLabel, chooseBreedValueLabel]
+        let placeholders: [UILabel] = [animalKindLabel, chooseBreedLabel, genderLabel, animalKindValueLabel, genderValueLabel, addPhotoLabel, chooseBreedValueLabel]
         placeholders.forEach {
             $0.font = Theme.Fonts.openSansLight12
             $0.textColor = Theme.Colors.black
-        }
-        
-        let textFields: [UITextField] = [petNameTextField, birthdayDateTextField, ownerNameTextField, ownerNumberTextField]
-        textFields.forEach {
-            $0.layer.cornerRadius = Theme.Constants.cornerRadius
-            $0.layer.borderWidth = Theme.Constants.defaultBorderWidth
-            $0.layer.borderColor = Theme.Colors.mainGrey.cgColor
-            $0.tintColor = Theme.Colors.rose
-            $0.font = Theme.Fonts.openSansLight12
-            $0.textColor = Theme.Colors.black
-            
-            let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: $0.frame.height))
-            $0.leftView = paddingView
-            $0.leftViewMode = .always
         }
         
         let containers: [UIView] = [animalKindContainerView, chooseBreedContainerView, genderContainerView]
@@ -68,6 +50,21 @@ class AddNewPetViewController: UIViewController {
             $0.layer.borderWidth = Theme.Constants.defaultBorderWidth
             $0.layer.borderColor = Theme.Colors.mainGrey.cgColor
         }
+        let petNameTextField: HealthyTextField = HealthyTextField.instanceFromNib()
+        petNameTextField.configure(with: .simple(title: "Pet name"))
+        petNameContainerView.add(subview: petNameTextField)
+        
+        let birthdayTextField: HealthyTextField = HealthyTextField.instanceFromNib()
+        birthdayTextField.configure(with: .date(title: "Birthday date", placeholder: "2021-01-15"))
+        birthdayContainerView.add(subview: birthdayTextField)
+        
+        let ownerNameTextField: HealthyTextField = HealthyTextField.instanceFromNib()
+        ownerNameTextField.configure(with: .simple(title: "Owner name"))
+        ownerNameContainerView.add(subview: ownerNameTextField)
+        
+        let ownerNumberTextField: HealthyTextField = HealthyTextField.instanceFromNib()
+        ownerNumberTextField.configure(with: .simple(title: "Owner phone number"))
+        ownerPhoneContainerView.add(subview: ownerNumberTextField)
         
         photoContainerView.backgroundColor = Theme.Colors.lightBlue
         photoContainerView.layer.cornerRadius = Theme.Constants.cornerRadius
