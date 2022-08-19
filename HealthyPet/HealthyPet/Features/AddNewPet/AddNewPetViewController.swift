@@ -8,6 +8,8 @@
 import UIKit
 
 class AddNewPetViewController: UIViewController {
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var addNewPetScrollView: UIScrollView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var photoContainerView: UIView!
     @IBOutlet weak var addPhotoLabel: UILabel!
@@ -30,6 +32,9 @@ class AddNewPetViewController: UIViewController {
         super.viewDidLoad()
 
         configureUI()
+        subscribeToNotifications(UIResponder.keyboardWillShowNotification, selector: #selector(keyboardWillShowOrHide))
+        subscribeToNotifications(UIResponder.keyboardWillHideNotification, selector: #selector(keyboardWillShowOrHide))
+        self.hideKeyboardWhenTappedAround()
     }
     
 
@@ -72,6 +77,30 @@ class AddNewPetViewController: UIViewController {
         addNewAnimalButton.backgroundColor = Theme.Colors.rose
         addNewAnimalButton.titleLabel?.font = Theme.Fonts.openSansBold14
         addNewAnimalButton.titleLabel?.textColor = Theme.Colors.white
+    }
+    
+    private func subscribeToNotifications(_ notification: NSNotification.Name, selector: Selector) {
+        NotificationCenter.default.addObserver(self, selector: selector, name: notification, object: nil)
+    }
+    
+    @objc func keyboardWillShowOrHide(_ notification: NSNotification) {
+        if let scrollView = addNewPetScrollView,
+           let userInfo = notification.userInfo,
+           let endValue = userInfo[UIResponder.keyboardFrameEndUserInfoKey],
+           let durationValue = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey],
+           let duration = (durationValue as AnyObject).doubleValue,
+           let curveValue = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] {
+            let endRect = view.convert((endValue as AnyObject).cgRectValue, from: view.window)
+
+            let keyboardOverlap = scrollView.frame.maxY - endRect.origin.y
+            scrollView.contentInset.bottom = keyboardOverlap
+            scrollView.verticalScrollIndicatorInsets.bottom = keyboardOverlap
+
+            let options = UIView.AnimationOptions(rawValue: UInt((curveValue as AnyObject).integerValue << 16))
+            UIView.animate(withDuration: duration, delay: 0, options: options) { [weak self] in
+                self?.contentView.layoutIfNeeded()
+            }
+        }
     }
 }
 

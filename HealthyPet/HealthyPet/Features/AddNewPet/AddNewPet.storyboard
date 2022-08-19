@@ -275,6 +275,7 @@
                     </view>
                     <connections>
                         <outlet property="addNewAnimalButton" destination="dWf-hR-XNy" id="OPr-aG-176"/>
+                        <outlet property="addNewPetScrollView" destination="zlU-3q-7Vi" id="sWe-DM-UrN"/>
                         <outlet property="addPhotoLabel" destination="wql-vi-fR2" id="gtw-eL-zxP"/>
                         <outlet property="animalKindContainerView" destination="fQd-kW-Yui" id="lpF-mX-kFv"/>
                         <outlet property="animalKindLabel" destination="q0U-US-JVY" id="knb-Yc-gEp"/>
@@ -283,6 +284,7 @@
                         <outlet property="chooseBreedContainerView" destination="qlP-Q7-e8L" id="8Xl-Vb-PdV"/>
                         <outlet property="chooseBreedLabel" destination="5Lt-fN-YVB" id="kdD-Uh-3xI"/>
                         <outlet property="chooseBreedValueLabel" destination="G1m-UD-58o" id="uI6-Pz-BeK"/>
+                        <outlet property="contentView" destination="hiN-QU-WDx" id="7kw-qr-oMY"/>
                         <outlet property="genderContainerView" destination="Q94-Lk-5MC" id="xp7-ks-TyM"/>
                         <outlet property="genderLabel" destination="pzR-Rk-Wj5" id="FJc-mx-5AF"/>
                         <outlet property="genderValueLabel" destination="Ywx-9q-5QG" id="rqr-cL-fqF"/>

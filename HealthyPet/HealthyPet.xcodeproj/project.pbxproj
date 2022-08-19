@@ -10,6 +10,7 @@
 		753EB7F92865BE1100C0F529 /* Theme+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753EB7F82865BE1100C0F529 /* Theme+Constants.swift */; };
 		753EB7FE2865C1E000C0F529 /* loadInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 753EB7FD2865C1E000C0F529 /* loadInfo.json */; };
 		7584D3DF28AF8DD40095F129 /* Veil in Frameworks */ = {isa = PBXBuildFile; productRef = 7584D3DE28AF8DD40095F129 /* Veil */; };
+		7584D3E128AF92EB0095F129 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7584D3E028AF92EB0095F129 /* UIViewController+Extensions.swift */; };
 		75BFA4BA28A190FA002122E8 /* AddNewPet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75BFA4B928A190FA002122E8 /* AddNewPet.storyboard */; };
 		75BFA4BC28A195CB002122E8 /* AddNewPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFA4BB28A195CB002122E8 /* AddNewPetViewController.swift */; };
 		75BFA4BE28A19A3B002122E8 /* AddNewPetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFA4BD28A19A3B002122E8 /* AddNewPetCoordinator.swift */; };
@@ -98,6 +99,7 @@
 		65714C1432747EE62431B0F0 /* Pods-HealthyPet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthyPet.release.xcconfig"; path = "Target Support Files/Pods-HealthyPet/Pods-HealthyPet.release.xcconfig"; sourceTree = "<group>"; };
 		753EB7F82865BE1100C0F529 /* Theme+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme+Constants.swift"; sourceTree = "<group>"; };
 		753EB7FD2865C1E000C0F529 /* loadInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loadInfo.json; sourceTree = "<group>"; };
+		7584D3E028AF92EB0095F129 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		75BFA4B928A190FA002122E8 /* AddNewPet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddNewPet.storyboard; sourceTree = "<group>"; };
 		75BFA4BB28A195CB002122E8 /* AddNewPetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPetViewController.swift; sourceTree = "<group>"; };
 		75BFA4BD28A19A3B002122E8 /* AddNewPetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPetCoordinator.swift; sourceTree = "<group>"; };
@@ -425,6 +427,7 @@
 				75CF78DC2863717B0011F933 /* URL+Extensions.swift */,
 				75CF78FD28648A740011F933 /* UIImage+Extensions.swift */,
 				75E8EF732875D41000FBB28D /* UIView+Extensions.swift */,
+				7584D3E028AF92EB0095F129 /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -814,6 +817,7 @@
 				75CF790928648DF60011F933 /* ApplicationCoordinator.swift in Sources */,
 				75E8EF722875D23400FBB28D /* SearchView.swift in Sources */,
 				75E8EF742875D41000FBB28D /* UIView+Extensions.swift in Sources */,
+				7584D3E128AF92EB0095F129 /* UIViewController+Extensions.swift in Sources */,
 				75CF78F4286479A20011F933 /* TabBarItem.swift in Sources */,
 				75CF790528648D5C0011F933 /* StoryboardController.swift in Sources */,
 				75E8EF8A2876D4F400FBB28D /* FilterButton.swift in Sources */,
