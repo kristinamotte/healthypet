@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		753EB7F92865BE1100C0F529 /* Theme+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753EB7F82865BE1100C0F529 /* Theme+Constants.swift */; };
 		753EB7FE2865C1E000C0F529 /* loadInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 753EB7FD2865C1E000C0F529 /* loadInfo.json */; };
+		7584D3DF28AF8DD40095F129 /* Veil in Frameworks */ = {isa = PBXBuildFile; productRef = 7584D3DE28AF8DD40095F129 /* Veil */; };
 		75BFA4BA28A190FA002122E8 /* AddNewPet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75BFA4B928A190FA002122E8 /* AddNewPet.storyboard */; };
 		75BFA4BC28A195CB002122E8 /* AddNewPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFA4BB28A195CB002122E8 /* AddNewPetViewController.swift */; };
 		75BFA4BE28A19A3B002122E8 /* AddNewPetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFA4BD28A19A3B002122E8 /* AddNewPetCoordinator.swift */; };
@@ -166,6 +167,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7584D3DF28AF8DD40095F129 /* Veil in Frameworks */,
 				D22852B770444BA135B2CF2B /* Pods_HealthyPet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -561,6 +563,9 @@
 			dependencies = (
 			);
 			name = HealthyPet;
+			packageProductDependencies = (
+				7584D3DE28AF8DD40095F129 /* Veil */,
+			);
 			productName = HealthyPet;
 			productReference = 75CF7889285BB8800011F933 /* HealthyPet.app */;
 			productType = "com.apple.product-type.application";
@@ -636,6 +641,9 @@
 				Base,
 			);
 			mainGroup = 75CF7880285BB87F0011F933;
+			packageReferences = (
+				7584D3DD28AF8DD40095F129 /* XCRemoteSwiftPackageReference "Veil" */,
+			);
 			productRefGroup = 75CF788A285BB8800011F933 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1186,6 +1194,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7584D3DD28AF8DD40095F129 /* XCRemoteSwiftPackageReference "Veil" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DanielCardonaRojas/Veil";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7584D3DE28AF8DD40095F129 /* Veil */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7584D3DD28AF8DD40095F129 /* XCRemoteSwiftPackageReference "Veil" */;
+			productName = Veil;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 75CF7881285BB87F0011F933 /* Project object */;
 }

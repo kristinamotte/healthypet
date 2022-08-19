@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import Veil
 
 class HealthyTextField: UIView {
     @IBOutlet weak var placeholderLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
+    
+    private var type: TextFieldType = .simple(title: "")
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,7 +25,9 @@ class HealthyTextField: UIView {
     }
     
     func configure(with type: TextFieldType) {
+        self.type = type
         placeholderLabel.text = type.title
+        textField.keyboardType = type.keyboardType
         
         if let placeholder = type.placeholder {
             textField.text = placeholder
@@ -48,6 +53,16 @@ class HealthyTextField: UIView {
         textField.leftViewMode = .always
         
         textField.delegate = self
+        textField.addTarget(self, action: #selector(didChangeText), for: .editingChanged)
+    }
+    
+    @objc private func didChangeText() {
+        guard let currentText = textField.text else { return }
+        
+        if case .date = type {
+            let dateMask = Veil(pattern: "####-##-##")
+            textField.text = dateMask.mask(input: currentText, exhaustive: false)
+        }
     }
 }
 
@@ -57,8 +72,7 @@ extension HealthyTextField: UITextFieldDelegate {
             textField.textColor = Theme.Colors.black
             textField.text = ""
         }
+        
         return true
     }
-    
-    
 }

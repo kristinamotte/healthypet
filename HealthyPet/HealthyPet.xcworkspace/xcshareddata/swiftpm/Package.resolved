@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "veil",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/DanielCardonaRojas/Veil",
+      "state" : {
+        "revision" : "967a2f103972ce5043e28f1920330ee934bcbadc",
+        "version" : "0.2.0"
+      }
+    }
+  ],
+  "version" : 2
+}
