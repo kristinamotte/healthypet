@@ -28,6 +28,11 @@ class AddNewPetViewController: UIViewController {
     @IBOutlet weak var ownerPhoneContainerView: UIView!
     @IBOutlet weak var addNewAnimalButton: UIButton!
     
+    let petNameTextField: HealthyTextField = HealthyTextField.instanceFromNib()
+    let birthdayTextField: HealthyTextField = HealthyTextField.instanceFromNib()
+    let ownerNameTextField: HealthyTextField = HealthyTextField.instanceFromNib()
+    let ownerNumberTextField: HealthyTextField = HealthyTextField.instanceFromNib()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -55,20 +60,17 @@ class AddNewPetViewController: UIViewController {
             $0.layer.borderWidth = Theme.Constants.defaultBorderWidth
             $0.layer.borderColor = Theme.Colors.mainGrey.cgColor
         }
-        let petNameTextField: HealthyTextField = HealthyTextField.instanceFromNib()
+        
         petNameTextField.configure(with: .simple(title: "Pet name"))
         petNameContainerView.add(subview: petNameTextField)
         
-        let birthdayTextField: HealthyTextField = HealthyTextField.instanceFromNib()
         birthdayTextField.configure(with: .date(title: "Birthday date", placeholder: "2021-01-15"))
         birthdayContainerView.add(subview: birthdayTextField)
         
-        let ownerNameTextField: HealthyTextField = HealthyTextField.instanceFromNib()
         ownerNameTextField.configure(with: .simple(title: "Owner name"))
         ownerNameContainerView.add(subview: ownerNameTextField)
         
-        let ownerNumberTextField: HealthyTextField = HealthyTextField.instanceFromNib()
-        ownerNumberTextField.configure(with: .simple(title: "Owner phone number"))
+        ownerNumberTextField.configure(with: .phoneNumber(title: "Owner phone number"))
         ownerPhoneContainerView.add(subview: ownerNumberTextField)
         
         photoContainerView.backgroundColor = Theme.Colors.lightBlue
@@ -99,6 +101,40 @@ class AddNewPetViewController: UIViewController {
             let options = UIView.AnimationOptions(rawValue: UInt((curveValue as AnyObject).integerValue << 16))
             UIView.animate(withDuration: duration, delay: 0, options: options) { [weak self] in
                 self?.contentView.layoutIfNeeded()
+            }
+        }
+    }
+    
+    // MARK: - Actions
+    @IBAction func didTapAddAnimal(_ sender: UIButton) {
+        let dateFormatter = DateFormatter.addPetDateFormatter
+        if !petNameTextField.isEmpty && !birthdayTextField.isEmpty && dateFormatter.date(from: birthdayTextField.text) != nil && !ownerNameTextField.isEmpty && !ownerNumberTextField.isEmpty {
+            // Add pet
+        } else {
+            if petNameTextField.isEmpty {
+                petNameTextField.set(error: "Please add your pet name")
+            } else {
+                petNameTextField.removeError()
+            }
+            
+            if birthdayTextField.isEmpty {
+                birthdayTextField.set(error: "Please add your pet birthday")
+            } else if dateFormatter.date(from: birthdayTextField.text) == nil {
+                birthdayTextField.set(error: "Please fullfill birthday correctly: YYYY-MM-DD")
+            } else {
+                birthdayTextField.removeError()
+            }
+            
+            if ownerNameTextField.isEmpty {
+                ownerNameTextField.set(error: "Please add owner name")
+            } else {
+                ownerNameTextField.removeError()
+            }
+            
+            if ownerNumberTextField.isEmpty {
+                ownerNumberTextField.set(error: "Please add owner number")
+            } else {
+                ownerNumberTextField.removeError()
             }
         }
     }

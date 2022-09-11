@@ -53,6 +53,7 @@
 		75CF790728648D800011F933 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF790628648D800011F933 /* Storyboard.swift */; };
 		75CF790928648DF60011F933 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF790828648DF60011F933 /* ApplicationCoordinator.swift */; };
 		75CF790B28648E3A0011F933 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF790A28648E3A0011F933 /* TabBarCoordinator.swift */; };
+		75E099F128CE0EF3009DAAE4 /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E099F028CE0EF3009DAAE4 /* DateFormatter+Extensions.swift */; };
 		75E8EF652875B37D00FBB28D /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75E8EF642875B37D00FBB28D /* SearchView.xib */; };
 		75E8EF6F2875C07700FBB28D /* Theme+Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E8EF6E2875C07700FBB28D /* Theme+Fonts.swift */; };
 		75E8EF722875D23400FBB28D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E8EF712875D23400FBB28D /* SearchView.swift */; };
@@ -146,6 +147,7 @@
 		75CF790628648D800011F933 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		75CF790828648DF60011F933 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		75CF790A28648E3A0011F933 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		75E099F028CE0EF3009DAAE4 /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
 		75E8EF642875B37D00FBB28D /* SearchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
 		75E8EF692875BA8600FBB28D /* OpenSans-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.otf"; sourceTree = "<group>"; };
 		75E8EF6A2875BA8600FBB28D /* OpenSans-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.otf"; sourceTree = "<group>"; };
@@ -428,6 +430,7 @@
 				75CF78FD28648A740011F933 /* UIImage+Extensions.swift */,
 				75E8EF732875D41000FBB28D /* UIView+Extensions.swift */,
 				7584D3E028AF92EB0095F129 /* UIViewController+Extensions.swift */,
+				75E099F028CE0EF3009DAAE4 /* DateFormatter+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -838,6 +841,7 @@
 				75CF78DB2863705F0011F933 /* TimeInterval+Extensions.swift in Sources */,
 				75CF78D228636C200011F933 /* API.swift in Sources */,
 				75CF790228648CB00011F933 /* HomeCoordinator.swift in Sources */,
+				75E099F128CE0EF3009DAAE4 /* DateFormatter+Extensions.swift in Sources */,
 				75CF78E52864662B0011F933 /* GetDogBreedsRequest.swift in Sources */,
 				75BFA4BC28A195CB002122E8 /* AddNewPetViewController.swift in Sources */,
 				75BFA4BE28A19A3B002122E8 /* AddNewPetCoordinator.swift in Sources */,

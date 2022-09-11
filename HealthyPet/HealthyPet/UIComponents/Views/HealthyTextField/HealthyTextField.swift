@@ -11,6 +11,7 @@ import Veil
 class HealthyTextField: UIView {
     @IBOutlet weak var placeholderLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var errorLabel: UILabel!
     
     private var type: TextFieldType = .simple(title: "")
     
@@ -21,7 +22,11 @@ class HealthyTextField: UIView {
     }
     
     var isEmpty: Bool {
-        textField.text == nil || textField.text?.isEmpty == true
+        textField.text == nil || textField.text?.isEmpty == true || textField.textColor == Theme.Colors.placeholderGrey
+    }
+    
+    var text: String {
+        textField.text ?? ""
     }
     
     func configure(with type: TextFieldType) {
@@ -37,9 +42,21 @@ class HealthyTextField: UIView {
         }
     }
     
+    func set(error: String) {
+        errorLabel.text = error
+        errorLabel.isHidden = false
+    }
+    
+    func removeError() {
+        errorLabel.isHidden = true
+    }
+    
     private func configureUI() {
         placeholderLabel.font = Theme.Fonts.openSansLight12
         placeholderLabel.textColor = Theme.Colors.black
+        errorLabel.isHidden = true
+        errorLabel.font = Theme.Fonts.openSansLight12
+        errorLabel.textColor = .red
         
         textField.layer.cornerRadius = Theme.Constants.cornerRadius
         textField.layer.borderWidth = Theme.Constants.defaultBorderWidth
@@ -74,5 +91,16 @@ extension HealthyTextField: UITextFieldDelegate {
         }
         
         return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if case .date = type {
+            let dateFormatter = DateFormatter.addPetDateFormatter
+            if !text.isEmpty && dateFormatter.date(from: text) != nil {
+                removeError()
+            }
+        } else if !text.isEmpty {
+            removeError()
+        }
     }
 }
