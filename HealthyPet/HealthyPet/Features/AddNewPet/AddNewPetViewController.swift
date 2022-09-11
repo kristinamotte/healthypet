@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class AddNewPetViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
@@ -14,24 +15,24 @@ class AddNewPetViewController: UIViewController {
     @IBOutlet weak var photoContainerView: UIView!
     @IBOutlet weak var addPhotoLabel: UILabel!
     @IBOutlet weak var petNameContainerView: UIView!
-    @IBOutlet weak var animalKindLabel: UILabel!
     @IBOutlet weak var animalKindContainerView: UIView!
-    @IBOutlet weak var animalKindValueLabel: UILabel!
     @IBOutlet weak var chooseBreedContainerView: UIView!
-    @IBOutlet weak var chooseBreedLabel: UILabel!
-    @IBOutlet weak var chooseBreedValueLabel: UILabel!
     @IBOutlet weak var birthdayContainerView: UIView!
-    @IBOutlet weak var genderLabel: UILabel!
     @IBOutlet weak var genderContainerView: UIView!
-    @IBOutlet weak var genderValueLabel: UILabel!
     @IBOutlet weak var ownerNameContainerView: UIView!
     @IBOutlet weak var ownerPhoneContainerView: UIView!
     @IBOutlet weak var addNewAnimalButton: UIButton!
-    
+
+    // MARK: - Text fields
     let petNameTextField: HealthyTextField = HealthyTextField.instanceFromNib()
     let birthdayTextField: HealthyTextField = HealthyTextField.instanceFromNib()
     let ownerNameTextField: HealthyTextField = HealthyTextField.instanceFromNib()
     let ownerNumberTextField: HealthyTextField = HealthyTextField.instanceFromNib()
+    
+    // MARK: - Dropdowns
+    let animalDropdown: HealthyDropdown = HealthyDropdown.instanceFromNib()
+    let chooseBreedDropdown: HealthyDropdown = HealthyDropdown.instanceFromNib()
+    let genderDropdown: HealthyDropdown = HealthyDropdown.instanceFromNib()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,19 +49,21 @@ class AddNewPetViewController: UIViewController {
         titleLabel.font = Theme.Fonts.openSansLight24
         titleLabel.textColor = Theme.Colors.black
         
-        let placeholders: [UILabel] = [animalKindLabel, chooseBreedLabel, genderLabel, animalKindValueLabel, genderValueLabel, addPhotoLabel, chooseBreedValueLabel]
-        placeholders.forEach {
-            $0.font = Theme.Fonts.openSansLight12
-            $0.textColor = Theme.Colors.black
-        }
+        addPhotoLabel.font = Theme.Fonts.openSansLight12
+        addPhotoLabel.textColor = Theme.Colors.black
         
-        let containers: [UIView] = [animalKindContainerView, chooseBreedContainerView, genderContainerView]
-        containers.forEach {
-            $0.layer.cornerRadius = Theme.Constants.cornerRadius
-            $0.layer.borderWidth = Theme.Constants.defaultBorderWidth
-            $0.layer.borderColor = Theme.Colors.mainGrey.cgColor
-        }
+        configureTextFields()
+        configureDropdowns()
         
+        photoContainerView.backgroundColor = Theme.Colors.lightBlue
+        photoContainerView.layer.cornerRadius = Theme.Constants.cornerRadius
+        addNewAnimalButton.layer.cornerRadius = addNewAnimalButton.frame.height / 2
+        addNewAnimalButton.backgroundColor = Theme.Colors.rose
+        addNewAnimalButton.titleLabel?.font = Theme.Fonts.openSansBold14
+        addNewAnimalButton.titleLabel?.textColor = Theme.Colors.white
+    }
+    
+    private func configureTextFields() {
         petNameTextField.configure(with: .simple(title: "Pet name"))
         petNameContainerView.add(subview: petNameTextField)
         
@@ -73,12 +76,23 @@ class AddNewPetViewController: UIViewController {
         ownerNumberTextField.configure(with: .phoneNumber(title: "Owner phone number"))
         ownerPhoneContainerView.add(subview: ownerNumberTextField)
         
-        photoContainerView.backgroundColor = Theme.Colors.lightBlue
-        photoContainerView.layer.cornerRadius = Theme.Constants.cornerRadius
-        addNewAnimalButton.layer.cornerRadius = addNewAnimalButton.frame.height / 2
-        addNewAnimalButton.backgroundColor = Theme.Colors.rose
-        addNewAnimalButton.titleLabel?.font = Theme.Fonts.openSansBold14
-        addNewAnimalButton.titleLabel?.textColor = Theme.Colors.white
+    }
+    
+    private func configureDropdowns() {
+        animalDropdown.configure(with: "What kind of animal it is?", preselected: "Dog")
+        animalKindContainerView.add(subview: animalDropdown)
+        let animalTap = UITapGestureRecognizer(target: self, action: #selector((didTapAnimalKindDropdown)))
+        animalKindContainerView.addGestureRecognizer(animalTap)
+        
+        chooseBreedDropdown.configure(with: "Choose breed", preselected: "Mixed")
+        chooseBreedContainerView.add(subview: chooseBreedDropdown)
+        let breedTap = UITapGestureRecognizer(target: self, action: #selector((didTapBreedDropdown)))
+        chooseBreedContainerView.addGestureRecognizer(breedTap)
+        
+        genderDropdown.configure(with: "Gender", preselected: "Female")
+        genderContainerView.add(subview: genderDropdown)
+        let genderTap = UITapGestureRecognizer(target: self, action: #selector((didTapGenderDropdown)))
+        genderContainerView.addGestureRecognizer(genderTap)
     }
     
     private func subscribeToNotifications(_ notification: NSNotification.Name, selector: Selector) {
@@ -105,11 +119,35 @@ class AddNewPetViewController: UIViewController {
         }
     }
     
+    @objc private func didTapAnimalKindDropdown() {
+        
+    }
+    
+    @objc private func didTapBreedDropdown() {
+        
+    }
+    
+    @objc private func didTapGenderDropdown() {
+        
+    }
+    
     // MARK: - Actions
     @IBAction func didTapAddAnimal(_ sender: UIButton) {
         let dateFormatter = DateFormatter.addPetDateFormatter
         if !petNameTextField.isEmpty && !birthdayTextField.isEmpty && dateFormatter.date(from: birthdayTextField.text) != nil && !ownerNameTextField.isEmpty && !ownerNumberTextField.isEmpty {
-            // Add pet
+            let animal = Animal(id: UUID().uuidString, imageUrl: nil, petName: petNameTextField.text, animalType: animalDropdown.text, breed: chooseBreedDropdown.text, birthday: birthdayTextField.text, gender: genderDropdown.text, ownerName: ownerNameTextField.text, ownerNumber: ownerNumberTextField.text)
+            let data = [
+                "id": animal.id,
+                "petName": animal.petName,
+                "imageUrl": animal.imageUrl,
+                "animalType": animal.animalType,
+                "breed": animal.breed,
+                "birthday": animal.birthday,
+                "gender": animal.gender,
+                "ownerName": animal.ownerName,
+                "ownerNumber": animal.ownerNumber
+                    ] as [String: String?]
+            // Send data to Firebase
         } else {
             if petNameTextField.isEmpty {
                 petNameTextField.set(error: "Please add your pet name")
