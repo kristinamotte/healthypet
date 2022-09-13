@@ -9,6 +9,7 @@ import UIKit
 import FirebaseDatabase
 
 class AddNewPetViewController: UIViewController {
+    // MARK: - Outlets
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var addNewPetScrollView: UIScrollView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -123,7 +124,10 @@ class AddNewPetViewController: UIViewController {
     }
     
     @objc private func didTapAnimalKindDropdown() {
-        
+        let options = ["Dog", "Cat"]
+        showAlert(for: options) { option in
+            self.animalDropdown.updatePreselected(option: option)
+        }
     }
     
     @objc private func didTapBreedDropdown() {
@@ -131,11 +135,31 @@ class AddNewPetViewController: UIViewController {
     }
     
     @objc private func didTapGenderDropdown() {
+        let options = ["Female", "Male"]
+        showAlert(for: options) { option in
+            self.genderDropdown.updatePreselected(option: option)
+        }
+    }
+    
+    private func showAlert(for options: [String], _ completion: @escaping ((String) -> Void)) {
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
+        for option in options {
+            let action = UIAlertAction(title: option, style: .default) { _ in
+                completion(option)
+            }
+            
+            actionSheet.addAction(action)
+        }
+
+        let action = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        actionSheet.addAction(action)
+
+        present(actionSheet, animated: true, completion: nil)
     }
     
     // MARK: - Actions
-    @IBAction func didTapAddAnimal(_ sender: UIButton) {
+    @IBAction private func didTapAddAnimal(_ sender: UIButton) {
         let dateFormatter = DateFormatter.addPetDateFormatter
         if !petNameTextField.isEmpty && !birthdayTextField.isEmpty && dateFormatter.date(from: birthdayTextField.text) != nil && !ownerNameTextField.isEmpty && !ownerNumberTextField.isEmpty {
             let animal = Animal(id: UUID().uuidString, imageUrl: nil, petName: petNameTextField.text, animalType: animalDropdown.text, breed: chooseBreedDropdown.text, birthday: birthdayTextField.text, gender: genderDropdown.text, ownerName: ownerNameTextField.text, ownerNumber: ownerNumberTextField.text)
@@ -172,6 +196,10 @@ class AddNewPetViewController: UIViewController {
 
 extension AddNewPetViewController: AddNewPetViewModelDelegate {
     func showAddAnimalError() {
+        
+    }
+    
+    func showAnimalAdded() {
         
     }
 }

@@ -9,6 +9,7 @@ import Foundation
 
 protocol AddNewPetViewModelDelegate: AnyObject {
     func showAddAnimalError()
+    func showAnimalAdded()
 }
 
 class AddNewPetViewModel {
@@ -27,6 +28,8 @@ class AddNewPetViewModel {
         firebaseHelper.addNew(animal: animal) { error in
             if error != nil {
                 self.delegate?.showAddAnimalError()
+            } else {
+                self.delegate?.showAnimalAdded()
             }
         }
     }
