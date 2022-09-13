@@ -54,6 +54,7 @@
 		75CF790928648DF60011F933 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF790828648DF60011F933 /* ApplicationCoordinator.swift */; };
 		75CF790B28648E3A0011F933 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF790A28648E3A0011F933 /* TabBarCoordinator.swift */; };
 		75DFCCDD28D0F8BC0079B157 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DFCCDC28D0F8BC0079B157 /* FirebaseHelper.swift */; };
+		75DFCCDF28D10BC50079B157 /* AddNewPetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DFCCDE28D10BC50079B157 /* AddNewPetViewModel.swift */; };
 		75E099F128CE0EF3009DAAE4 /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E099F028CE0EF3009DAAE4 /* DateFormatter+Extensions.swift */; };
 		75E099F528CE147B009DAAE4 /* HealthyDropdown.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75E099F428CE147B009DAAE4 /* HealthyDropdown.xib */; };
 		75E099F728CE14F4009DAAE4 /* HealthyDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E099F628CE14F4009DAAE4 /* HealthyDropdown.swift */; };
@@ -154,6 +155,7 @@
 		75CF790828648DF60011F933 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		75CF790A28648E3A0011F933 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		75DFCCDC28D0F8BC0079B157 /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
+		75DFCCDE28D10BC50079B157 /* AddNewPetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPetViewModel.swift; sourceTree = "<group>"; };
 		75E099F028CE0EF3009DAAE4 /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
 		75E099F428CE147B009DAAE4 /* HealthyDropdown.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HealthyDropdown.xib; sourceTree = "<group>"; };
 		75E099F628CE14F4009DAAE4 /* HealthyDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyDropdown.swift; sourceTree = "<group>"; };
@@ -372,6 +374,7 @@
 			children = (
 				75BFA4B928A190FA002122E8 /* AddNewPet.storyboard */,
 				75BFA4BB28A195CB002122E8 /* AddNewPetViewController.swift */,
+				75DFCCDE28D10BC50079B157 /* AddNewPetViewModel.swift */,
 				75BFA4BD28A19A3B002122E8 /* AddNewPetCoordinator.swift */,
 			);
 			path = AddNewPet;
@@ -865,6 +868,7 @@
 				75E8EF722875D23400FBB28D /* SearchView.swift in Sources */,
 				75E8EF742875D41000FBB28D /* UIView+Extensions.swift in Sources */,
 				7584D3E128AF92EB0095F129 /* UIViewController+Extensions.swift in Sources */,
+				75DFCCDF28D10BC50079B157 /* AddNewPetViewModel.swift in Sources */,
 				75CF78F4286479A20011F933 /* TabBarItem.swift in Sources */,
 				75CF790528648D5C0011F933 /* StoryboardController.swift in Sources */,
 				75DFCCDD28D0F8BC0079B157 /* FirebaseHelper.swift in Sources */,

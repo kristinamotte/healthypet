@@ -34,6 +34,9 @@ class AddNewPetViewController: UIViewController {
     let chooseBreedDropdown: HealthyDropdown = HealthyDropdown.instanceFromNib()
     let genderDropdown: HealthyDropdown = HealthyDropdown.instanceFromNib()
     
+    // MARK: - View Model
+    var viewModel: AddNewPetViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -136,7 +139,7 @@ class AddNewPetViewController: UIViewController {
         let dateFormatter = DateFormatter.addPetDateFormatter
         if !petNameTextField.isEmpty && !birthdayTextField.isEmpty && dateFormatter.date(from: birthdayTextField.text) != nil && !ownerNameTextField.isEmpty && !ownerNumberTextField.isEmpty {
             let animal = Animal(id: UUID().uuidString, imageUrl: nil, petName: petNameTextField.text, animalType: animalDropdown.text, breed: chooseBreedDropdown.text, birthday: birthdayTextField.text, gender: genderDropdown.text, ownerName: ownerNameTextField.text, ownerNumber: ownerNumberTextField.text)
-            // Send data to Firebase
+            viewModel?.addNew(animal)
         } else {
             if petNameTextField.isEmpty {
                 petNameTextField.set(error: "Please add your pet name")
@@ -164,6 +167,12 @@ class AddNewPetViewController: UIViewController {
                 ownerNumberTextField.removeError()
             }
         }
+    }
+}
+
+extension AddNewPetViewController: AddNewPetViewModelDelegate {
+    func showAddAnimalError() {
+        
     }
 }
 

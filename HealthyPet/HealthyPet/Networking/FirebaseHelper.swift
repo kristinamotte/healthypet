@@ -8,7 +8,11 @@
 import Foundation
 import FirebaseDatabase
 
-final class FirebaseHelper {
+protocol AddNewAnimal {
+    func addNew(animal: Animal, _ completion: @escaping (Error?) -> Void)
+}
+
+final class FirebaseHelper: AddNewAnimal {
     let ref = Database.database().reference()
     var dataBaseHandler: DatabaseHandle?
     

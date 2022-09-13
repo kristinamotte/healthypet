@@ -20,7 +20,14 @@ class AddNewPetCoordinator: NSObject, Coordinator {
     }
     
     func start() {
+        controller.viewModel = viewModel
         presenter.setNavigationBarHidden(true, animated: false)
         presenter.pushViewController(controller, animated: true)
+    }
+    
+    var viewModel: AddNewPetViewModel {
+        let viewModel = AddNewPetViewModel(delegate: controller)
+        
+        return viewModel
     }
 }
