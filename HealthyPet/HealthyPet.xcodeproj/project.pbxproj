@@ -53,6 +53,7 @@
 		75CF790728648D800011F933 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF790628648D800011F933 /* Storyboard.swift */; };
 		75CF790928648DF60011F933 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF790828648DF60011F933 /* ApplicationCoordinator.swift */; };
 		75CF790B28648E3A0011F933 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF790A28648E3A0011F933 /* TabBarCoordinator.swift */; };
+		75DFCCDD28D0F8BC0079B157 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DFCCDC28D0F8BC0079B157 /* FirebaseHelper.swift */; };
 		75E099F128CE0EF3009DAAE4 /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E099F028CE0EF3009DAAE4 /* DateFormatter+Extensions.swift */; };
 		75E099F528CE147B009DAAE4 /* HealthyDropdown.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75E099F428CE147B009DAAE4 /* HealthyDropdown.xib */; };
 		75E099F728CE14F4009DAAE4 /* HealthyDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E099F628CE14F4009DAAE4 /* HealthyDropdown.swift */; };
@@ -152,6 +153,7 @@
 		75CF790628648D800011F933 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		75CF790828648DF60011F933 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		75CF790A28648E3A0011F933 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		75DFCCDC28D0F8BC0079B157 /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
 		75E099F028CE0EF3009DAAE4 /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
 		75E099F428CE147B009DAAE4 /* HealthyDropdown.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HealthyDropdown.xib; sourceTree = "<group>"; };
 		75E099F628CE14F4009DAAE4 /* HealthyDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyDropdown.swift; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 				75CF78E3286466150011F933 /* Requests */,
 				75CF78D028636C160011F933 /* API */,
 				75CF78C7286367900011F933 /* Core */,
+				75DFCCDC28D0F8BC0079B157 /* FirebaseHelper.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -864,6 +867,7 @@
 				7584D3E128AF92EB0095F129 /* UIViewController+Extensions.swift in Sources */,
 				75CF78F4286479A20011F933 /* TabBarItem.swift in Sources */,
 				75CF790528648D5C0011F933 /* StoryboardController.swift in Sources */,
+				75DFCCDD28D0F8BC0079B157 /* FirebaseHelper.swift in Sources */,
 				75E8EF8A2876D4F400FBB28D /* FilterButton.swift in Sources */,
 				75E8EF6F2875C07700FBB28D /* Theme+Fonts.swift in Sources */,
 				753EB7F92865BE1100C0F529 /* Theme+Constants.swift in Sources */,

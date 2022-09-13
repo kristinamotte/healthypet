@@ -38,11 +38,11 @@ class AddNewPetViewController: UIViewController {
         super.viewDidLoad()
 
         configureUI()
+        
         subscribeToNotifications(UIResponder.keyboardWillShowNotification, selector: #selector(keyboardWillShowOrHide))
         subscribeToNotifications(UIResponder.keyboardWillHideNotification, selector: #selector(keyboardWillShowOrHide))
         self.hideKeyboardWhenTappedAround()
     }
-    
 
     // MARK: - Private methods
     private func configureUI() {
@@ -99,7 +99,7 @@ class AddNewPetViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: selector, name: notification, object: nil)
     }
     
-    @objc func keyboardWillShowOrHide(_ notification: NSNotification) {
+    @objc private func keyboardWillShowOrHide(_ notification: NSNotification) {
         if let scrollView = addNewPetScrollView,
            let userInfo = notification.userInfo,
            let endValue = userInfo[UIResponder.keyboardFrameEndUserInfoKey],
@@ -136,17 +136,6 @@ class AddNewPetViewController: UIViewController {
         let dateFormatter = DateFormatter.addPetDateFormatter
         if !petNameTextField.isEmpty && !birthdayTextField.isEmpty && dateFormatter.date(from: birthdayTextField.text) != nil && !ownerNameTextField.isEmpty && !ownerNumberTextField.isEmpty {
             let animal = Animal(id: UUID().uuidString, imageUrl: nil, petName: petNameTextField.text, animalType: animalDropdown.text, breed: chooseBreedDropdown.text, birthday: birthdayTextField.text, gender: genderDropdown.text, ownerName: ownerNameTextField.text, ownerNumber: ownerNumberTextField.text)
-            let data = [
-                "id": animal.id,
-                "petName": animal.petName,
-                "imageUrl": animal.imageUrl,
-                "animalType": animal.animalType,
-                "breed": animal.breed,
-                "birthday": animal.birthday,
-                "gender": animal.gender,
-                "ownerName": animal.ownerName,
-                "ownerNumber": animal.ownerNumber
-                    ] as [String: String?]
             // Send data to Firebase
         } else {
             if petNameTextField.isEmpty {
