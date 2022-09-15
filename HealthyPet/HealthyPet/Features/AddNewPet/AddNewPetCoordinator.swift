@@ -28,6 +28,10 @@ class AddNewPetCoordinator: NSObject, Coordinator {
     var viewModel: AddNewPetViewModel {
         let viewModel = AddNewPetViewModel(delegate: controller)
         
+        viewModel.onSelectBreeds = { [controller] breeds, selectedOption in
+            SelectOptionCoordinator(presenter: controller, breeds: breeds, selectedOption: selectedOption, delegate: controller).start()
+        }
+        
         return viewModel
     }
 }

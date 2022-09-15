@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="SelectBreedTableViewCell" customModule="HealthyPet" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="289"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5eO-HE-JDg">
+                    <rect key="frame" x="0.0" y="0.0" width="390" height="289"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Cfp-bO-b6V">
+                            <rect key="frame" x="32" y="16" width="326" height="248"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyY-jV-3Vc">
+                                    <rect key="frame" x="0.0" y="114" width="252" height="20.333333333333343"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="T4I-5Q-2Bt">
+                                    <rect key="frame" x="302" y="113" width="24" height="22.666666666666671"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="24" id="Afx-5l-fSq"/>
+                                        <constraint firstAttribute="height" constant="24" id="Mch-gG-owm"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahH-hf-03A">
+                            <rect key="frame" x="23" y="280" width="344" height="1"/>
+                            <color key="backgroundColor" red="0.90637189149999997" green="0.95649880170000001" blue="0.97647422549999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="KK7-kX-O5X"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Cfp-bO-b6V" secondAttribute="trailing" constant="32" id="2di-g5-5qt"/>
+                        <constraint firstItem="Cfp-bO-b6V" firstAttribute="top" secondItem="5eO-HE-JDg" secondAttribute="top" constant="16" id="CxC-IV-hU0"/>
+                        <constraint firstAttribute="bottom" secondItem="ahH-hf-03A" secondAttribute="bottom" constant="8" id="NRc-Pt-KaM"/>
+                        <constraint firstItem="ahH-hf-03A" firstAttribute="top" secondItem="Cfp-bO-b6V" secondAttribute="bottom" constant="16" id="NUn-OR-xSS"/>
+                        <constraint firstAttribute="trailing" secondItem="ahH-hf-03A" secondAttribute="trailing" constant="23" id="Q6i-pX-9r6"/>
+                        <constraint firstItem="Cfp-bO-b6V" firstAttribute="leading" secondItem="5eO-HE-JDg" secondAttribute="leading" constant="32" id="cjI-qu-ayO"/>
+                        <constraint firstItem="ahH-hf-03A" firstAttribute="leading" secondItem="5eO-HE-JDg" secondAttribute="leading" constant="23" id="p3Z-JG-Aqq"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="5eO-HE-JDg" secondAttribute="trailing" id="Gdn-TG-hv5"/>
+                <constraint firstItem="5eO-HE-JDg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="NQG-7I-plE"/>
+                <constraint firstAttribute="bottom" secondItem="5eO-HE-JDg" secondAttribute="bottom" id="Vwt-lB-D1h"/>
+                <constraint firstItem="5eO-HE-JDg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qc9-fq-ZEp"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="checkMarkImageView" destination="T4I-5Q-2Bt" id="0HP-F6-nT3"/>
+                <outlet property="separatorView" destination="ahH-hf-03A" id="Izg-YV-r1u"/>
+                <outlet property="titleLabel" destination="pyY-jV-3Vc" id="BTi-zD-0Z1"/>
+            </connections>
+            <point key="canvasLocation" x="90.769230769230759" y="195.85308056872037"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

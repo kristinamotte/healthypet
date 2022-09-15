@@ -53,6 +53,13 @@
 		75CF790728648D800011F933 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF790628648D800011F933 /* Storyboard.swift */; };
 		75CF790928648DF60011F933 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF790828648DF60011F933 /* ApplicationCoordinator.swift */; };
 		75CF790B28648E3A0011F933 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF790A28648E3A0011F933 /* TabBarCoordinator.swift */; };
+		75D4FBD028D3B57300C6BF5E /* AnimalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D4FBCF28D3B57300C6BF5E /* AnimalType.swift */; };
+		75D4FBD228D3B73900C6BF5E /* BreedsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D4FBD128D3B73900C6BF5E /* BreedsService.swift */; };
+		75D4FBD628D3BF8700C6BF5E /* SelectOptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D4FBD528D3BF8700C6BF5E /* SelectOptionViewModel.swift */; };
+		75D4FBD828D3BFAB00C6BF5E /* SelectOptionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D4FBD728D3BFAB00C6BF5E /* SelectOptionCoordinator.swift */; };
+		75D4FBDB28D3C0EB00C6BF5E /* SelectBreedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75D4FBDA28D3C0EB00C6BF5E /* SelectBreedTableViewCell.xib */; };
+		75D4FBDE28D3C18600C6BF5E /* SelectBreedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D4FBDD28D3C18600C6BF5E /* SelectBreedTableViewCell.swift */; };
+		75D4FBE028D3C33C00C6BF5E /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D4FBDF28D3C33C00C6BF5E /* Reusable.swift */; };
 		75DFCCDD28D0F8BC0079B157 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DFCCDC28D0F8BC0079B157 /* FirebaseHelper.swift */; };
 		75DFCCDF28D10BC50079B157 /* AddNewPetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DFCCDE28D10BC50079B157 /* AddNewPetViewModel.swift */; };
 		75E099F128CE0EF3009DAAE4 /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E099F028CE0EF3009DAAE4 /* DateFormatter+Extensions.swift */; };
@@ -154,6 +161,13 @@
 		75CF790628648D800011F933 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		75CF790828648DF60011F933 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		75CF790A28648E3A0011F933 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		75D4FBCF28D3B57300C6BF5E /* AnimalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalType.swift; sourceTree = "<group>"; };
+		75D4FBD128D3B73900C6BF5E /* BreedsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsService.swift; sourceTree = "<group>"; };
+		75D4FBD528D3BF8700C6BF5E /* SelectOptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectOptionViewModel.swift; sourceTree = "<group>"; };
+		75D4FBD728D3BFAB00C6BF5E /* SelectOptionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectOptionCoordinator.swift; sourceTree = "<group>"; };
+		75D4FBDA28D3C0EB00C6BF5E /* SelectBreedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectBreedTableViewCell.xib; sourceTree = "<group>"; };
+		75D4FBDD28D3C18600C6BF5E /* SelectBreedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBreedTableViewCell.swift; sourceTree = "<group>"; };
+		75D4FBDF28D3C33C00C6BF5E /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		75DFCCDC28D0F8BC0079B157 /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
 		75DFCCDE28D10BC50079B157 /* AddNewPetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPetViewModel.swift; sourceTree = "<group>"; };
 		75E099F028CE0EF3009DAAE4 /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
@@ -375,6 +389,7 @@
 				75BFA4B928A190FA002122E8 /* AddNewPet.storyboard */,
 				75BFA4BB28A195CB002122E8 /* AddNewPetViewController.swift */,
 				75DFCCDE28D10BC50079B157 /* AddNewPetViewModel.swift */,
+				75D4FBCF28D3B57300C6BF5E /* AnimalType.swift */,
 				75BFA4BD28A19A3B002122E8 /* AddNewPetCoordinator.swift */,
 			);
 			path = AddNewPet;
@@ -394,6 +409,7 @@
 				75CF78D028636C160011F933 /* API */,
 				75CF78C7286367900011F933 /* Core */,
 				75DFCCDC28D0F8BC0079B157 /* FirebaseHelper.swift */,
+				75D4FBD128D3B73900C6BF5E /* BreedsService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -510,6 +526,23 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
+		75D4FBD928D3C0D400C6BF5E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				75D4FBDC28D3C0F000C6BF5E /* SelectBreed */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		75D4FBDC28D3C0F000C6BF5E /* SelectBreed */ = {
+			isa = PBXGroup;
+			children = (
+				75D4FBDA28D3C0EB00C6BF5E /* SelectBreedTableViewCell.xib */,
+				75D4FBDD28D3C18600C6BF5E /* SelectBreedTableViewCell.swift */,
+			);
+			path = SelectBreed;
+			sourceTree = "<group>";
+		};
 		75E099F328CE1462009DAAE4 /* HealthyDropdown */ = {
 			isa = PBXGroup;
 			children = (
@@ -523,6 +556,8 @@
 			isa = PBXGroup;
 			children = (
 				75E099F828CE25C0009DAAE4 /* SelectOptionViewController.swift */,
+				75D4FBD528D3BF8700C6BF5E /* SelectOptionViewModel.swift */,
+				75D4FBD728D3BFAB00C6BF5E /* SelectOptionCoordinator.swift */,
 			);
 			path = SelectOption;
 			sourceTree = "<group>";
@@ -538,7 +573,9 @@
 		75E8EF622875B35400FBB28D /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				75D4FBD928D3C0D400C6BF5E /* Cells */,
 				75E8EF632875B35F00FBB28D /* Views */,
+				75D4FBDF28D3C33C00C6BF5E /* Reusable.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -711,6 +748,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75D4FBDB28D3C0EB00C6BF5E /* SelectBreedTableViewCell.xib in Resources */,
 				75E09A0028CE2AAB009DAAE4 /* GoogleService-Info.plist in Resources */,
 				75E099F528CE147B009DAAE4 /* HealthyDropdown.xib in Resources */,
 				75CF7899285BB8810011F933 /* LaunchScreen.storyboard in Resources */,
@@ -869,10 +907,12 @@
 				75E8EF742875D41000FBB28D /* UIView+Extensions.swift in Sources */,
 				7584D3E128AF92EB0095F129 /* UIViewController+Extensions.swift in Sources */,
 				75DFCCDF28D10BC50079B157 /* AddNewPetViewModel.swift in Sources */,
+				75D4FBE028D3C33C00C6BF5E /* Reusable.swift in Sources */,
 				75CF78F4286479A20011F933 /* TabBarItem.swift in Sources */,
 				75CF790528648D5C0011F933 /* StoryboardController.swift in Sources */,
 				75DFCCDD28D0F8BC0079B157 /* FirebaseHelper.swift in Sources */,
 				75E8EF8A2876D4F400FBB28D /* FilterButton.swift in Sources */,
+				75D4FBD828D3BFAB00C6BF5E /* SelectOptionCoordinator.swift in Sources */,
 				75E8EF6F2875C07700FBB28D /* Theme+Fonts.swift in Sources */,
 				753EB7F92865BE1100C0F529 /* Theme+Constants.swift in Sources */,
 				75CF78E9286471960011F933 /* APIError.swift in Sources */,
@@ -881,6 +921,7 @@
 				75CF790B28648E3A0011F933 /* TabBarCoordinator.swift in Sources */,
 				75CF78E7286466ED0011F933 /* Headers.swift in Sources */,
 				75E099F728CE14F4009DAAE4 /* HealthyDropdown.swift in Sources */,
+				75D4FBD628D3BF8700C6BF5E /* SelectOptionViewModel.swift in Sources */,
 				75CF790028648B2F0011F933 /* TabBarViewController.swift in Sources */,
 				75CF78D628636DC50011F933 /* DataCache.swift in Sources */,
 				75CF78C9286368090011F933 /* Request.swift in Sources */,
@@ -891,12 +932,15 @@
 				75CF78CF28636BF00011F933 /* NetworkingFactory.swift in Sources */,
 				75CF78F02864796C0011F933 /* Coordinator.swift in Sources */,
 				75CF78DB2863705F0011F933 /* TimeInterval+Extensions.swift in Sources */,
+				75D4FBD228D3B73900C6BF5E /* BreedsService.swift in Sources */,
+				75D4FBD028D3B57300C6BF5E /* AnimalType.swift in Sources */,
 				75CF78D228636C200011F933 /* API.swift in Sources */,
 				75CF790228648CB00011F933 /* HomeCoordinator.swift in Sources */,
 				75E099F128CE0EF3009DAAE4 /* DateFormatter+Extensions.swift in Sources */,
 				75CF78E52864662B0011F933 /* GetDogBreedsRequest.swift in Sources */,
 				75BFA4BC28A195CB002122E8 /* AddNewPetViewController.swift in Sources */,
 				75BFA4BE28A19A3B002122E8 /* AddNewPetCoordinator.swift in Sources */,
+				75D4FBDE28D3C18600C6BF5E /* SelectBreedTableViewCell.swift in Sources */,
 				75BFA4C528A43B7C002122E8 /* TextFieldType.swift in Sources */,
 				75BFA4C328A43AC8002122E8 /* HealthyTextField.swift in Sources */,
 				75CF78D828636FEA0011F933 /* DataSource.swift in Sources */,

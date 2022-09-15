@@ -124,14 +124,19 @@ class AddNewPetViewController: UIViewController {
     }
     
     @objc private func didTapAnimalKindDropdown() {
-        let options = ["Dog", "Cat"]
+        let options = [AnimalType.dog.rawValue, AnimalType.cat.rawValue]
         showAlert(for: options) { option in
             self.animalDropdown.updatePreselected(option: option)
         }
     }
     
     @objc private func didTapBreedDropdown() {
+        guard let viewModel = viewModel else { return }
         
+        let selectedAnimalType = AnimalType(rawValue: animalDropdown.text) ?? .dog
+        let breeds = viewModel.getBreeds(for: selectedAnimalType)
+        
+        viewModel.onSelectBreeds?(breeds, chooseBreedDropdown.text)
     }
     
     @objc private func didTapGenderDropdown() {
@@ -201,6 +206,12 @@ extension AddNewPetViewController: AddNewPetViewModelDelegate {
     
     func showAnimalAdded() {
         
+    }
+}
+
+extension AddNewPetViewController: SelectOptionViewControllerDelegate {
+    func didChoose(option: String) {
+        chooseBreedDropdown.updatePreselected(option: option)
     }
 }
 

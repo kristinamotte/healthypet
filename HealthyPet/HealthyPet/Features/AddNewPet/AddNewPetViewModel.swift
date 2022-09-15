@@ -13,15 +13,31 @@ protocol AddNewPetViewModelDelegate: AnyObject {
 }
 
 class AddNewPetViewModel {
+    var onSelectBreeds: (([String], String) -> Void)?
+    
     // MARK: - Delegate
     weak var delegate: AddNewPetViewModelDelegate?
     
     // MARK: - Networking
     private let firebaseHelper: AddNewAnimal
+    private let breedsService: BreedsService
     
-    init(firebaseHelper: AddNewAnimal = FirebaseHelper(), delegate: AddNewPetViewModelDelegate?) {
+    init(firebaseHelper: AddNewAnimal = FirebaseHelper(), delegate: AddNewPetViewModelDelegate?, breedsService: BreedsService = BreedsServiceImpl()) {
         self.firebaseHelper = firebaseHelper
         self.delegate = delegate
+        self.breedsService = breedsService
+    }
+    
+    func getBreeds(for category: AnimalType) -> [String] {
+        switch category {
+        case .dog:
+            var breeds = breedsService.dogBreeds.map { $0.name }
+            breeds.append("Mixed")
+            
+            return breeds
+        case .cat:
+            return []
+        }
     }
     
     func addNew(_ animal: Animal) {

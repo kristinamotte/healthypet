@@ -17,6 +17,10 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         filterView.add(subview: searchView)
+        
+        API.shared.getDogBreeds { result in
+            
+        }
     }
 }
 
