@@ -254,6 +254,7 @@
                         <outlet property="backImageView" destination="r9J-gW-bJa" id="qoE-th-Aj9"/>
                         <outlet property="breedSeparatorView" destination="28u-6x-Ox9" id="C1E-OJ-pmR"/>
                         <outlet property="containerView" destination="pQq-by-iNF" id="JKB-qt-q4d"/>
+                        <outlet property="contentStackView" destination="32K-kk-E7C" id="y1M-O4-EaZ"/>
                         <outlet property="editImageView" destination="v1t-kd-mm2" id="Q4U-N4-qxl"/>
                         <outlet property="generatePdfButton" destination="YWl-IE-d9I" id="tdY-4s-szB"/>
                         <outlet property="ownerContainerView" destination="M8W-T6-aOS" id="WRA-4a-8VF"/>

@@ -27,6 +27,7 @@ class AnimalDetailsViewController: UIViewController {
     @IBOutlet weak var ownerNumberLabel: UILabel!
     @IBOutlet weak var ownerNameLabel: UILabel!
     @IBOutlet weak var generatePdfButton: UIButton!
+    @IBOutlet weak var contentStackView: UIStackView!
     
     // MARK: - View Model
     var viewModel: AnimalDetailsViewModel?
@@ -106,8 +107,8 @@ class AnimalDetailsViewController: UIViewController {
     
     func generatePDF() {
         do {
-            let dst = NSHomeDirectory() + "/\(viewModel?.animal.id ?? "1").pdf"
-            try PDFGenerator.generate(containerView, to: dst)
+            let dst = NSTemporaryDirectory() + "/\(viewModel?.animal.id ?? "1").pdf"
+            try PDFGenerator.generate(view, to: dst)
             
             let url = URL(fileURLWithPath: dst)
             viewModel?.onGeneratedPdf?(url)
