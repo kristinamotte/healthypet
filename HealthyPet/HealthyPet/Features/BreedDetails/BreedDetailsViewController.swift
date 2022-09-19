@@ -35,6 +35,7 @@ class BreedDetailsViewController: UIViewController {
         tableView.dataSource = self
         tableView.separatorStyle = .none
         BreedInfoTableViewCell.register(in: tableView)
+        BreedAdditionalInfoTableViewCell.register(in: tableView)
     }
     
     @objc private func didTapBackButton() {
@@ -63,15 +64,40 @@ extension BreedDetailsViewController: UITableViewDelegate, UITableViewDataSource
                 return cell
             }
         case .weight(let weight):
-            return UITableViewCell()
+            if let cell = tableView.dequeueReusableCell(withIdentifier: BreedAdditionalInfoTableViewCell.identifier) as? BreedAdditionalInfoTableViewCell {
+                cell.selectionStyle = .none
+                cell.configure(with: "Weight, kg.", description: weight)
+                
+                return cell
+            }
         case .temperament(let temperament):
-            return UITableViewCell()
+            if let cell = tableView.dequeueReusableCell(withIdentifier: BreedAdditionalInfoTableViewCell.identifier) as? BreedAdditionalInfoTableViewCell {
+                cell.selectionStyle = .none
+                cell.configure(with: "Temperament", description: temperament)
+                
+                return cell
+            }
         case .description(let description):
-            return UITableViewCell()
+            if let cell = tableView.dequeueReusableCell(withIdentifier: BreedAdditionalInfoTableViewCell.identifier) as? BreedAdditionalInfoTableViewCell {
+                cell.selectionStyle = .none
+                cell.configure(with: "Description", description: description)
+                
+                return cell
+            }
         case .lifeSpan(let lifeSpan):
-            return UITableViewCell()
+            if let cell = tableView.dequeueReusableCell(withIdentifier: BreedAdditionalInfoTableViewCell.identifier) as? BreedAdditionalInfoTableViewCell {
+                cell.selectionStyle = .none
+                cell.configure(with: "Life span", description: lifeSpan)
+                
+                return cell
+            }
         case .bredFor(let bredFor):
-            return UITableViewCell()
+            if let cell = tableView.dequeueReusableCell(withIdentifier: BreedAdditionalInfoTableViewCell.identifier) as? BreedAdditionalInfoTableViewCell {
+                cell.selectionStyle = .none
+                cell.configure(with: "Bred for", description: bredFor)
+                
+                return cell
+            }
         }
         
         

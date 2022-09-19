@@ -100,6 +100,8 @@
 		75DEA0A728D8B9B100E2CD45 /* BreedDetailsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DEA0A628D8B9B100E2CD45 /* BreedDetailsItem.swift */; };
 		75DEA0AA28D8BD6600E2CD45 /* BreedInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DEA0A928D8BD6600E2CD45 /* BreedInfoTableViewCell.swift */; };
 		75DEA0AC28D8BD8200E2CD45 /* BreedInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75DEA0AB28D8BD8200E2CD45 /* BreedInfoTableViewCell.xib */; };
+		75DEA0AF28D8CBFA00E2CD45 /* BreedAdditionalInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DEA0AE28D8CBFA00E2CD45 /* BreedAdditionalInfoTableViewCell.swift */; };
+		75DEA0B128D8CC3300E2CD45 /* BreedAdditionalInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75DEA0B028D8CC3300E2CD45 /* BreedAdditionalInfoTableViewCell.xib */; };
 		75DFCCDD28D0F8BC0079B157 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DFCCDC28D0F8BC0079B157 /* FirebaseHelper.swift */; };
 		75DFCCDF28D10BC50079B157 /* AddNewPetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DFCCDE28D10BC50079B157 /* AddNewPetViewModel.swift */; };
 		75E099F128CE0EF3009DAAE4 /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E099F028CE0EF3009DAAE4 /* DateFormatter+Extensions.swift */; };
@@ -243,6 +245,8 @@
 		75DEA0A628D8B9B100E2CD45 /* BreedDetailsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailsItem.swift; sourceTree = "<group>"; };
 		75DEA0A928D8BD6600E2CD45 /* BreedInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedInfoTableViewCell.swift; sourceTree = "<group>"; };
 		75DEA0AB28D8BD8200E2CD45 /* BreedInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedInfoTableViewCell.xib; sourceTree = "<group>"; };
+		75DEA0AE28D8CBFA00E2CD45 /* BreedAdditionalInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedAdditionalInfoTableViewCell.swift; sourceTree = "<group>"; };
+		75DEA0B028D8CC3300E2CD45 /* BreedAdditionalInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedAdditionalInfoTableViewCell.xib; sourceTree = "<group>"; };
 		75DFCCDC28D0F8BC0079B157 /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
 		75DFCCDE28D10BC50079B157 /* AddNewPetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPetViewModel.swift; sourceTree = "<group>"; };
 		75E099F028CE0EF3009DAAE4 /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
@@ -693,6 +697,7 @@
 		75D4FBD928D3C0D400C6BF5E /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				75DEA0AD28D8CB7D00E2CD45 /* BreedAdditionalInfoTableViewCell */,
 				75DEA0A828D8BD4B00E2CD45 /* BreedInfoTableViewCell */,
 				75AA02E728E0F75F00E14AEF /* BreedTableViewCell */,
 				75D4059028E0771B00EDA918 /* AnimalTableViewCell */,
@@ -728,6 +733,15 @@
 				75DEA0AB28D8BD8200E2CD45 /* BreedInfoTableViewCell.xib */,
 			);
 			path = BreedInfoTableViewCell;
+			sourceTree = "<group>";
+		};
+		75DEA0AD28D8CB7D00E2CD45 /* BreedAdditionalInfoTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				75DEA0AE28D8CBFA00E2CD45 /* BreedAdditionalInfoTableViewCell.swift */,
+				75DEA0B028D8CC3300E2CD45 /* BreedAdditionalInfoTableViewCell.xib */,
+			);
+			path = BreedAdditionalInfoTableViewCell;
 			sourceTree = "<group>";
 		};
 		75E099F328CE1462009DAAE4 /* HealthyDropdown */ = {
@@ -957,6 +971,7 @@
 				75E8EF772875DCBD00FBB28D /* OpenSans-Light.otf in Resources */,
 				75AA02E028E0F75F00E14AEF /* BreedsList.storyboard in Resources */,
 				75E8EF782875DCC000FBB28D /* OpenSans-Bold.otf in Resources */,
+				75DEA0B128D8CC3300E2CD45 /* BreedAdditionalInfoTableViewCell.xib in Resources */,
 				75DEA0AC28D8BD8200E2CD45 /* BreedInfoTableViewCell.xib in Resources */,
 				75D4059228E0773200EDA918 /* AnimalTableViewCell.xib in Resources */,
 			);
@@ -1173,6 +1188,7 @@
 				75CF788F285BB8800011F933 /* SceneDelegate.swift in Sources */,
 				75A2EAAB28E1AF5800901A96 /* AnimalDetailsViewController.swift in Sources */,
 				75CF790728648D800011F933 /* Storyboard.swift in Sources */,
+				75DEA0AF28D8CBFA00E2CD45 /* BreedAdditionalInfoTableViewCell.swift in Sources */,
 				75CF78E2286464520011F933 /* DogBreed.swift in Sources */,
 				75D4058B28E06D9800EDA918 /* UIButton+Extensions.swift in Sources */,
 				75DEA09F28D8B28F00E2CD45 /* BreedDetailsViewController.swift in Sources */,

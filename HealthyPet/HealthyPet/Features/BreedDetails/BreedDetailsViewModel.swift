@@ -23,11 +23,11 @@ class BreedDetailsViewModel {
         case .cat:
             var catsDefaultData: [BreedDetailsItem] = [.generalInfo(url: breed.url, breed.name, breed.origin), .lifeSpan(breed.lifeSpan)]
             
-            if let description = breed.description {
+            if let description = breed.description, !description.isEmpty {
                 catsDefaultData.append(.description(description))
             }
             
-            if let temperament = breed.temperament {
+            if let temperament = breed.temperament, !temperament.isEmpty {
                 catsDefaultData.append(.temperament(temperament))
             }
             
@@ -37,11 +37,11 @@ class BreedDetailsViewModel {
         case .dog:
             var dogsDefaultData: [BreedDetailsItem] = [.generalInfo(url: breed.url, breed.name, breed.origin), .lifeSpan(breed.lifeSpan)]
             
-            if let description = breed.description {
+            if let description = breed.description, !description.isEmpty {
                 dogsDefaultData.append(.bredFor(description))
             }
             
-            if let temperament = breed.temperament {
+            if let temperament = breed.temperament, !temperament.isEmpty {
                 dogsDefaultData.append(.temperament(temperament))
             }
             
