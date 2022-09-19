@@ -24,6 +24,10 @@
                                     <constraint firstAttribute="height" constant="150" id="eNf-Z6-uuA"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YdW-Or-mSN">
+                                <rect key="frame" x="0.0" y="197" width="390" height="613"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="odB-RG-8vW">
                                 <rect key="frame" x="0.0" y="197" width="390" height="613"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -32,16 +36,21 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="YdW-Or-mSN" secondAttribute="trailing" id="CEh-Q0-K4u"/>
                             <constraint firstItem="odB-RG-8vW" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="IHg-Kz-OZ4"/>
                             <constraint firstItem="szV-eF-FNt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="KNj-Yy-wyh"/>
                             <constraint firstItem="odB-RG-8vW" firstAttribute="top" secondItem="szV-eF-FNt" secondAttribute="bottom" id="QmS-xT-pt9"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="YdW-Or-mSN" secondAttribute="bottom" id="TSu-uK-19d"/>
                             <constraint firstItem="odB-RG-8vW" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="a2P-RH-qmE"/>
+                            <constraint firstItem="YdW-Or-mSN" firstAttribute="top" secondItem="szV-eF-FNt" secondAttribute="bottom" id="g0R-C5-6LL"/>
+                            <constraint firstItem="YdW-Or-mSN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="igX-57-QMU"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="odB-RG-8vW" secondAttribute="bottom" id="irk-ZO-PgT"/>
                             <constraint firstItem="szV-eF-FNt" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="tK3-gU-vxk"/>
                             <constraint firstItem="szV-eF-FNt" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="zOh-zy-V04"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emptyStateContainerView" destination="YdW-Or-mSN" id="o0W-uK-ddB"/>
                         <outlet property="filterContainerView" destination="szV-eF-FNt" id="yNa-si-uiA"/>
                         <outlet property="tableView" destination="odB-RG-8vW" id="mhl-cy-KRY"/>
                     </connections>

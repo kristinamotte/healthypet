@@ -10,6 +10,7 @@ import UIKit
 class BreedsListViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var filterContainerView: UIView!
+    @IBOutlet weak var emptyStateContainerView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - SearchView
@@ -21,9 +22,12 @@ class BreedsListViewController: UIViewController {
         }
     }
     
+    // MARK: - View Model
     var viewModel: BreedsListViewModel?
     
+    // MARK: - Data source
     private var breeds: [GeneralBreed] = []
+    private var filteredBreeds: [GeneralBreed] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,12 +62,32 @@ class BreedsListViewController: UIViewController {
         
         tableView.reloadData()
         
-//        if !searchView.isSearchBarEmpty {
-//            filterContentForSearchText(searchView.searchText)
-//        } else {
-//            setEmptyState()
-//            petsTableView.reloadData()
-//        }
+        if !searchView.isSearchBarEmpty {
+            filterContentForSearchText(searchView.searchText)
+        } else {
+            setEmptyState()
+            tableView.reloadData()
+        }
+    }
+    
+    private func filterContentForSearchText(_ searchText: String) {
+        filteredBreeds = breeds.filter { $0.name.lowercased().contains(searchText.lowercased()) }
+        
+        setEmptyState()
+        tableView.reloadData()
+    }
+    
+    private func setEmptyState() {
+        if (!breeds.isEmpty && !searchView.isSearchBarEmpty && filteredBreeds.isEmpty) || breeds.isEmpty {
+            let emptyVc = HomeEmptyViewController.fromStoryboard
+            emptyVc.type = .empty
+            emptyStateContainerView.isHidden = false
+            tableView.isHidden = true
+            addChildViewController(emptyVc, containerView: emptyStateContainerView)
+        } else {
+            emptyStateContainerView.isHidden = true
+            tableView.isHidden = false
+        }
     }
 }
 
@@ -73,15 +97,15 @@ extension BreedsListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        if !searchView.isSearchBarEmpty {
-//            return filteredAnimals.count
-//        }
-//
+        if !searchView.isSearchBarEmpty {
+            return filteredBreeds.count
+        }
+
         return breeds.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let item = searchView.isSearchBarEmpty ? breeds[indexPath.row] : breeds[indexPath.row]
+        let item = searchView.isSearchBarEmpty ? breeds[indexPath.row] : filteredBreeds[indexPath.row]
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: BreedTableViewCell.identifier) as? BreedTableViewCell {
             cell.selectionStyle = .none
@@ -101,7 +125,7 @@ extension BreedsListViewController: SearchViewDelegate {
     }
     
     func didSearch(by text: String) {
-        
+        filterContentForSearchText(text)
     }
 }
 

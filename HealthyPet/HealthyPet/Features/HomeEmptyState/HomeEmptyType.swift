@@ -34,7 +34,7 @@ enum HomeEmptyType {
         case .loading:
             return "Please wait little bit until we gather all the data"
         case .empty:
-            return "No reults have found"
+            return "No results have found"
         }
     }
 }
