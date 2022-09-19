@@ -98,6 +98,8 @@
 		75DEA0A128D8B78600E2CD45 /* BreedDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DEA0A028D8B78600E2CD45 /* BreedDetailsViewModel.swift */; };
 		75DEA0A328D8B8D100E2CD45 /* BreedDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DEA0A228D8B8D100E2CD45 /* BreedDetailsCoordinator.swift */; };
 		75DEA0A728D8B9B100E2CD45 /* BreedDetailsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DEA0A628D8B9B100E2CD45 /* BreedDetailsItem.swift */; };
+		75DEA0AA28D8BD6600E2CD45 /* BreedInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DEA0A928D8BD6600E2CD45 /* BreedInfoTableViewCell.swift */; };
+		75DEA0AC28D8BD8200E2CD45 /* BreedInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75DEA0AB28D8BD8200E2CD45 /* BreedInfoTableViewCell.xib */; };
 		75DFCCDD28D0F8BC0079B157 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DFCCDC28D0F8BC0079B157 /* FirebaseHelper.swift */; };
 		75DFCCDF28D10BC50079B157 /* AddNewPetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DFCCDE28D10BC50079B157 /* AddNewPetViewModel.swift */; };
 		75E099F128CE0EF3009DAAE4 /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E099F028CE0EF3009DAAE4 /* DateFormatter+Extensions.swift */; };
@@ -239,6 +241,8 @@
 		75DEA0A028D8B78600E2CD45 /* BreedDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailsViewModel.swift; sourceTree = "<group>"; };
 		75DEA0A228D8B8D100E2CD45 /* BreedDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailsCoordinator.swift; sourceTree = "<group>"; };
 		75DEA0A628D8B9B100E2CD45 /* BreedDetailsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailsItem.swift; sourceTree = "<group>"; };
+		75DEA0A928D8BD6600E2CD45 /* BreedInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedInfoTableViewCell.swift; sourceTree = "<group>"; };
+		75DEA0AB28D8BD8200E2CD45 /* BreedInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedInfoTableViewCell.xib; sourceTree = "<group>"; };
 		75DFCCDC28D0F8BC0079B157 /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
 		75DFCCDE28D10BC50079B157 /* AddNewPetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPetViewModel.swift; sourceTree = "<group>"; };
 		75E099F028CE0EF3009DAAE4 /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
@@ -689,6 +693,7 @@
 		75D4FBD928D3C0D400C6BF5E /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				75DEA0A828D8BD4B00E2CD45 /* BreedInfoTableViewCell */,
 				75AA02E728E0F75F00E14AEF /* BreedTableViewCell */,
 				75D4059028E0771B00EDA918 /* AnimalTableViewCell */,
 				75D4FBDC28D3C0F000C6BF5E /* SelectBreed */,
@@ -714,6 +719,15 @@
 				75DEA0A228D8B8D100E2CD45 /* BreedDetailsCoordinator.swift */,
 			);
 			path = BreedDetails;
+			sourceTree = "<group>";
+		};
+		75DEA0A828D8BD4B00E2CD45 /* BreedInfoTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				75DEA0A928D8BD6600E2CD45 /* BreedInfoTableViewCell.swift */,
+				75DEA0AB28D8BD8200E2CD45 /* BreedInfoTableViewCell.xib */,
+			);
+			path = BreedInfoTableViewCell;
 			sourceTree = "<group>";
 		};
 		75E099F328CE1462009DAAE4 /* HealthyDropdown */ = {
@@ -943,6 +957,7 @@
 				75E8EF772875DCBD00FBB28D /* OpenSans-Light.otf in Resources */,
 				75AA02E028E0F75F00E14AEF /* BreedsList.storyboard in Resources */,
 				75E8EF782875DCC000FBB28D /* OpenSans-Bold.otf in Resources */,
+				75DEA0AC28D8BD8200E2CD45 /* BreedInfoTableViewCell.xib in Resources */,
 				75D4059228E0773200EDA918 /* AnimalTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1083,6 +1098,7 @@
 				75AA02E428E0F75F00E14AEF /* BreedsListViewModel.swift in Sources */,
 				75CF78FE28648A740011F933 /* UIImage+Extensions.swift in Sources */,
 				75CF78F2286479930011F933 /* CoordinatorDelegate.swift in Sources */,
+				75DEA0AA28D8BD6600E2CD45 /* BreedInfoTableViewCell.swift in Sources */,
 				75E8EF8C2878650C00FBB28D /* Theme+Dimensions.swift in Sources */,
 				75E8EF882876D46800FBB28D /* FilterView.swift in Sources */,
 				75A2EAA828E1AA7100901A96 /* HomeEmptyType.swift in Sources */,

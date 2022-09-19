@@ -34,6 +34,7 @@ class BreedDetailsViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
+        BreedInfoTableViewCell.register(in: tableView)
     }
     
     @objc private func didTapBackButton() {
@@ -51,6 +52,28 @@ extension BreedDetailsViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let item = (viewModel?.dataSource ?? [])[indexPath.row]
+        
+        switch item {
+        case .generalInfo(let url, let name, let location):
+            if let cell = tableView.dequeueReusableCell(withIdentifier: BreedInfoTableViewCell.identifier) as? BreedInfoTableViewCell {
+                cell.selectionStyle = .none
+                cell.configure(with: name, location: location, url: url)
+                
+                return cell
+            }
+        case .weight(let weight):
+            return UITableViewCell()
+        case .temperament(let temperament):
+            return UITableViewCell()
+        case .description(let description):
+            return UITableViewCell()
+        case .lifeSpan(let lifeSpan):
+            return UITableViewCell()
+        case .bredFor(let bredFor):
+            return UITableViewCell()
+        }
+        
         
         return UITableViewCell()
     }
