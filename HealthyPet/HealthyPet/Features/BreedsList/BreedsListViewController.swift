@@ -35,6 +35,7 @@ class BreedsListViewController: UIViewController {
         searchView.configure(with: "Breeds library")
         filterContainerView.add(subview: searchView)
         configureTableView()
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func viewWillAppear(_ animated: Bool) {

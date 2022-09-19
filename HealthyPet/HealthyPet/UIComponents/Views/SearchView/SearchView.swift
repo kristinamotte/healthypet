@@ -77,6 +77,7 @@ class SearchView: UIView {
         searchContainerView.alpha = 0
         findPetContainerView.alpha = 1
         searchBar.text = nil
+        searchBar.resignFirstResponder()
         delegate?.didSearch(by: searchText)
         
         UIView.animate(withDuration: Theme.Constants.defaultAnimationDuration, delay: 0.0, options: .curveEaseInOut) {

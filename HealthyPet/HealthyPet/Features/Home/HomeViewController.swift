@@ -37,6 +37,7 @@ class HomeViewController: UIViewController {
         emptyStateContainerView.isHidden = true
         petsTableView.isHidden = false
         configureTableView()
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func viewWillAppear(_ animated: Bool) {
