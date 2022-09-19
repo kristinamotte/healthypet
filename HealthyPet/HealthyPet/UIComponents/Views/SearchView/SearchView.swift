@@ -53,6 +53,10 @@ class SearchView: UIView {
         return view
     }
     
+    func configure(with title: String) {
+        titleLabel.text = title
+    }
+    
     private func configureUI() {
         searchBar.searchTextField.font = Theme.Fonts.openSansRegular14
         searchContainerView.isHidden = true

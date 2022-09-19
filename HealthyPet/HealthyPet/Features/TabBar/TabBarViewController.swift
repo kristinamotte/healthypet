@@ -68,7 +68,7 @@ class TabBarViewController: UITabBarController {
         addNew.controller.tabBarItem = UITabBarItem(title: "", image: #imageLiteral(resourceName: "ic_addNew_unselected"), selectedImage: #imageLiteral(resourceName: "ic_addNew_selected"))
         addNew.start()
 
-        let breeds = HomeCoordinator(presenter: UINavigationController())
+        let breeds = BreedsListCoordinator(presenter: UINavigationController())
         breeds.controller.tabBarItem = UITabBarItem(title: "", image: #imageLiteral(resourceName: "ic_breeds_unselected"), selectedImage: #imageLiteral(resourceName: "ic_breeds_selected"))
         breeds.start()
 

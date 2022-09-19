@@ -25,6 +25,13 @@
 		75A2EAB928E2206100901A96 /* EditPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A2EAB828E2206100901A96 /* EditPetViewController.swift */; };
 		75A2EABB28E2225D00901A96 /* EditPetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A2EABA28E2225D00901A96 /* EditPetViewModel.swift */; };
 		75A2EABD28E222A700901A96 /* EditPetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A2EABC28E222A700901A96 /* EditPetCoordinator.swift */; };
+		75AA02DE28E0F74500E14AEF /* BreedsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AA02DD28E0F74500E14AEF /* BreedsListViewController.swift */; };
+		75AA02E028E0F75F00E14AEF /* BreedsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75AA02DF28E0F75F00E14AEF /* BreedsList.storyboard */; };
+		75AA02E228E0F75F00E14AEF /* BreedsListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AA02E128E0F75F00E14AEF /* BreedsListCoordinator.swift */; };
+		75AA02E428E0F75F00E14AEF /* BreedsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AA02E328E0F75F00E14AEF /* BreedsListViewModel.swift */; };
+		75AA02E628E0F75F00E14AEF /* GeneralBreed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AA02E528E0F75F00E14AEF /* GeneralBreed.swift */; };
+		75AA02E928E0F75F00E14AEF /* BreedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75AA02E828E0F75F00E14AEF /* BreedTableViewCell.xib */; };
+		75AA02EB28E0F75F00E14AEF /* BreedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AA02EA28E0F75F00E14AEF /* BreedTableViewCell.swift */; };
 		75BFA4BA28A190FA002122E8 /* AddNewPet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75BFA4B928A190FA002122E8 /* AddNewPet.storyboard */; };
 		75BFA4BC28A195CB002122E8 /* AddNewPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFA4BB28A195CB002122E8 /* AddNewPetViewController.swift */; };
 		75BFA4BE28A19A3B002122E8 /* AddNewPetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFA4BD28A19A3B002122E8 /* AddNewPetCoordinator.swift */; };
@@ -156,6 +163,13 @@
 		75A2EAB828E2206100901A96 /* EditPetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPetViewController.swift; sourceTree = "<group>"; };
 		75A2EABA28E2225D00901A96 /* EditPetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPetViewModel.swift; sourceTree = "<group>"; };
 		75A2EABC28E222A700901A96 /* EditPetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPetCoordinator.swift; sourceTree = "<group>"; };
+		75AA02DD28E0F74500E14AEF /* BreedsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListViewController.swift; sourceTree = "<group>"; };
+		75AA02DF28E0F75F00E14AEF /* BreedsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BreedsList.storyboard; sourceTree = "<group>"; };
+		75AA02E128E0F75F00E14AEF /* BreedsListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListCoordinator.swift; sourceTree = "<group>"; };
+		75AA02E328E0F75F00E14AEF /* BreedsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListViewModel.swift; sourceTree = "<group>"; };
+		75AA02E528E0F75F00E14AEF /* GeneralBreed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralBreed.swift; sourceTree = "<group>"; };
+		75AA02E828E0F75F00E14AEF /* BreedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedTableViewCell.xib; sourceTree = "<group>"; };
+		75AA02EA28E0F75F00E14AEF /* BreedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedTableViewCell.swift; sourceTree = "<group>"; };
 		75BFA4B928A190FA002122E8 /* AddNewPet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddNewPet.storyboard; sourceTree = "<group>"; };
 		75BFA4BB28A195CB002122E8 /* AddNewPetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPetViewController.swift; sourceTree = "<group>"; };
 		75BFA4BD28A19A3B002122E8 /* AddNewPetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPetCoordinator.swift; sourceTree = "<group>"; };
@@ -334,6 +348,15 @@
 			path = EditPet;
 			sourceTree = "<group>";
 		};
+		75AA02E728E0F75F00E14AEF /* BreedTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				75AA02E828E0F75F00E14AEF /* BreedTableViewCell.xib */,
+				75AA02EA28E0F75F00E14AEF /* BreedTableViewCell.swift */,
+			);
+			path = BreedTableViewCell;
+			sourceTree = "<group>";
+		};
 		75BFA4BF28A43A15002122E8 /* HealthyTextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -497,6 +520,10 @@
 		75CF78C52863600B0011F933 /* BreedsList */ = {
 			isa = PBXGroup;
 			children = (
+				75AA02DD28E0F74500E14AEF /* BreedsListViewController.swift */,
+				75AA02E328E0F75F00E14AEF /* BreedsListViewModel.swift */,
+				75AA02E128E0F75F00E14AEF /* BreedsListCoordinator.swift */,
+				75AA02DF28E0F75F00E14AEF /* BreedsList.storyboard */,
 			);
 			path = BreedsList;
 			sourceTree = "<group>";
@@ -578,6 +605,7 @@
 				75A2EAA528E0EC8000901A96 /* FirebaseImage.swift */,
 				75D4058E28E071B500EDA918 /* CatBreed.swift */,
 				75E099FB28CE2712009DAAE4 /* Animal.swift */,
+				75AA02E528E0F75F00E14AEF /* GeneralBreed.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -652,6 +680,7 @@
 		75D4FBD928D3C0D400C6BF5E /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				75AA02E728E0F75F00E14AEF /* BreedTableViewCell */,
 				75D4059028E0771B00EDA918 /* AnimalTableViewCell */,
 				75D4FBDC28D3C0F000C6BF5E /* SelectBreed */,
 			);
@@ -884,6 +913,7 @@
 				75CF7899285BB8810011F933 /* LaunchScreen.storyboard in Resources */,
 				75E8EF7B2875DCC300FBB28D /* OpenSans-Regular.otf in Resources */,
 				75E8EF652875B37D00FBB28D /* SearchView.xib in Resources */,
+				75AA02E928E0F75F00E14AEF /* BreedTableViewCell.xib in Resources */,
 				753EB7FE2865C1E000C0F529 /* loadInfo.json in Resources */,
 				75BFA4C128A43A36002122E8 /* HealthyTextField.xib in Resources */,
 				75CF7896285BB8810011F933 /* Assets.xcassets in Resources */,
@@ -891,6 +921,7 @@
 				75E8EF862876D3B000FBB28D /* FilterView.xib in Resources */,
 				75CF7894285BB8800011F933 /* Main.storyboard in Resources */,
 				75E8EF772875DCBD00FBB28D /* OpenSans-Light.otf in Resources */,
+				75AA02E028E0F75F00E14AEF /* BreedsList.storyboard in Resources */,
 				75E8EF782875DCC000FBB28D /* OpenSans-Bold.otf in Resources */,
 				75D4059228E0773200EDA918 /* AnimalTableViewCell.xib in Resources */,
 			);
@@ -1029,6 +1060,7 @@
 				75CF7891285BB8800011F933 /* HomeViewController.swift in Sources */,
 				75A2EABD28E222A700901A96 /* EditPetCoordinator.swift in Sources */,
 				75CF78DF286463FD0011F933 /* API+Breeds.swift in Sources */,
+				75AA02E428E0F75F00E14AEF /* BreedsListViewModel.swift in Sources */,
 				75CF78FE28648A740011F933 /* UIImage+Extensions.swift in Sources */,
 				75CF78F2286479930011F933 /* CoordinatorDelegate.swift in Sources */,
 				75E8EF8C2878650C00FBB28D /* Theme+Dimensions.swift in Sources */,
@@ -1065,8 +1097,10 @@
 				75CF790028648B2F0011F933 /* TabBarViewController.swift in Sources */,
 				75CF78D628636DC50011F933 /* DataCache.swift in Sources */,
 				75CF78C9286368090011F933 /* Request.swift in Sources */,
+				75AA02EB28E0F75F00E14AEF /* BreedTableViewCell.swift in Sources */,
 				75CF78CD28636A840011F933 /* APIResult.swift in Sources */,
 				75E099F928CE25C0009DAAE4 /* SelectOptionViewController.swift in Sources */,
+				75AA02DE28E0F74500E14AEF /* BreedsListViewController.swift in Sources */,
 				75A2EAAD28E1B7B100901A96 /* AnimalDetailsCoordinator.swift in Sources */,
 				75CF788D285BB8800011F933 /* AppDelegate.swift in Sources */,
 				75CF78EB286473D50011F933 /* Cache.swift in Sources */,
@@ -1077,6 +1111,7 @@
 				75D4FBD028D3B57300C6BF5E /* AnimalType.swift in Sources */,
 				75A2EAB428E213EA00901A96 /* DocumentPreviewViewModel.swift in Sources */,
 				75CF78D228636C200011F933 /* API.swift in Sources */,
+				75AA02E228E0F75F00E14AEF /* BreedsListCoordinator.swift in Sources */,
 				75CF790228648CB00011F933 /* HomeCoordinator.swift in Sources */,
 				75A2EAA628E0EC8000901A96 /* FirebaseImage.swift in Sources */,
 				75D4059628E095A900EDA918 /* HomeViewModel.swift in Sources */,
@@ -1093,6 +1128,7 @@
 				75D4058F28E071B500EDA918 /* CatBreed.swift in Sources */,
 				75A2EABB28E2225D00901A96 /* EditPetViewModel.swift in Sources */,
 				75BFA4C328A43AC8002122E8 /* HealthyTextField.swift in Sources */,
+				75AA02E628E0F75F00E14AEF /* GeneralBreed.swift in Sources */,
 				75CF78D828636FEA0011F933 /* DataSource.swift in Sources */,
 				75CF78FC286485950011F933 /* Theme+Colors.swift in Sources */,
 				75CF788F285BB8800011F933 /* SceneDelegate.swift in Sources */,
