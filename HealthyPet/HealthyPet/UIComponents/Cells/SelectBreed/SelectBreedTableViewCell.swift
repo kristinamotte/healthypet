@@ -8,6 +8,7 @@
 import UIKit
 
 class SelectBreedTableViewCell: UITableViewCell, ReusableTableCell {
+    // MARK: - Outlets
     @IBOutlet weak var separatorView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var checkMarkImageView: UIImageView!
@@ -26,6 +27,7 @@ class SelectBreedTableViewCell: UITableViewCell, ReusableTableCell {
         titleLabel.text = title
     }
     
+    // MARK: - Private methods
     private func configureUI() {
         separatorView.backgroundColor = Theme.Colors.lightGrey
         titleLabel.font = Theme.Fonts.openSansLight16

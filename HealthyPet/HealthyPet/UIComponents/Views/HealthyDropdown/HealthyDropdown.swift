@@ -8,6 +8,7 @@
 import UIKit
 
 class HealthyDropdown: UIView {
+    // MARK: - Outlets
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var optionLabel: UILabel!

@@ -9,6 +9,7 @@ import UIKit
 import Veil
 
 class HealthyTextField: UIView {
+    // MARK: - Outlets
     @IBOutlet weak var placeholderLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
@@ -56,6 +57,7 @@ class HealthyTextField: UIView {
         errorLabel.isHidden = true
     }
     
+    // MARK: - Private methods
     private func configureUI() {
         placeholderLabel.font = Theme.Fonts.openSansLight12
         placeholderLabel.textColor = Theme.Colors.black
@@ -88,6 +90,7 @@ class HealthyTextField: UIView {
     }
 }
 
+// MARK: - UITextFieldDelegate
 extension HealthyTextField: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         if textField.textColor == Theme.Colors.placeholderGrey {

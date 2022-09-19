@@ -13,6 +13,7 @@ protocol SearchViewDelegate: AnyObject {
 }
 
 class SearchView: UIView {
+    // MARK: - Outlets
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var containerStackView: UIStackView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -57,6 +58,7 @@ class SearchView: UIView {
         titleLabel.text = title
     }
     
+    // MARK: - Private methods
     private func configureUI() {
         searchBar.searchTextField.font = Theme.Fonts.openSansRegular14
         searchContainerView.isHidden = true
@@ -87,6 +89,7 @@ class SearchView: UIView {
     }
 }
 
+// MARK: - UISearchBarDelegate
 extension SearchView: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
         delegate?.didSearch(by: searchBar.text ?? "")
@@ -97,6 +100,7 @@ extension SearchView: UISearchBarDelegate {
     }
 }
 
+// MARK: - FilterViewDelegate
 extension SearchView: FilterViewDelegate {
     func didSelect(option: FilterType) {
         delegate?.didSelect(option: option)

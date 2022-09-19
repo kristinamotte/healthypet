@@ -12,6 +12,7 @@ protocol FilterViewDelegate: AnyObject {
 }
 
 class FilterView: UIView {
+    // MARK: - Outlets
     @IBOutlet weak var allButton: FilterButton!
     @IBOutlet weak var dogsButton: FilterButton!
     @IBOutlet weak var catsButton: FilterButton!
@@ -25,6 +26,7 @@ class FilterView: UIView {
         return view
     }
     
+    // MARK: - Actions
     @IBAction func didTapAllButton(_ sender: FilterButton) {
         if allButton.buttonStyle == .notPressed {
             delegate?.didSelect(option: .all)

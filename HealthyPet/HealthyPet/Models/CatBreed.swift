@@ -7,7 +7,6 @@
 
 import Foundation
 
-// MARK: - Welcome
 struct CatBreed: Codable {
     let weight: Weight
     let id: String
