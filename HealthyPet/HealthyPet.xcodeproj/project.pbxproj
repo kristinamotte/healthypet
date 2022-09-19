@@ -94,6 +94,10 @@
 		75D4FBDB28D3C0EB00C6BF5E /* SelectBreedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75D4FBDA28D3C0EB00C6BF5E /* SelectBreedTableViewCell.xib */; };
 		75D4FBDE28D3C18600C6BF5E /* SelectBreedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D4FBDD28D3C18600C6BF5E /* SelectBreedTableViewCell.swift */; };
 		75D4FBE028D3C33C00C6BF5E /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D4FBDF28D3C33C00C6BF5E /* Reusable.swift */; };
+		75DEA09F28D8B28F00E2CD45 /* BreedDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DEA09E28D8B28F00E2CD45 /* BreedDetailsViewController.swift */; };
+		75DEA0A128D8B78600E2CD45 /* BreedDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DEA0A028D8B78600E2CD45 /* BreedDetailsViewModel.swift */; };
+		75DEA0A328D8B8D100E2CD45 /* BreedDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DEA0A228D8B8D100E2CD45 /* BreedDetailsCoordinator.swift */; };
+		75DEA0A728D8B9B100E2CD45 /* BreedDetailsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DEA0A628D8B9B100E2CD45 /* BreedDetailsItem.swift */; };
 		75DFCCDD28D0F8BC0079B157 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DFCCDC28D0F8BC0079B157 /* FirebaseHelper.swift */; };
 		75DFCCDF28D10BC50079B157 /* AddNewPetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DFCCDE28D10BC50079B157 /* AddNewPetViewModel.swift */; };
 		75E099F128CE0EF3009DAAE4 /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E099F028CE0EF3009DAAE4 /* DateFormatter+Extensions.swift */; };
@@ -231,6 +235,10 @@
 		75D4FBDA28D3C0EB00C6BF5E /* SelectBreedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectBreedTableViewCell.xib; sourceTree = "<group>"; };
 		75D4FBDD28D3C18600C6BF5E /* SelectBreedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBreedTableViewCell.swift; sourceTree = "<group>"; };
 		75D4FBDF28D3C33C00C6BF5E /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		75DEA09E28D8B28F00E2CD45 /* BreedDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailsViewController.swift; sourceTree = "<group>"; };
+		75DEA0A028D8B78600E2CD45 /* BreedDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailsViewModel.swift; sourceTree = "<group>"; };
+		75DEA0A228D8B8D100E2CD45 /* BreedDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailsCoordinator.swift; sourceTree = "<group>"; };
+		75DEA0A628D8B9B100E2CD45 /* BreedDetailsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailsItem.swift; sourceTree = "<group>"; };
 		75DFCCDC28D0F8BC0079B157 /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
 		75DFCCDE28D10BC50079B157 /* AddNewPetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPetViewModel.swift; sourceTree = "<group>"; };
 		75E099F028CE0EF3009DAAE4 /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
@@ -471,6 +479,7 @@
 		75CF78C128635FDD0011F933 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				75DEA09D28D8B27100E2CD45 /* BreedDetails */,
 				75A2EAB728E2204C00901A96 /* EditPet */,
 				75A2EAB028E212C300901A96 /* DocumentPreview */,
 				75A2EAA928E1AF3600901A96 /* Animal Details */,
@@ -694,6 +703,17 @@
 				75D4FBDD28D3C18600C6BF5E /* SelectBreedTableViewCell.swift */,
 			);
 			path = SelectBreed;
+			sourceTree = "<group>";
+		};
+		75DEA09D28D8B27100E2CD45 /* BreedDetails */ = {
+			isa = PBXGroup;
+			children = (
+				75DEA09E28D8B28F00E2CD45 /* BreedDetailsViewController.swift */,
+				75DEA0A628D8B9B100E2CD45 /* BreedDetailsItem.swift */,
+				75DEA0A028D8B78600E2CD45 /* BreedDetailsViewModel.swift */,
+				75DEA0A228D8B8D100E2CD45 /* BreedDetailsCoordinator.swift */,
+			);
+			path = BreedDetails;
 			sourceTree = "<group>";
 		};
 		75E099F328CE1462009DAAE4 /* HealthyDropdown */ = {
@@ -1091,11 +1111,13 @@
 				75E099FC28CE2712009DAAE4 /* Animal.swift in Sources */,
 				75CF78CB28636A440011F933 /* Networking.swift in Sources */,
 				75CF790B28648E3A0011F933 /* TabBarCoordinator.swift in Sources */,
+				75DEA0A328D8B8D100E2CD45 /* BreedDetailsCoordinator.swift in Sources */,
 				75CF78E7286466ED0011F933 /* Headers.swift in Sources */,
 				75E099F728CE14F4009DAAE4 /* HealthyDropdown.swift in Sources */,
 				75D4FBD628D3BF8700C6BF5E /* SelectOptionViewModel.swift in Sources */,
 				75CF790028648B2F0011F933 /* TabBarViewController.swift in Sources */,
 				75CF78D628636DC50011F933 /* DataCache.swift in Sources */,
+				75DEA0A728D8B9B100E2CD45 /* BreedDetailsItem.swift in Sources */,
 				75CF78C9286368090011F933 /* Request.swift in Sources */,
 				75AA02EB28E0F75F00E14AEF /* BreedTableViewCell.swift in Sources */,
 				75CF78CD28636A840011F933 /* APIResult.swift in Sources */,
@@ -1113,6 +1135,7 @@
 				75CF78D228636C200011F933 /* API.swift in Sources */,
 				75AA02E228E0F75F00E14AEF /* BreedsListCoordinator.swift in Sources */,
 				75CF790228648CB00011F933 /* HomeCoordinator.swift in Sources */,
+				75DEA0A128D8B78600E2CD45 /* BreedDetailsViewModel.swift in Sources */,
 				75A2EAA628E0EC8000901A96 /* FirebaseImage.swift in Sources */,
 				75D4059628E095A900EDA918 /* HomeViewModel.swift in Sources */,
 				75E099F128CE0EF3009DAAE4 /* DateFormatter+Extensions.swift in Sources */,
@@ -1136,6 +1159,7 @@
 				75CF790728648D800011F933 /* Storyboard.swift in Sources */,
 				75CF78E2286464520011F933 /* DogBreed.swift in Sources */,
 				75D4058B28E06D9800EDA918 /* UIButton+Extensions.swift in Sources */,
+				75DEA09F28D8B28F00E2CD45 /* BreedDetailsViewController.swift in Sources */,
 				75CF78ED286474300011F933 /* DataType+Decoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

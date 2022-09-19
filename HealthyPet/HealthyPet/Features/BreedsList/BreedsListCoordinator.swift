@@ -27,6 +27,10 @@ class BreedsListCoordinator: NSObject, Coordinator {
     
     var viewModel: BreedsListViewModel {
         let viewModel = BreedsListViewModel()
+        
+        viewModel.onBreedDetails = { [presenter] breed in
+            BreedDetailsCoordinator(presenter: presenter, breed: breed).start()
+        }
 
         return viewModel
     }

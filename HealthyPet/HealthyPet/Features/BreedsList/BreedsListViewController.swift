@@ -116,6 +116,12 @@ extension BreedsListViewController: UITableViewDelegate, UITableViewDataSource {
         
         return UITableViewCell()
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = searchView.isSearchBarEmpty ? breeds[indexPath.row] : filteredBreeds[indexPath.row]
+        
+        viewModel?.onBreedDetails?(item)
+    }
 }
 
 // MARK: - SearchViewDelegate
