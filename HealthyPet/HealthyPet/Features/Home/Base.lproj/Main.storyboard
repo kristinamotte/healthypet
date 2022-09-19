@@ -362,16 +362,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="5CW-rn-v6f">
-                                <rect key="frame" x="24" y="308.33333333333331" width="342" height="240.66666666666669"/>
+                                <rect key="frame" x="24" y="287.66666666666663" width="342" height="281.66666666666663"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mSP-N7-7Lr">
-                                        <rect key="frame" x="79" y="0.0" width="184" height="184"/>
+                                        <rect key="frame" x="21" y="0.0" width="300" height="225"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_empty" translatesAutoresizingMaskIntoConstraints="NO" id="zhM-Tf-1dc">
-                                                <rect key="frame" x="0.0" y="0.0" width="184" height="184"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="225"/>
                                             </imageView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OlT-Ne-iDJ" customClass="AnimationView" customModule="Lottie">
-                                                <rect key="frame" x="0.0" y="0.0" width="184" height="184"/>
+                                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="OlT-Ne-iDJ" customClass="AnimationView" customModule="Lottie">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="225"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="loadInfo"/>
                                                 </userDefinedRuntimeAttributes>
@@ -380,11 +380,11 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="zhM-Tf-1dc" firstAttribute="top" secondItem="mSP-N7-7Lr" secondAttribute="top" id="0cR-Ro-JkC"/>
-                                            <constraint firstAttribute="height" constant="184" id="5rM-7q-lmD"/>
                                             <constraint firstAttribute="bottom" secondItem="zhM-Tf-1dc" secondAttribute="bottom" id="Cgs-it-mdK"/>
                                             <constraint firstItem="OlT-Ne-iDJ" firstAttribute="top" secondItem="mSP-N7-7Lr" secondAttribute="top" id="DQu-cu-9HK"/>
-                                            <constraint firstAttribute="width" constant="184" id="Sdy-TX-ZUX"/>
+                                            <constraint firstAttribute="width" constant="300" id="Sdy-TX-ZUX"/>
                                             <constraint firstAttribute="bottom" secondItem="OlT-Ne-iDJ" secondAttribute="bottom" id="a5g-NY-kys"/>
+                                            <constraint firstAttribute="width" secondItem="mSP-N7-7Lr" secondAttribute="height" multiplier="800:600" id="b0K-Dv-5x0"/>
                                             <constraint firstItem="OlT-Ne-iDJ" firstAttribute="leading" secondItem="mSP-N7-7Lr" secondAttribute="leading" id="cgw-EV-Enh"/>
                                             <constraint firstItem="zhM-Tf-1dc" firstAttribute="leading" secondItem="mSP-N7-7Lr" secondAttribute="leading" id="l1U-NJ-629"/>
                                             <constraint firstAttribute="trailing" secondItem="OlT-Ne-iDJ" secondAttribute="trailing" id="tGg-mn-T0Q"/>
@@ -392,7 +392,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please wait little bit until we gather all the data" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNU-3w-NsC">
-                                        <rect key="frame" x="27" y="200" width="288" height="40.666666666666657"/>
+                                        <rect key="frame" x="27" y="240.99999999999991" width="288" height="40.666666666666657"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
