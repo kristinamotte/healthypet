@@ -24,7 +24,9 @@ class AddNewPetViewController: UIViewController {
     @IBOutlet weak var ownerNameContainerView: UIView!
     @IBOutlet weak var ownerPhoneContainerView: UIView!
     @IBOutlet weak var addNewAnimalButton: UIButton!
-
+    @IBOutlet weak var addPhotoStackView: UIStackView!
+    @IBOutlet weak var photoImageView: UIImageView!
+    
     // MARK: - Text fields
     let petNameTextField: HealthyTextField = HealthyTextField.instanceFromNib()
     let birthdayTextField: HealthyTextField = HealthyTextField.instanceFromNib()
@@ -36,6 +38,8 @@ class AddNewPetViewController: UIViewController {
     let chooseBreedDropdown: HealthyDropdown = HealthyDropdown.instanceFromNib()
     let genderDropdown: HealthyDropdown = HealthyDropdown.instanceFromNib()
     
+    let imagePicker = UIImagePickerController()
+    
     // MARK: - View Model
     var viewModel: AddNewPetViewModel?
     
@@ -44,6 +48,7 @@ class AddNewPetViewController: UIViewController {
 
         configureUI()
         
+        imagePicker.delegate = self
         subscribeToNotifications(UIResponder.keyboardWillShowNotification, selector: #selector(keyboardWillShowOrHide))
         subscribeToNotifications(UIResponder.keyboardWillHideNotification, selector: #selector(keyboardWillShowOrHide))
         self.hideKeyboardWhenTappedAround()
@@ -66,6 +71,9 @@ class AddNewPetViewController: UIViewController {
         addNewAnimalButton.backgroundColor = Theme.Colors.rose
         addNewAnimalButton.titleLabel?.font = Theme.Fonts.openSansBold14
         addNewAnimalButton.titleLabel?.textColor = Theme.Colors.white
+        photoImageView.isHidden = true
+        photoContainerView.isUserInteractionEnabled = true
+        photoContainerView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didSelectPetImage)))
     }
     
     private func configureTextFields() {
@@ -164,12 +172,20 @@ class AddNewPetViewController: UIViewController {
         present(actionSheet, animated: true, completion: nil)
     }
     
+    @objc private func didSelectPetImage() {
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .photoLibrary
+        
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
     // MARK: - Actions
     @IBAction private func didTapAddAnimal(_ sender: UIButton) {
         let dateFormatter = DateFormatter.addPetDateFormatter
         if !petNameTextField.isEmpty && !birthdayTextField.isEmpty && dateFormatter.date(from: birthdayTextField.text) != nil && !ownerNameTextField.isEmpty && !ownerNumberTextField.isEmpty {
             let animal = Animal(id: UUID().uuidString, imageUrl: nil, petName: petNameTextField.text, animalType: animalDropdown.text, breed: chooseBreedDropdown.text, birthday: birthdayTextField.text, gender: genderDropdown.text, ownerName: ownerNameTextField.text, ownerNumber: ownerNumberTextField.text)
-            viewModel?.addNew(animal)
+            addNewAnimalButton.showSpinner(tintColor: Theme.Colors.white)
+            viewModel?.addNew(animal, image: photoImageView.image)
         } else {
             if petNameTextField.isEmpty {
                 petNameTextField.set(error: "Please add your pet name")
@@ -202,6 +218,7 @@ class AddNewPetViewController: UIViewController {
 
 extension AddNewPetViewController: AddNewPetViewModelDelegate {
     func showAddAnimalError() {
+        addNewAnimalButton.hideSpinner()
         let toast = Toast.default(image: #imageLiteral(resourceName: "ic_error"), title: "Something went wrong", subtitle: "Please try again")
         toast.show()
     }
@@ -215,7 +232,11 @@ extension AddNewPetViewController: AddNewPetViewModelDelegate {
         animalDropdown.configure(with: "What kind of animal it is?", preselected: "Dog")
         chooseBreedDropdown.configure(with: "Choose breed", preselected: "Mixed")
         genderDropdown.configure(with: "Gender", preselected: "Female")
+        photoImageView.image = nil
+        photoImageView.isHidden = true
+        addPhotoStackView.isHidden = false
         
+        addNewAnimalButton.hideSpinner()
         let toast = Toast.default(image: #imageLiteral(resourceName: "ic_success"), title: "Animal successfully added")
         toast.show()
     }
@@ -224,6 +245,19 @@ extension AddNewPetViewController: AddNewPetViewModelDelegate {
 extension AddNewPetViewController: SelectOptionViewControllerDelegate {
     func didChoose(option: String) {
         chooseBreedDropdown.updatePreselected(option: option)
+    }
+}
+
+extension AddNewPetViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            photoImageView.isHidden = false
+            photoImageView.contentMode = .scaleAspectFill
+            photoImageView.image = pickedImage
+            addPhotoStackView.isHidden = true
+        }
+
+        dismiss(animated: true, completion: nil)
     }
 }
 

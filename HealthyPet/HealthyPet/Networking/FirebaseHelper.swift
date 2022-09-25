@@ -5,15 +5,19 @@
 //  Created by Kristina Motte on 13/09/2022.
 //
 
-import Foundation
+import UIKit
 import FirebaseDatabase
+import FirebaseStorage
+import FirebaseCore
 
 protocol AddNewAnimal {
     func addNew(animal: Animal, _ completion: @escaping (Error?) -> Void)
+    func uploadImage(image: UIImage, id: String, completion: @escaping (Error?, String?) -> Void)
 }
 
 final class FirebaseHelper: AddNewAnimal {
     let ref = Database.database().reference()
+    let storageRef = Storage.storage().reference()
     var dataBaseHandler: DatabaseHandle?
     
     func addNew(animal: Animal, _ completion: @escaping (Error?) -> Void) {
@@ -82,5 +86,21 @@ final class FirebaseHelper: AddNewAnimal {
                 completion(animals)
             }
         })
+    }
+    
+    func uploadImage(image: UIImage, id: String, completion: @escaping (Error?, String?) -> Void) {
+        guard let jpegData = image.jpegData(compressionQuality: 0.8) else { return }
+        
+        let path = "/images/\(id).jpg"
+        let fileRef = storageRef.child(path)
+        
+        let uploadTask = fileRef.putData(jpegData) { metadata, error in
+            guard let error = error, metadata == nil else {
+                completion(nil, path)
+                return
+            }
+            
+            completion(error, nil)
+        }
     }
 }

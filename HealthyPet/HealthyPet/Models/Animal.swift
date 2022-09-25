@@ -9,7 +9,7 @@ import Foundation
 
 struct Animal: Codable {
     let id: String
-    let imageUrl: String?
+    var imageUrl: String?
     let petName: String
     let animalType: String
     let breed: String

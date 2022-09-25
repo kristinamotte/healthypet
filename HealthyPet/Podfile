@@ -9,9 +9,6 @@ target 'HealthyPet' do
   
   pod 'lottie-ios'
 
-  # Firebase
-  pod 'Firebase/Database'
-
   pod "ToastViewSwift"
 
   target 'HealthyPetTests' do

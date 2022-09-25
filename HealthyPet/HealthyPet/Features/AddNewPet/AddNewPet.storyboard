@@ -32,9 +32,12 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="iXK-KE-Z3x">
                                                 <rect key="frame" x="24" y="68.5" width="366" height="143"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mW9-G3-TMb">
+                                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mW9-G3-TMb">
                                                         <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
                                                         <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eoS-kE-JWW">
+                                                                <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                                            </imageView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Oiw-g0-i3P">
                                                                 <rect key="frame" x="18.5" y="31" width="93" height="68.5"/>
                                                                 <subviews>
@@ -58,7 +61,11 @@
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="130" id="3jV-l5-0ig"/>
                                                             <constraint firstAttribute="height" constant="130" id="737-BF-HKT"/>
+                                                            <constraint firstItem="eoS-kE-JWW" firstAttribute="leading" secondItem="mW9-G3-TMb" secondAttribute="leading" id="Bbd-o9-QNN"/>
                                                             <constraint firstItem="Oiw-g0-i3P" firstAttribute="centerY" secondItem="mW9-G3-TMb" secondAttribute="centerY" id="FLF-IH-Yqb"/>
+                                                            <constraint firstItem="eoS-kE-JWW" firstAttribute="top" secondItem="mW9-G3-TMb" secondAttribute="top" id="RLw-qg-Tg0"/>
+                                                            <constraint firstAttribute="bottom" secondItem="eoS-kE-JWW" secondAttribute="bottom" id="XCg-po-SMd"/>
+                                                            <constraint firstAttribute="trailing" secondItem="eoS-kE-JWW" secondAttribute="trailing" id="Xq3-e7-ySN"/>
                                                             <constraint firstItem="Oiw-g0-i3P" firstAttribute="centerX" secondItem="mW9-G3-TMb" secondAttribute="centerX" id="i98-Vr-MlB"/>
                                                         </constraints>
                                                     </view>
@@ -185,6 +192,7 @@
                         <outlet property="addNewAnimalButton" destination="dWf-hR-XNy" id="OPr-aG-176"/>
                         <outlet property="addNewPetScrollView" destination="zlU-3q-7Vi" id="sWe-DM-UrN"/>
                         <outlet property="addPhotoLabel" destination="wql-vi-fR2" id="gtw-eL-zxP"/>
+                        <outlet property="addPhotoStackView" destination="Oiw-g0-i3P" id="oZx-Cm-k9g"/>
                         <outlet property="animalKindContainerView" destination="fQd-kW-Yui" id="lpF-mX-kFv"/>
                         <outlet property="birthdayContainerView" destination="PcL-na-6p1" id="2Ul-oi-drA"/>
                         <outlet property="chooseBreedContainerView" destination="qlP-Q7-e8L" id="8Xl-Vb-PdV"/>
@@ -194,6 +202,7 @@
                         <outlet property="ownerPhoneContainerView" destination="hyv-Lh-DG5" id="SOp-tY-Aug"/>
                         <outlet property="petNameContainerView" destination="BsJ-oT-jrg" id="Cw7-A9-3n7"/>
                         <outlet property="photoContainerView" destination="mW9-G3-TMb" id="RhZ-5H-T5f"/>
+                        <outlet property="photoImageView" destination="eoS-kE-JWW" id="ZfT-B3-w1T"/>
                         <outlet property="titleLabel" destination="Ku8-E9-DL7" id="GLA-r0-5DV"/>
                     </connections>
                 </viewController>
