@@ -61,6 +61,8 @@
 		75D4058B28E06D9800EDA918 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D4058A28E06D9800EDA918 /* UIButton+Extensions.swift */; };
 		75D4058D28E06F9A00EDA918 /* GetCatBreedsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D4058C28E06F9A00EDA918 /* GetCatBreedsRequest.swift */; };
 		75D4058F28E071B500EDA918 /* CatBreed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D4058E28E071B500EDA918 /* CatBreed.swift */; };
+		75D4059228E0773200EDA918 /* AnimalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75D4059128E0773200EDA918 /* AnimalTableViewCell.xib */; };
+		75D4059428E079DB00EDA918 /* AnimalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D4059328E079DB00EDA918 /* AnimalTableViewCell.swift */; };
 		75D4FBD028D3B57300C6BF5E /* AnimalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D4FBCF28D3B57300C6BF5E /* AnimalType.swift */; };
 		75D4FBD228D3B73900C6BF5E /* BreedsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D4FBD128D3B73900C6BF5E /* BreedsService.swift */; };
 		75D4FBD628D3BF8700C6BF5E /* SelectOptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D4FBD528D3BF8700C6BF5E /* SelectOptionViewModel.swift */; };
@@ -172,6 +174,8 @@
 		75D4058A28E06D9800EDA918 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		75D4058C28E06F9A00EDA918 /* GetCatBreedsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCatBreedsRequest.swift; sourceTree = "<group>"; };
 		75D4058E28E071B500EDA918 /* CatBreed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreed.swift; sourceTree = "<group>"; };
+		75D4059128E0773200EDA918 /* AnimalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimalTableViewCell.xib; sourceTree = "<group>"; };
+		75D4059328E079DB00EDA918 /* AnimalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTableViewCell.swift; sourceTree = "<group>"; };
 		75D4FBCF28D3B57300C6BF5E /* AnimalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalType.swift; sourceTree = "<group>"; };
 		75D4FBD128D3B73900C6BF5E /* BreedsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsService.swift; sourceTree = "<group>"; };
 		75D4FBD528D3BF8700C6BF5E /* SelectOptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectOptionViewModel.swift; sourceTree = "<group>"; };
@@ -545,9 +549,19 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
+		75D4059028E0771B00EDA918 /* AnimalTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				75D4059128E0773200EDA918 /* AnimalTableViewCell.xib */,
+				75D4059328E079DB00EDA918 /* AnimalTableViewCell.swift */,
+			);
+			path = AnimalTableViewCell;
+			sourceTree = "<group>";
+		};
 		75D4FBD928D3C0D400C6BF5E /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				75D4059028E0771B00EDA918 /* AnimalTableViewCell */,
 				75D4FBDC28D3C0F000C6BF5E /* SelectBreed */,
 			);
 			path = Cells;
@@ -787,6 +801,7 @@
 				75CF7894285BB8800011F933 /* Main.storyboard in Resources */,
 				75E8EF772875DCBD00FBB28D /* OpenSans-Light.otf in Resources */,
 				75E8EF782875DCC000FBB28D /* OpenSans-Bold.otf in Resources */,
+				75D4059228E0773200EDA918 /* AnimalTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -937,6 +952,7 @@
 				75CF78F4286479A20011F933 /* TabBarItem.swift in Sources */,
 				75CF790528648D5C0011F933 /* StoryboardController.swift in Sources */,
 				75DFCCDD28D0F8BC0079B157 /* FirebaseHelper.swift in Sources */,
+				75D4059428E079DB00EDA918 /* AnimalTableViewCell.swift in Sources */,
 				75E8EF8A2876D4F400FBB28D /* FilterButton.swift in Sources */,
 				75D4FBD828D3BFAB00C6BF5E /* SelectOptionCoordinator.swift in Sources */,
 				75E8EF6F2875C07700FBB28D /* Theme+Fonts.swift in Sources */,
