@@ -20,5 +20,6 @@ class Theme {
         static let textGrey         = #colorLiteral(red: 0.4784314632, green: 0.4784314632, blue: 0.4784314632, alpha: 1) // #7A7A7A
         static let rose             = #colorLiteral(red: 1, green: 0.5513415337, blue: 0.5869708657, alpha: 1) // #F89398
         static let placeholderGrey  = #colorLiteral(red: 0.4745097756, green: 0.4745098948, blue: 0.4745098948, alpha: 1) // #797979
+        static let paleGrey         = #colorLiteral(red: 0.9606918693, green: 0.9609245658, blue: 0.9521555305, alpha: 1) // #979797
     }
 }

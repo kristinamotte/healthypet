@@ -18,5 +18,6 @@ extension Theme {
         static let noBorderWidth = 0.0
         static let defaultBorderWidth = 1.0
         static let cornerRadius = 4.0
+        static let largeCornerRadius = 14.0
     }
 }

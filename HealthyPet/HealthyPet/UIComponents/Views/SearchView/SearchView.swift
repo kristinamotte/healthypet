@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol SearchViewDelegate: AnyObject {
+    func didSelect(option: FilterType)
+}
+
 class SearchView: UIView {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var containerStackView: UIStackView!
@@ -19,7 +23,8 @@ class SearchView: UIView {
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var crossImageView: UIImageView!
     
-    private var filterView: FilterView = FilterView.instanceFromNib()
+    weak var delegate: SearchViewDelegate?
+    private lazy var filterView: FilterView = FilterView.loadFromNib(delegate: self)
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,6 +34,13 @@ class SearchView: UIView {
         crossImageView.isUserInteractionEnabled = true
         searchImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapSearch)))
         crossImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapCloseSearch)))
+    }
+    
+    // MARK: - Life cycle
+    class func loadFromNib(delegate: SearchViewDelegate? = nil) -> SearchView {
+        let view = Bundle.main.loadNibNamed("SearchView", owner: nil, options: nil)?.first as! SearchView
+        view.delegate = delegate
+        return view
     }
     
     private func configureUI() {
@@ -73,5 +85,11 @@ extension SearchView: UITextFieldDelegate {
             textField.text = nil
             textField.textColor = Theme.Colors.black
         }
+    }
+}
+
+extension SearchView: FilterViewDelegate {
+    func didSelect(option: FilterType) {
+        delegate?.didSelect(option: option)
     }
 }

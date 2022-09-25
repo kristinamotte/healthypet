@@ -15,12 +15,19 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var emptyStateContainerView: UIView!
     
     // MARK: - SearchView
-    lazy var searchView: SearchView = SearchView.instanceFromNib()
+    lazy var searchView: SearchView = SearchView.loadFromNib(delegate: self)
     
     // MARK: - View Model
     var viewModel: HomeViewModel?
     
+    var selectedFilterItem: FilterType = .all {
+        didSet {
+            configureFilteredData()
+        }
+    }
+    
     private var isFirstLoading = true
+    private var animals: [Animal] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +47,7 @@ class HomeViewController: UIViewController {
             if updated {
                 self.isFirstLoading = false
                 self.configureEmptyState()
+                self.configureFilteredData()
             }
         }
     }
@@ -62,18 +70,47 @@ class HomeViewController: UIViewController {
             petsTableView.isHidden = false
         }
     }
+    
+    private func configureFilteredData() {
+        switch selectedFilterItem {
+        case .all:
+            animals = viewModel?.animals ?? []
+        case .dogs:
+            animals = viewModel?.dogs ?? []
+        case .cats:
+            animals = viewModel?.cats ?? []
+        }
+        
+        petsTableView.reloadData()
+    }
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return animals.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let item = animals[indexPath.row]
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: AnimalTableViewCell.identifier) as? AnimalTableViewCell {
+            cell.selectionStyle = .none
+            cell.configure(with: item)
+            
+            if let path = item.imageUrl {
+                viewModel?.getImageUrl(path: path) { url in
+                    if let url = url {
+                        cell.loadImage(for: url)
+                    }
+                }
+            }
+            
+            return cell
+        }
         
         return UITableViewCell()
     }
@@ -87,6 +124,12 @@ extension HomeViewController: HomeViewModelDelegate {
     func show(error: Error) {
         let toast = Toast.default(image: #imageLiteral(resourceName: "ic_error"), title: "Something went wrong", subtitle: "Please try again")
         toast.show()
+    }
+}
+
+extension HomeViewController: SearchViewDelegate {
+    func didSelect(option: FilterType) {
+        selectedFilterItem = option
     }
 }
 

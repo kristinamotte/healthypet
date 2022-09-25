@@ -11,6 +11,9 @@
 		753EB7FE2865C1E000C0F529 /* loadInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 753EB7FD2865C1E000C0F529 /* loadInfo.json */; };
 		7584D3DF28AF8DD40095F129 /* Veil in Frameworks */ = {isa = PBXBuildFile; productRef = 7584D3DE28AF8DD40095F129 /* Veil */; };
 		7584D3E128AF92EB0095F129 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7584D3E028AF92EB0095F129 /* UIViewController+Extensions.swift */; };
+		75A2EAA028E0AA8400901A96 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A2EA9F28E0AA8400901A96 /* ImageService.swift */; };
+		75A2EAA228E0AAB200901A96 /* UIImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A2EAA128E0AAB200901A96 /* UIImageLoader.swift */; };
+		75A2EAA428E0B07B00901A96 /* FilterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A2EAA328E0B07B00901A96 /* FilterType.swift */; };
 		75BFA4BA28A190FA002122E8 /* AddNewPet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75BFA4B928A190FA002122E8 /* AddNewPet.storyboard */; };
 		75BFA4BC28A195CB002122E8 /* AddNewPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFA4BB28A195CB002122E8 /* AddNewPetViewController.swift */; };
 		75BFA4BE28A19A3B002122E8 /* AddNewPetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFA4BD28A19A3B002122E8 /* AddNewPetCoordinator.swift */; };
@@ -128,6 +131,9 @@
 		753EB7F82865BE1100C0F529 /* Theme+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme+Constants.swift"; sourceTree = "<group>"; };
 		753EB7FD2865C1E000C0F529 /* loadInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loadInfo.json; sourceTree = "<group>"; };
 		7584D3E028AF92EB0095F129 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		75A2EA9F28E0AA8400901A96 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		75A2EAA128E0AAB200901A96 /* UIImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageLoader.swift; sourceTree = "<group>"; };
+		75A2EAA328E0B07B00901A96 /* FilterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterType.swift; sourceTree = "<group>"; };
 		75BFA4B928A190FA002122E8 /* AddNewPet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddNewPet.storyboard; sourceTree = "<group>"; };
 		75BFA4BB28A195CB002122E8 /* AddNewPetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPetViewController.swift; sourceTree = "<group>"; };
 		75BFA4BD28A19A3B002122E8 /* AddNewPetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPetCoordinator.swift; sourceTree = "<group>"; };
@@ -267,6 +273,15 @@
 			path = Animations;
 			sourceTree = "<group>";
 		};
+		75A2EA9E28E0AA7700901A96 /* ImageService */ = {
+			isa = PBXGroup;
+			children = (
+				75A2EA9F28E0AA8400901A96 /* ImageService.swift */,
+				75A2EAA128E0AAB200901A96 /* UIImageLoader.swift */,
+			);
+			path = ImageService;
+			sourceTree = "<group>";
+		};
 		75BFA4BF28A43A15002122E8 /* HealthyTextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,6 +419,7 @@
 			children = (
 				75D4059928E09D0E00EDA918 /* HomeEmptyState */,
 				75CF7890285BB8800011F933 /* HomeViewController.swift */,
+				75A2EAA328E0B07B00901A96 /* FilterType.swift */,
 				75D4059528E095A900EDA918 /* HomeViewModel.swift */,
 				75CF790128648CB00011F933 /* HomeCoordinator.swift */,
 				75CF7892285BB8800011F933 /* Main.storyboard */,
@@ -438,6 +454,7 @@
 				75CF78C7286367900011F933 /* Core */,
 				75DFCCDC28D0F8BC0079B157 /* FirebaseHelper.swift */,
 				75D4FBD128D3B73900C6BF5E /* BreedsService.swift */,
+				75A2EA9E28E0AA7700901A96 /* ImageService */,
 				75D4059728E0968200EDA918 /* HomeDataUpdater.swift */,
 			);
 			path = Networking;
@@ -964,6 +981,7 @@
 				75E8EF742875D41000FBB28D /* UIView+Extensions.swift in Sources */,
 				75D4058D28E06F9A00EDA918 /* GetCatBreedsRequest.swift in Sources */,
 				7584D3E128AF92EB0095F129 /* UIViewController+Extensions.swift in Sources */,
+				75A2EAA228E0AAB200901A96 /* UIImageLoader.swift in Sources */,
 				75D4059828E0968200EDA918 /* HomeDataUpdater.swift in Sources */,
 				75DFCCDF28D10BC50079B157 /* AddNewPetViewModel.swift in Sources */,
 				75D4FBE028D3C33C00C6BF5E /* Reusable.swift in Sources */,
@@ -1001,6 +1019,8 @@
 				75CF78E52864662B0011F933 /* GetDogBreedsRequest.swift in Sources */,
 				75BFA4BC28A195CB002122E8 /* AddNewPetViewController.swift in Sources */,
 				75D4059B28E09D3100EDA918 /* HomeEmptyViewController.swift in Sources */,
+				75A2EAA028E0AA8400901A96 /* ImageService.swift in Sources */,
+				75A2EAA428E0B07B00901A96 /* FilterType.swift in Sources */,
 				75BFA4BE28A19A3B002122E8 /* AddNewPetCoordinator.swift in Sources */,
 				75D4FBDE28D3C18600C6BF5E /* SelectBreedTableViewCell.swift in Sources */,
 				75BFA4C528A43B7C002122E8 /* TextFieldType.swift in Sources */,

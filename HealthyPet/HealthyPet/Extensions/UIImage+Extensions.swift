@@ -21,3 +21,13 @@ extension UIImage {
         self.init(cgImage: cgImage)
     }
 }
+
+extension UIImageView {
+    func loadImage(at url: URL, placeholder: UIImage?, completion: @escaping () -> Void) {
+        UIImageLoader.loader.load(url, for: self, placeholder: placeholder, completion: completion)
+    }
+    
+    func cancelImageLoad() {
+        UIImageLoader.loader.cancel(for: self)
+    }
+}

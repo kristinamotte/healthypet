@@ -12,26 +12,44 @@ protocol HomeViewModelDelegate: AnyObject {
 }
 
 class HomeViewModel {
-    private let dataUpdater: HomeDataUpdater
-    
+    // MARK: - Delegate
     weak var delegate: HomeViewModelDelegate?
     
-    init(dataUpdater: HomeDataUpdater = HomeDataUpdaterImpl(), delegate: HomeViewModelDelegate?) {
+    // MARK: - Dependencies
+    private let dataUpdater: HomeDataUpdater
+    private let firebaseHelper: AllAnimals
+    
+    init(dataUpdater: HomeDataUpdater = HomeDataUpdaterImpl(), delegate: HomeViewModelDelegate?, firebaseHelper: AllAnimals = FirebaseHelper()) {
         self.dataUpdater = dataUpdater
         self.delegate = delegate
+        self.firebaseHelper = firebaseHelper
+    }
+    
+    var animals: [Animal] {
+        Cache<[Animal]>(dataType: .pets).value ?? []
+    }
+    
+    var dogs: [Animal] {
+        animals.filter { $0.animalType == AnimalType.dog.rawValue }
+    }
+    
+    var cats: [Animal] {
+        animals.filter { $0.animalType == AnimalType.cat.rawValue }
     }
     
     func updateAllData(completion: @escaping (_ updated: Bool) -> Void) {
-        if !DataSource.timedOut.isEmpty {
-            dataUpdater.updateAllData { error in
-                if let error = error {
-                    self.delegate?.show(error: error)
-                }
-                
-                completion(true)
+        dataUpdater.updateAllData { error in
+            if let error = error {
+                self.delegate?.show(error: error)
             }
-        } else {
-            completion(false)
+            
+            completion(true)
+        }
+    }
+    
+    func getImageUrl(path: String, completion: @escaping (URL?) -> Void) {
+        firebaseHelper.getImageUrl(path: path) { url in
+            completion(url)
         }
     }
 }
