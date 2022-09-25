@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AnimalTableViewCell: UITableViewCell {
+class AnimalTableViewCell: UITableViewCell, ReusableTableCell {
     // MARK: - Outlets
     @IBOutlet weak var imageContainerView: UIView!
     @IBOutlet weak var containerView: UIView!

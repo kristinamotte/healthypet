@@ -20,7 +20,14 @@ class HomeCoordinator: NSObject, Coordinator {
     }
     
     func start() {
+        controller.viewModel = viewModel
         presenter.setNavigationBarHidden(true, animated: false)
         presenter.pushViewController(controller, animated: true)
+    }
+    
+    var viewModel: HomeViewModel {
+        let viewModel = HomeViewModel(delegate: controller)
+        
+        return viewModel
     }
 }

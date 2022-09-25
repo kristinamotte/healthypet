@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import PromiseKit
 
 extension API {
     func getDogBreeds(completion: @escaping APICompletion<[DogBreed]>) {
@@ -23,6 +24,19 @@ extension API {
         )
     }
     
+    func getDogBreeds() -> Promise<[DogBreed]> {
+        Promise { seal in
+            getDogBreeds { result in
+                switch result {
+                case .success(let response):
+                    seal.fulfill(response)
+                case .error:
+                    seal.fulfill([])
+                }
+            }
+        }
+    }
+    
     func getCatBreeds(completion: @escaping APICompletion<[CatBreed]>) {
         let request = GetCatBreedsRequest()
             .withDefaultValidations()
@@ -36,5 +50,18 @@ extension API {
             cache: { try? DataCache.cache($0, dataType: .catBreeds) },
             completion: completion
         )
+    }
+    
+    func getCatBreeds() -> Promise<[CatBreed]> {
+        Promise { seal in
+            getCatBreeds { result in
+                switch result {
+                case .success(let response):
+                    seal.fulfill(response)
+                case .error:
+                    seal.fulfill([])
+                }
+            }
+        }
     }
 }

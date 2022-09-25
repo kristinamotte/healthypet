@@ -17,4 +17,22 @@ extension UIViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
+    
+    func addChildViewController(_ child: UIViewController, containerView: UIView, pinToEdges: Bool = true) {
+        child.willMove(toParent: nil)
+
+        addChild(child)
+
+        containerView.addSubview(child.view)
+
+        if pinToEdges {
+            child.view.translatesAutoresizingMaskIntoConstraints = false
+            child.view.topAnchor.constraint(equalTo: containerView.topAnchor).isActive = true
+            child.view.bottomAnchor.constraint(equalTo: containerView.bottomAnchor).isActive = true
+            child.view.rightAnchor.constraint(equalTo: containerView.rightAnchor).isActive = true
+            child.view.leftAnchor.constraint(equalTo: containerView.leftAnchor).isActive = true
+        }
+
+        child.didMove(toParent: self)
+    }
 }

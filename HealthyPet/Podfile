@@ -11,6 +11,8 @@ target 'HealthyPet' do
 
   pod "ToastViewSwift"
 
+  pod "PromiseKit", "~> 6.8"
+
   target 'HealthyPetTests' do
     inherit! :search_paths
     # Pods for testing

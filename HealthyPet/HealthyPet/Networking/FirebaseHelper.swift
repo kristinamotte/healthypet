@@ -9,13 +9,18 @@ import UIKit
 import FirebaseDatabase
 import FirebaseStorage
 import FirebaseCore
+import PromiseKit
 
 protocol AddNewAnimal {
     func addNew(animal: Animal, _ completion: @escaping (Error?) -> Void)
     func uploadImage(image: UIImage, id: String, completion: @escaping (Error?, String?) -> Void)
 }
 
-final class FirebaseHelper: AddNewAnimal {
+protocol AllAnimals {
+    func getAllAnimals() -> Promise<[Animal]>
+}
+
+final class FirebaseHelper: AddNewAnimal, AllAnimals {
     let ref = Database.database().reference()
     let storageRef = Storage.storage().reference()
     var dataBaseHandler: DatabaseHandle?
@@ -84,8 +89,18 @@ final class FirebaseHelper: AddNewAnimal {
                 }
                 
                 completion(animals)
+            } else {
+                completion([])
             }
         })
+    }
+    
+    func getAllAnimals() -> Promise<[Animal]> {
+        Promise { seal in
+            getAllAnimals { animals in
+                seal.fulfill(animals)
+            }
+        }
     }
     
     func uploadImage(image: UIImage, id: String, completion: @escaping (Error?, String?) -> Void) {

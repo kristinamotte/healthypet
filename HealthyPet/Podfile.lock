@@ -1,20 +1,32 @@
 PODS:
   - lottie-ios (3.3.0)
+  - PromiseKit (6.17.1):
+    - PromiseKit/CorePromise (= 6.17.1)
+    - PromiseKit/Foundation (= 6.17.1)
+    - PromiseKit/UIKit (= 6.17.1)
+  - PromiseKit/CorePromise (6.17.1)
+  - PromiseKit/Foundation (6.17.1):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.17.1):
+    - PromiseKit/CorePromise
   - ToastViewSwift (1.1.0)
 
 DEPENDENCIES:
   - lottie-ios
+  - PromiseKit (~> 6.8)
   - ToastViewSwift
 
 SPEC REPOS:
   trunk:
     - lottie-ios
+    - PromiseKit
     - ToastViewSwift
 
 SPEC CHECKSUMS:
   lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
+  PromiseKit: ee485df3d4dc570594d7e7aecae6352697dc6a4c
   ToastViewSwift: 8fc7b518fdd834daf4b8009d09435a3fb1d8df46
 
-PODFILE CHECKSUM: 45adeeff512fdd8cc1bb9ea0d310a2aa5145c3eb
+PODFILE CHECKSUM: 5659c75c1281a815eadf6a774610f1f378e28fc0
 
 COCOAPODS: 1.11.3
