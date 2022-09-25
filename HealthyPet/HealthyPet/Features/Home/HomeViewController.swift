@@ -105,8 +105,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                 viewModel?.getImageUrl(id: item.id, path: path) { url in
                     if let url = url {
                         cell.loadImage(for: url)
+                    } else {
+                        cell.setPlaceholder()
                     }
                 }
+            } else {
+                cell.setPlaceholder()
             }
             
             return cell

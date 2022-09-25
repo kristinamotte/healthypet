@@ -44,9 +44,14 @@ class AnimalTableViewCell: UITableViewCell, ReusableTableCell {
     func loadImage(for url: URL) {
         photoLoader.startAnimating()
         
-        animalImageView.loadImage(at: url, placeholder: nil) {
+        animalImageView.loadImage(at: url, placeholder: #imageLiteral(resourceName: "ic_pet_placeholder")) {
             self.photoLoader.stopAnimating()
         }
+    }
+    
+    func setPlaceholder() {
+        photoLoader.stopAnimating()
+        animalImageView.image = #imageLiteral(resourceName: "ic_pet_placeholder")
     }
     
     // MARK: - Private methods
