@@ -102,7 +102,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             cell.configure(with: item)
             
             if let path = item.imageUrl {
-                viewModel?.getImageUrl(path: path) { url in
+                viewModel?.getImageUrl(id: item.id, path: path) { url in
                     if let url = url {
                         cell.loadImage(for: url)
                     }

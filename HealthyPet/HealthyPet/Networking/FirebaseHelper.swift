@@ -18,7 +18,7 @@ protocol AddNewAnimal {
 
 protocol AllAnimals {
     func getAllAnimals() -> Promise<[Animal]>
-    func getImageUrl(path: String, completion: @escaping (URL?) -> Void)
+    func getImageUrl(id: String, path: String, completion: @escaping (URL?) -> Void)
 }
 
 final class FirebaseHelper: AddNewAnimal, AllAnimals {
@@ -99,9 +99,7 @@ final class FirebaseHelper: AddNewAnimal, AllAnimals {
     func getAllAnimals() -> Promise<[Animal]> {
         Promise { seal in
             getAllAnimals { animals in
-                if let data = try? JSONEncoder().encode(animals) {
-                    try? DataCache.cache(data, dataType: .pets)
-                }
+                DataCache.cacheIfPossible(animals, forKey: .pets)
                 
                 seal.fulfill(animals)
             }
@@ -124,7 +122,7 @@ final class FirebaseHelper: AddNewAnimal, AllAnimals {
         }
     }
     
-    func getImageUrl(path: String, completion: @escaping (URL?) -> Void) {
+    func getImageUrl(id: String, path: String, completion: @escaping (URL?) -> Void) {
         let starsRef = storageRef.child(path)
 
         // Fetch the download URL
@@ -133,6 +131,9 @@ final class FirebaseHelper: AddNewAnimal, AllAnimals {
                 completion(nil)
                 return
             }
+            
+            let model = FirebaseImage(id: id, url: url)
+            DataCache.cacheIfPossible(model, forKey: .firebaseImage, identifier: id)
             
             completion(url)
         }

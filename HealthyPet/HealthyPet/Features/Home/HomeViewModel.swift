@@ -47,9 +47,15 @@ class HomeViewModel {
         }
     }
     
-    func getImageUrl(path: String, completion: @escaping (URL?) -> Void) {
-        firebaseHelper.getImageUrl(path: path) { url in
+    func getImageUrl(id: String, path: String, completion: @escaping (URL?) -> Void) {
+        let cachedImages = Cache<FirebaseImage>(dataType: .firebaseImage).arrayValue ?? []
+        
+        if let url = cachedImages.first(where: { $0.id == id })?.url {
             completion(url)
+        } else {
+            firebaseHelper.getImageUrl(id: id, path: path) { url in
+                completion(url)
+            }
         }
     }
 }

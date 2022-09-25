@@ -23,8 +23,8 @@ class Cache<T> where T: Decodable {
                 return object
             }
 
-            if let cacheData = DataCache.cachedData(for: dataType) {
-                if let object = try? dataType.decoder.decode(T.self, from: cacheData) {
+            if let cacheData = DataCache.cachedData(for: dataType), case let .single(data) = cacheData {
+                if let object = try? dataType.decoder.decode(T.self, from: data) {
                     _value = object
                     return object
                 } else {
@@ -37,6 +37,41 @@ class Cache<T> where T: Decodable {
         }
         set {
             _value = newValue
+
+            if newValue == nil {
+                DataCache.removeCache(for: dataType)
+            }
+        }
+    }
+    
+    /// Get array of valus from cache or 'nil' if absent
+    var arrayValue: [T]? {
+        get {
+            if let object = _arrayValue {
+                return object
+            }
+
+            if let cacheData = DataCache.cachedData(for: dataType), case let .multiple(dataArray) = cacheData {
+                var allObjects: [T] = []
+                for data in dataArray {
+                    if let object = try? dataType.decoder.decode(T.self, from: data) {
+                        allObjects.append(object)
+                    }
+                }
+
+                /// Remove cache if not possible to decode any item in data array
+                if allObjects.isEmpty && !dataArray.isEmpty {
+                    DataCache.removeCache(for: dataType)
+                }
+
+                _arrayValue = allObjects
+                return allObjects
+            }
+
+            return nil
+        }
+        set {
+            _arrayValue = newValue
 
             if newValue == nil {
                 DataCache.removeCache(for: dataType)
