@@ -119,7 +119,7 @@ class AnimalDetailsViewController: UIViewController {
 }
 
 extension AnimalDetailsViewController: EditPetViewControllerDelegate {
-    func didUpdate(animal: Animal, url: URL?) {
+    func didUpdate(animal: Animal, image: UIImage?) {
         petNameLabel.text = animal.petName
         petBreedLabel.text = animal.breed
         petGenderImageView.image = animal.genderIcon
@@ -127,11 +127,9 @@ extension AnimalDetailsViewController: EditPetViewControllerDelegate {
         ownerNumberLabel.text = animal.ownerNumber
         ownerNameLabel.text = animal.ownerName
         
-        if let url = url {
+        if let image = image {
             petImageView.isHidden = false
-            petImageView.loadImage(at: url, placeholder: nil) {
-                
-            }
+            petImageView.image = image
         } else {
             petImageView.isHidden = true
         }

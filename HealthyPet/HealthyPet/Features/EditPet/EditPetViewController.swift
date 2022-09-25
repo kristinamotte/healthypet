@@ -9,7 +9,7 @@ import UIKit
 import ToastViewSwift
 
 protocol EditPetViewControllerDelegate: AnyObject {
-    func didUpdate(animal: Animal, url: URL?)
+    func didUpdate(animal: Animal, image: UIImage?)
 }
 
 class EditPetViewController: UIViewController {
@@ -194,7 +194,7 @@ class EditPetViewController: UIViewController {
         
         if viewModel.isEdited {
             let animal = Animal(id: viewModel.animal.id, imageUrl: nil, petName: petNameTextField.text, animalType: animalDropdown.text, breed: chooseBreedDropdown.text, birthday: birthdayTextField.text, gender: genderDropdown.text, ownerName: ownerNameTextField.text, ownerNumber: ownerNumberTextField.text)
-            delegate?.didUpdate(animal: animal, url: viewModel.url)
+            delegate?.didUpdate(animal: animal, image: photoImageView.image)
         }
     }
     
