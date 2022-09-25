@@ -38,6 +38,7 @@ class AddNewPetViewController: UIViewController {
     let chooseBreedDropdown: HealthyDropdown = HealthyDropdown.instanceFromNib()
     let genderDropdown: HealthyDropdown = HealthyDropdown.instanceFromNib()
     
+    // MARK: - Image Picker Controller
     let imagePicker = UIImagePickerController()
     
     // MARK: - View Model
@@ -136,6 +137,7 @@ class AddNewPetViewController: UIViewController {
         let options = [AnimalType.dog.rawValue, AnimalType.cat.rawValue]
         showAlert(for: options) { option in
             self.animalDropdown.updatePreselected(option: option)
+            self.chooseBreedDropdown.updatePreselected(option: "Mixed")
         }
     }
     

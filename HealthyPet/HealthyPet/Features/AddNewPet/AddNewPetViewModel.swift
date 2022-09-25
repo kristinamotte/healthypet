@@ -36,7 +36,10 @@ class AddNewPetViewModel {
             
             return breeds
         case .cat:
-            return []
+            var breeds = breedsService.catBreeds.map { $0.name }
+            breeds.append("Mixed")
+            
+            return breeds
         }
     }
     

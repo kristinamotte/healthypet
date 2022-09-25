@@ -20,6 +20,7 @@ struct APIHeaderKeys {
 struct APIHeaderValues {
     static let json = "application/json"
     static let apiKey = "d18e6949-d4d5-48dc-9155-6dd25618d150"
+    static let catsApiKey = "live_b62ydSFx0OWhavIMbYxTGpVNrn76nEf8PkuliCwuVyVG8SAn002C5TpHW1rXCV5J"
 }
 
 // MARK: - Predefined headers
@@ -32,6 +33,10 @@ extension Dictionary where Key == String, Value == String {
     
     static var dogsApiKey: [String: String] {
         [APIHeaderKeys.apiKey: APIHeaderValues.apiKey]
+    }
+    
+    static var catsApiKey: [String: String] {
+        [APIHeaderKeys.apiKey: APIHeaderValues.catsApiKey]
     }
 }
 

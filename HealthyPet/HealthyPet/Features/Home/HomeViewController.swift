@@ -21,6 +21,10 @@ class HomeViewController: UIViewController {
         API.shared.getDogBreeds { result in
             
         }
+        
+        API.shared.getCatBreeds { result in
+            
+        }
     }
 }
 

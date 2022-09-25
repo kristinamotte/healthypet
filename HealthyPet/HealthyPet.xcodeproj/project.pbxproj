@@ -59,6 +59,8 @@
 		75D4058728E0680A00EDA918 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 75D4058628E0680A00EDA918 /* FirebaseStorage */; };
 		75D4058928E0680A00EDA918 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 75D4058828E0680A00EDA918 /* FirebaseStorageCombine-Community */; };
 		75D4058B28E06D9800EDA918 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D4058A28E06D9800EDA918 /* UIButton+Extensions.swift */; };
+		75D4058D28E06F9A00EDA918 /* GetCatBreedsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D4058C28E06F9A00EDA918 /* GetCatBreedsRequest.swift */; };
+		75D4058F28E071B500EDA918 /* CatBreed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D4058E28E071B500EDA918 /* CatBreed.swift */; };
 		75D4FBD028D3B57300C6BF5E /* AnimalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D4FBCF28D3B57300C6BF5E /* AnimalType.swift */; };
 		75D4FBD228D3B73900C6BF5E /* BreedsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D4FBD128D3B73900C6BF5E /* BreedsService.swift */; };
 		75D4FBD628D3BF8700C6BF5E /* SelectOptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D4FBD528D3BF8700C6BF5E /* SelectOptionViewModel.swift */; };
@@ -168,6 +170,8 @@
 		75CF790828648DF60011F933 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		75CF790A28648E3A0011F933 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		75D4058A28E06D9800EDA918 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
+		75D4058C28E06F9A00EDA918 /* GetCatBreedsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCatBreedsRequest.swift; sourceTree = "<group>"; };
+		75D4058E28E071B500EDA918 /* CatBreed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreed.swift; sourceTree = "<group>"; };
 		75D4FBCF28D3B57300C6BF5E /* AnimalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalType.swift; sourceTree = "<group>"; };
 		75D4FBD128D3B73900C6BF5E /* BreedsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsService.swift; sourceTree = "<group>"; };
 		75D4FBD528D3BF8700C6BF5E /* SelectOptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectOptionViewModel.swift; sourceTree = "<group>"; };
@@ -486,6 +490,7 @@
 			isa = PBXGroup;
 			children = (
 				75CF78E1286464510011F933 /* DogBreed.swift */,
+				75D4058E28E071B500EDA918 /* CatBreed.swift */,
 				75E099FB28CE2712009DAAE4 /* Animal.swift */,
 			);
 			path = Models;
@@ -495,6 +500,7 @@
 			isa = PBXGroup;
 			children = (
 				75CF78E42864662B0011F933 /* GetDogBreedsRequest.swift */,
+				75D4058C28E06F9A00EDA918 /* GetCatBreedsRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -924,6 +930,7 @@
 				75CF790928648DF60011F933 /* ApplicationCoordinator.swift in Sources */,
 				75E8EF722875D23400FBB28D /* SearchView.swift in Sources */,
 				75E8EF742875D41000FBB28D /* UIView+Extensions.swift in Sources */,
+				75D4058D28E06F9A00EDA918 /* GetCatBreedsRequest.swift in Sources */,
 				7584D3E128AF92EB0095F129 /* UIViewController+Extensions.swift in Sources */,
 				75DFCCDF28D10BC50079B157 /* AddNewPetViewModel.swift in Sources */,
 				75D4FBE028D3C33C00C6BF5E /* Reusable.swift in Sources */,
@@ -961,6 +968,7 @@
 				75BFA4BE28A19A3B002122E8 /* AddNewPetCoordinator.swift in Sources */,
 				75D4FBDE28D3C18600C6BF5E /* SelectBreedTableViewCell.swift in Sources */,
 				75BFA4C528A43B7C002122E8 /* TextFieldType.swift in Sources */,
+				75D4058F28E071B500EDA918 /* CatBreed.swift in Sources */,
 				75BFA4C328A43AC8002122E8 /* HealthyTextField.swift in Sources */,
 				75CF78D828636FEA0011F933 /* DataSource.swift in Sources */,
 				75CF78FC286485950011F933 /* Theme+Colors.swift in Sources */,

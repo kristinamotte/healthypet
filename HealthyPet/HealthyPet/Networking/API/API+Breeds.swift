@@ -22,4 +22,19 @@ extension API {
             completion: completion
         )
     }
+    
+    func getCatBreeds(completion: @escaping APICompletion<[CatBreed]>) {
+        let request = GetCatBreedsRequest()
+            .withDefaultValidations()
+        
+        execute(
+            request,
+            parse: {
+                let breeds = try? JSONDecoder().decode([CatBreed].self, from: $0)
+                return breeds ?? []
+        },
+            cache: { try? DataCache.cache($0, dataType: .catBreeds) },
+            completion: completion
+        )
+    }
 }
