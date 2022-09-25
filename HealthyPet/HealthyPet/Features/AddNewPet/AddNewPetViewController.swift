@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseDatabase
+import ToastViewSwift
 
 class AddNewPetViewController: UIViewController {
     // MARK: - Outlets
@@ -201,11 +202,22 @@ class AddNewPetViewController: UIViewController {
 
 extension AddNewPetViewController: AddNewPetViewModelDelegate {
     func showAddAnimalError() {
-        
+        let toast = Toast.default(image: #imageLiteral(resourceName: "ic_error"), title: "Something went wrong", subtitle: "Please try again")
+        toast.show()
     }
     
     func showAnimalAdded() {
+        // Set default values
+        let textFields: [HealthyTextField] = [petNameTextField, ownerNameTextField, ownerNumberTextField]
         
+        textFields.forEach { $0.textField.text = "" }
+        birthdayTextField.configure(with: .date(title: "Birthday date", placeholder: "2021-01-15"))
+        animalDropdown.configure(with: "What kind of animal it is?", preselected: "Dog")
+        chooseBreedDropdown.configure(with: "Choose breed", preselected: "Mixed")
+        genderDropdown.configure(with: "Gender", preselected: "Female")
+        
+        let toast = Toast.default(image: #imageLiteral(resourceName: "ic_success"), title: "Animal successfully added")
+        toast.show()
     }
 }
 

@@ -12,6 +12,8 @@ target 'HealthyPet' do
   # Firebase
   pod 'Firebase/Database'
 
+  pod "ToastViewSwift"
+
   target 'HealthyPetTests' do
     inherit! :search_paths
     # Pods for testing

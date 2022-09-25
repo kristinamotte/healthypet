@@ -36,10 +36,12 @@ PODS:
   - nanopb/decode (2.30909.0)
   - nanopb/encode (2.30909.0)
   - PromisesObjC (2.1.0)
+  - ToastViewSwift (1.1.0)
 
 DEPENDENCIES:
   - Firebase/Database
   - lottie-ios
+  - ToastViewSwift
 
 SPEC REPOS:
   trunk:
@@ -54,6 +56,7 @@ SPEC REPOS:
     - lottie-ios
     - nanopb
     - PromisesObjC
+    - ToastViewSwift
 
 SPEC CHECKSUMS:
   Firebase: 91c243d75573ac6e7c9735ec859b72bffb61347d
@@ -67,7 +70,8 @@ SPEC CHECKSUMS:
   lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   PromisesObjC: 99b6f43f9e1044bd87a95a60beff28c2c44ddb72
+  ToastViewSwift: 8fc7b518fdd834daf4b8009d09435a3fb1d8df46
 
-PODFILE CHECKSUM: de712a2bd0dce1b6602f504987ef7abd62e44441
+PODFILE CHECKSUM: 21a1462b779c3ef24cd88adcd3f6f06be23e4591
 
 COCOAPODS: 1.11.3
