@@ -9,6 +9,7 @@ import UIKit
 
 protocol SearchViewDelegate: AnyObject {
     func didSelect(option: FilterType)
+    func didSearch(by text: String)
 }
 
 class SearchView: UIView {
@@ -20,16 +21,25 @@ class SearchView: UIView {
     @IBOutlet weak var findPetContainerView: UIView!
     @IBOutlet weak var findPetStackView: UIStackView!
     @IBOutlet weak var searchContainerView: UIView!
-    @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var crossImageView: UIImageView!
     
     weak var delegate: SearchViewDelegate?
     private lazy var filterView: FilterView = FilterView.loadFromNib(delegate: self)
     
+    var isSearchBarEmpty: Bool {
+        searchBar.text?.isEmpty ?? true
+    }
+    
+    var searchText: String {
+        searchBar.text ?? ""
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
         configureUI()
+        searchBar.delegate = self
         searchImageView.isUserInteractionEnabled = true
         crossImageView.isUserInteractionEnabled = true
         searchImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapSearch)))
@@ -44,19 +54,10 @@ class SearchView: UIView {
     }
     
     private func configureUI() {
+        searchBar.searchTextField.font = Theme.Fonts.openSansRegular14
         searchContainerView.isHidden = true
         findPetContainerView.isHidden = false
         filterContainerView.add(subview: filterView)
-        searchTextField.delegate = self
-        searchTextField.font = Theme.Fonts.openSansLight16
-        searchTextField.tintColor = Theme.Colors.rose
-        configureTextFieldWithPlaceholder()
-    }
-    
-    private func configureTextFieldWithPlaceholder() {
-        searchTextField.resignFirstResponder()
-        searchTextField.textColor = Theme.Colors.textGrey
-        searchTextField.text = "Start typing"
     }
     
     @objc private func didTapSearch() {
@@ -71,7 +72,9 @@ class SearchView: UIView {
     @objc private func didTapCloseSearch() {
         searchContainerView.alpha = 0
         findPetContainerView.alpha = 1
-        configureTextFieldWithPlaceholder()
+        searchBar.text = nil
+        delegate?.didSearch(by: searchText)
+        
         UIView.animate(withDuration: Theme.Constants.defaultAnimationDuration, delay: 0.0, options: .curveEaseInOut) {
             self.searchContainerView.isHidden = true
             self.findPetContainerView.isHidden = false
@@ -79,12 +82,13 @@ class SearchView: UIView {
     }
 }
 
-extension SearchView: UITextFieldDelegate {
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField.textColor == Theme.Colors.textGrey {
-            textField.text = nil
-            textField.textColor = Theme.Colors.black
-        }
+extension SearchView: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        delegate?.didSearch(by: searchBar.text ?? "")
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        delegate?.didSearch(by: searchBar.text ?? "")
     }
 }
 

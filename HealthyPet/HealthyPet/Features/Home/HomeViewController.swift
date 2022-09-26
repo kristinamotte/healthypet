@@ -28,6 +28,7 @@ class HomeViewController: UIViewController {
     
     private var isFirstLoading = true
     private var animals: [Animal] = []
+    private var filteredAnimals: [Animal] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,6 +82,16 @@ class HomeViewController: UIViewController {
             animals = viewModel?.cats ?? []
         }
         
+        if !searchView.isSearchBarEmpty {
+            filterContentForSearchText(searchView.searchText)
+        } else {
+            petsTableView.reloadData()
+        }
+    }
+    
+    private func filterContentForSearchText(_ searchText: String) {
+        filteredAnimals = animals.filter { $0.petName.lowercased().contains(searchText.lowercased()) }
+        
         petsTableView.reloadData()
     }
 }
@@ -91,11 +102,15 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if !searchView.isSearchBarEmpty {
+            return filteredAnimals.count
+        }
+        
         return animals.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let item = animals[indexPath.row]
+        let item = searchView.isSearchBarEmpty ? animals[indexPath.row] : filteredAnimals[indexPath.row]
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: AnimalTableViewCell.identifier) as? AnimalTableViewCell {
             cell.selectionStyle = .none
@@ -132,6 +147,10 @@ extension HomeViewController: HomeViewModelDelegate {
 }
 
 extension HomeViewController: SearchViewDelegate {
+    func didSearch(by text: String) {
+        filterContentForSearchText(text)
+    }
+    
     func didSelect(option: FilterType) {
         selectedFilterItem = option
     }
