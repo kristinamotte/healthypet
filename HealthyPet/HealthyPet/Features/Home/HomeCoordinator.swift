@@ -28,6 +28,10 @@ class HomeCoordinator: NSObject, Coordinator {
     var viewModel: HomeViewModel {
         let viewModel = HomeViewModel(delegate: controller)
         
+        viewModel.onAnimalDetails = { [presenter] animal, url in
+            AnimalDetailsCoordinator(presenter: presenter, animal: animal, animalImageUrl: url).start()
+        }
+        
         return viewModel
     }
 }

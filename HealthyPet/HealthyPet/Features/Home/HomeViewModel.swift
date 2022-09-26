@@ -12,6 +12,9 @@ protocol HomeViewModelDelegate: AnyObject {
 }
 
 class HomeViewModel {
+    // MARK: - Navigation
+    var onAnimalDetails: ((Animal, URL?) -> Void)?
+    
     // MARK: - Delegate
     weak var delegate: HomeViewModelDelegate?
     
@@ -57,5 +60,11 @@ class HomeViewModel {
                 completion(url)
             }
         }
+    }
+    
+    func getUrl(for animal: Animal) -> URL? {
+        let cachedImages = Cache<FirebaseImage>(dataType: .firebaseImage).arrayValue ?? []
+        
+        return cachedImages.first(where: { $0.id == animal.id })?.url
     }
 }

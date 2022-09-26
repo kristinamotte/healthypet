@@ -151,7 +151,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = searchView.isSearchBarEmpty ? animals[indexPath.row] : filteredAnimals[indexPath.row]
         
+        viewModel?.onAnimalDetails?(item, viewModel?.getUrl(for: item))
     }
 }
 
