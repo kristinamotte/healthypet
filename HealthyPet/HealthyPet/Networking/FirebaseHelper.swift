@@ -16,12 +16,17 @@ protocol AddNewAnimal {
     func uploadImage(image: UIImage, id: String, completion: @escaping (Error?, String?) -> Void)
 }
 
+protocol EditAnimal {
+    func edit(animal: Animal, _ completion: @escaping (Error?) -> Void)
+    func uploadImage(image: UIImage, id: String, completion: @escaping (Error?, String?) -> Void)
+}
+
 protocol AllAnimals {
     func getAllAnimals() -> Promise<[Animal]>
     func getImageUrl(id: String, path: String, completion: @escaping (URL?) -> Void)
 }
 
-final class FirebaseHelper: AddNewAnimal, AllAnimals {
+final class FirebaseHelper: AddNewAnimal, AllAnimals, EditAnimal {
     let ref = Database.database().reference()
     let storageRef = Storage.storage().reference()
     var dataBaseHandler: DatabaseHandle?

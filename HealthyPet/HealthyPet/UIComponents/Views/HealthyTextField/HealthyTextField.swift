@@ -42,6 +42,11 @@ class HealthyTextField: UIView {
         }
     }
     
+    func update(with text: String) {
+        textField.text = text
+        textField.textColor = Theme.Colors.black
+    }
+    
     func set(error: String) {
         errorLabel.text = error
         errorLabel.isHidden = false

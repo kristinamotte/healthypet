@@ -22,6 +22,9 @@
 		75A2EAB228E2131600901A96 /* DocumentPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A2EAB128E2131600901A96 /* DocumentPreviewViewController.swift */; };
 		75A2EAB428E213EA00901A96 /* DocumentPreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A2EAB328E213EA00901A96 /* DocumentPreviewViewModel.swift */; };
 		75A2EAB628E216AD00901A96 /* DocumentPreviewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A2EAB528E216AD00901A96 /* DocumentPreviewCoordinator.swift */; };
+		75A2EAB928E2206100901A96 /* EditPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A2EAB828E2206100901A96 /* EditPetViewController.swift */; };
+		75A2EABB28E2225D00901A96 /* EditPetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A2EABA28E2225D00901A96 /* EditPetViewModel.swift */; };
+		75A2EABD28E222A700901A96 /* EditPetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A2EABC28E222A700901A96 /* EditPetCoordinator.swift */; };
 		75BFA4BA28A190FA002122E8 /* AddNewPet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75BFA4B928A190FA002122E8 /* AddNewPet.storyboard */; };
 		75BFA4BC28A195CB002122E8 /* AddNewPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFA4BB28A195CB002122E8 /* AddNewPetViewController.swift */; };
 		75BFA4BE28A19A3B002122E8 /* AddNewPetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFA4BD28A19A3B002122E8 /* AddNewPetCoordinator.swift */; };
@@ -150,6 +153,9 @@
 		75A2EAB128E2131600901A96 /* DocumentPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPreviewViewController.swift; sourceTree = "<group>"; };
 		75A2EAB328E213EA00901A96 /* DocumentPreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPreviewViewModel.swift; sourceTree = "<group>"; };
 		75A2EAB528E216AD00901A96 /* DocumentPreviewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPreviewCoordinator.swift; sourceTree = "<group>"; };
+		75A2EAB828E2206100901A96 /* EditPetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPetViewController.swift; sourceTree = "<group>"; };
+		75A2EABA28E2225D00901A96 /* EditPetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPetViewModel.swift; sourceTree = "<group>"; };
+		75A2EABC28E222A700901A96 /* EditPetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPetCoordinator.swift; sourceTree = "<group>"; };
 		75BFA4B928A190FA002122E8 /* AddNewPet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddNewPet.storyboard; sourceTree = "<group>"; };
 		75BFA4BB28A195CB002122E8 /* AddNewPetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPetViewController.swift; sourceTree = "<group>"; };
 		75BFA4BD28A19A3B002122E8 /* AddNewPetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPetCoordinator.swift; sourceTree = "<group>"; };
@@ -318,6 +324,16 @@
 			path = DocumentPreview;
 			sourceTree = "<group>";
 		};
+		75A2EAB728E2204C00901A96 /* EditPet */ = {
+			isa = PBXGroup;
+			children = (
+				75A2EAB828E2206100901A96 /* EditPetViewController.swift */,
+				75A2EABA28E2225D00901A96 /* EditPetViewModel.swift */,
+				75A2EABC28E222A700901A96 /* EditPetCoordinator.swift */,
+			);
+			path = EditPet;
+			sourceTree = "<group>";
+		};
 		75BFA4BF28A43A15002122E8 /* HealthyTextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -432,12 +448,14 @@
 		75CF78C128635FDD0011F933 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				75A2EAB728E2204C00901A96 /* EditPet */,
 				75A2EAB028E212C300901A96 /* DocumentPreview */,
 				75A2EAA928E1AF3600901A96 /* Animal Details */,
 				75E099FA28CE26D4009DAAE4 /* SelectOption */,
 				75CF78F52864841E0011F933 /* TabBar */,
 				75CF78C52863600B0011F933 /* BreedsList */,
 				75CF78C4286360000011F933 /* AddNewPet */,
+				75D4059928E09D0E00EDA918 /* HomeEmptyState */,
 				75CF78C328635FFA0011F933 /* Home */,
 				75CF78C228635FE50011F933 /* LaunchScreen */,
 			);
@@ -455,7 +473,6 @@
 		75CF78C328635FFA0011F933 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				75D4059928E09D0E00EDA918 /* HomeEmptyState */,
 				75CF7890285BB8800011F933 /* HomeViewController.swift */,
 				75A2EAA328E0B07B00901A96 /* FilterType.swift */,
 				75D4059528E095A900EDA918 /* HomeViewModel.swift */,
@@ -1010,6 +1027,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75CF7891285BB8800011F933 /* HomeViewController.swift in Sources */,
+				75A2EABD28E222A700901A96 /* EditPetCoordinator.swift in Sources */,
 				75CF78DF286463FD0011F933 /* API+Breeds.swift in Sources */,
 				75CF78FE28648A740011F933 /* UIImage+Extensions.swift in Sources */,
 				75CF78F2286479930011F933 /* CoordinatorDelegate.swift in Sources */,
@@ -1064,6 +1082,7 @@
 				75D4059628E095A900EDA918 /* HomeViewModel.swift in Sources */,
 				75E099F128CE0EF3009DAAE4 /* DateFormatter+Extensions.swift in Sources */,
 				75CF78E52864662B0011F933 /* GetDogBreedsRequest.swift in Sources */,
+				75A2EAB928E2206100901A96 /* EditPetViewController.swift in Sources */,
 				75BFA4BC28A195CB002122E8 /* AddNewPetViewController.swift in Sources */,
 				75D4059B28E09D3100EDA918 /* HomeEmptyViewController.swift in Sources */,
 				75A2EAA028E0AA8400901A96 /* ImageService.swift in Sources */,
@@ -1072,6 +1091,7 @@
 				75D4FBDE28D3C18600C6BF5E /* SelectBreedTableViewCell.swift in Sources */,
 				75BFA4C528A43B7C002122E8 /* TextFieldType.swift in Sources */,
 				75D4058F28E071B500EDA918 /* CatBreed.swift in Sources */,
+				75A2EABB28E2225D00901A96 /* EditPetViewModel.swift in Sources */,
 				75BFA4C328A43AC8002122E8 /* HealthyTextField.swift in Sources */,
 				75CF78D828636FEA0011F933 /* DataSource.swift in Sources */,
 				75CF78FC286485950011F933 /* Theme+Colors.swift in Sources */,

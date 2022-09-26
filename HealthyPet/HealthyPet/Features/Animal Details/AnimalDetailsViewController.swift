@@ -36,6 +36,8 @@ class AnimalDetailsViewController: UIViewController {
 
         configureUI()
         configureContent()
+        editImageView.isUserInteractionEnabled = true
+        editImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapEditButton)))
         backImageView.isUserInteractionEnabled = true
         backImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapBackButton)))
     }
@@ -90,6 +92,12 @@ class AnimalDetailsViewController: UIViewController {
     
     @objc private func didTapBackButton() {
         viewModel?.onPreviosScreen?()
+    }
+    
+    @objc private func didTapEditButton() {
+        guard let viewModel = viewModel else { return }
+        
+        viewModel.onEdit?(viewModel.animal, viewModel.animalImageUrl)
     }
     
     @IBAction private func didTapGeneratePdfButton(_ sender: UIButton) {

@@ -39,6 +39,10 @@ class AnimalDetailsCoordinator: Coordinator {
             DocumentPreviewCoordinator(presenter: presenter, url: url).start()
         }
         
+        viewModel.onEdit = { [presenter] animal, url in
+            EditPetCoordinator(presenter: presenter, animal: animal, url: url).start()
+        }
+        
         return viewModel
     }
 }
