@@ -11,6 +11,7 @@ class EditPetViewModel {
     // MARK: - Navigation
     var onSelectBreeds: (([String], String) -> Void)?
     var onPreviousScreen: (() -> Void)?
+    var onParentScreen: (() -> Void)?
     
     // MARK: - Dependencies
     var animal: Animal
@@ -62,6 +63,12 @@ class EditPetViewModel {
             }
         } else {
             update(animal: animal)
+        }
+    }
+    
+    func removeAnimal(_ completion: @escaping (Error?) -> Void) {
+        firebaseHelper.delete(animal: animal) { error in
+           completion(error)
         }
     }
     

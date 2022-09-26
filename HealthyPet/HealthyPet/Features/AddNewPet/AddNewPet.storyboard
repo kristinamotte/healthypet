@@ -371,7 +371,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="7Cr-ca-4SE">
-                                                <rect key="frame" x="24" y="231" width="366" height="448"/>
+                                                <rect key="frame" x="24" y="231" width="366" height="504"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2uL-X9-N6B">
                                                         <rect key="frame" x="0.0" y="0.0" width="366" height="61"/>
@@ -429,6 +429,17 @@
                                                             <action selector="didTapAddAnimal:" destination="A09-PQ-IyC" eventType="touchUpInside" id="m9j-uA-Oim"/>
                                                         </connections>
                                                     </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYi-Rl-RZ1">
+                                                        <rect key="frame" x="0.0" y="464" width="366" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="GDb-rG-7b2"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Remove animal"/>
+                                                        <connections>
+                                                            <action selector="didTapRemoveButton:" destination="A09-PQ-IyC" eventType="touchUpInside" id="ogb-he-cNG"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
@@ -484,6 +495,7 @@
                         <outlet property="petNameContainerView" destination="Jdi-8g-9Yr" id="deK-vG-h2o"/>
                         <outlet property="photoContainerView" destination="s5n-4j-X6O" id="TcU-dh-rFZ"/>
                         <outlet property="photoImageView" destination="1Qm-ME-z5f" id="T0W-y3-7Hx"/>
+                        <outlet property="removeAnimalButton" destination="tYi-Rl-RZ1" id="X6b-DP-c60"/>
                         <outlet property="titleLabel" destination="fNi-Uo-s6v" id="Hux-dv-eHr"/>
                     </connections>
                 </viewController>

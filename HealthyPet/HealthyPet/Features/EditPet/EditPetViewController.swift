@@ -29,6 +29,7 @@ class EditPetViewController: UIViewController {
     @IBOutlet weak var ownerPhoneContainerView: UIView!
     @IBOutlet weak var addNewAnimalButton: UIButton!
     @IBOutlet weak var addPhotoStackView: UIStackView!
+    @IBOutlet weak var removeAnimalButton: UIButton!
     @IBOutlet weak var photoImageView: UIImageView!
     
     // MARK: - Text fields
@@ -81,7 +82,9 @@ class EditPetViewController: UIViewController {
         addNewAnimalButton.layer.cornerRadius = addNewAnimalButton.frame.height / 2
         addNewAnimalButton.backgroundColor = Theme.Colors.rose
         addNewAnimalButton.titleLabel?.font = Theme.Fonts.openSansBold14
-        addNewAnimalButton.titleLabel?.textColor = Theme.Colors.white
+        addNewAnimalButton.setTitleColor(Theme.Colors.white, for: .normal)
+        removeAnimalButton.titleLabel?.font = Theme.Fonts.openSansBold14
+        removeAnimalButton.setTitleColor(Theme.Colors.rose, for: .normal)
         
         if let viewModel = viewModel, let url = viewModel.url {
             photoImageView.isHidden = false
@@ -251,6 +254,24 @@ class EditPetViewController: UIViewController {
                 ownerNumberTextField.set(error: "Please add owner number")
             } else {
                 ownerNumberTextField.removeError()
+            }
+        }
+    }
+    
+    @IBAction func didTapRemoveButton(_ sender: UIButton) {
+        removeAnimalButton.showSpinner(tintColor: Theme.Colors.blue)
+        
+        viewModel?.removeAnimal { error in
+            self.removeAnimalButton.hideSpinner()
+            
+            if error != nil {
+                let toast = Toast.default(image: #imageLiteral(resourceName: "ic_error"), title: "Something went wrong", subtitle: "Please try again")
+                toast.show()
+            } else {
+                let toast = Toast.default(image: #imageLiteral(resourceName: "ic_success"), title: "Animal successfully removed")
+                toast.show()
+                
+                self.viewModel?.onParentScreen?()
             }
         }
     }

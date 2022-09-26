@@ -39,6 +39,10 @@ class EditPetCoordinator: NSObject, Coordinator {
             presenter.popViewController(animated: true)
         }
         
+        viewModel.onParentScreen = { [presenter] in
+            presenter.popToRootViewController(animated: true)
+        }
+        
         return viewModel
     }
 }

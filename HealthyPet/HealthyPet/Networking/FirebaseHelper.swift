@@ -19,6 +19,7 @@ protocol AddNewAnimal {
 protocol EditAnimal {
     func edit(animal: Animal, _ completion: @escaping (Error?) -> Void)
     func uploadImage(image: UIImage, id: String, completion: @escaping (Error?, String?) -> Void)
+    func delete(animal: Animal, _ completion: @escaping (Error?) -> Void)
 }
 
 protocol AllAnimals {
