@@ -23,6 +23,7 @@ class AnimalDetailsCoordinator: Coordinator {
     
     func start() {
         controller.viewModel = viewModel
+        controller.hidesBottomBarWhenPushed = true
         controller.modalPresentationStyle = .fullScreen
         presenter.pushViewController(controller, animated: true)
     }

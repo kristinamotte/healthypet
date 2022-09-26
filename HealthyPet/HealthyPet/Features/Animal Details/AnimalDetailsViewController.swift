@@ -46,7 +46,7 @@ class AnimalDetailsViewController: UIViewController {
         petBreedLabel.textColor = Theme.Colors.textGrey
         ageLabel.font = Theme.Fonts.openSansRegular12
         ageLabel.textColor = Theme.Colors.textGrey
-        breedSeparatorView.layer.cornerRadius = breedSeparatorView.bounds.height
+        breedSeparatorView.layer.cornerRadius = breedSeparatorView.bounds.height / 2
         breedSeparatorView.backgroundColor = Theme.Colors.blue
         ownerContainerView.layer.cornerRadius = Theme.Constants.cornerRadius
         ownerContainerView.backgroundColor = Theme.Colors.greyBg
@@ -65,7 +65,7 @@ class AnimalDetailsViewController: UIViewController {
         generatePdfButton.setImage(#imageLiteral(resourceName: "ic_pdf"), for: .normal)
     }
     
-    func configureContent() {
+    private func configureContent() {
         guard let viewModel = viewModel else { return }
         
         petNameLabel.text = viewModel.animal.petName
