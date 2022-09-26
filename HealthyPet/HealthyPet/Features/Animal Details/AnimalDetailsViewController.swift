@@ -51,7 +51,7 @@ class AnimalDetailsViewController: UIViewController {
         ownerContainerView.layer.cornerRadius = Theme.Constants.cornerRadius
         ownerContainerView.backgroundColor = Theme.Colors.greyBg
         ownerInfoTitleLabel.font = Theme.Fonts.openSansBold14
-        ownerSeparatorView.backgroundColor = Theme.Colors.mainGrey
+        ownerSeparatorView.backgroundColor = Theme.Colors.separatorGrey
         ownerNameLabel.font = Theme.Fonts.openSansRegular12
         ownerNameLabel.textColor = Theme.Colors.textGrey
         ownerNumberLabel.font = Theme.Fonts.openSansBold12
