@@ -15,6 +15,7 @@
 		75A2EAA228E0AAB200901A96 /* UIImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A2EAA128E0AAB200901A96 /* UIImageLoader.swift */; };
 		75A2EAA428E0B07B00901A96 /* FilterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A2EAA328E0B07B00901A96 /* FilterType.swift */; };
 		75A2EAA628E0EC8000901A96 /* FirebaseImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A2EAA528E0EC8000901A96 /* FirebaseImage.swift */; };
+		75A2EAA828E1AA7100901A96 /* HomeEmptyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A2EAA728E1AA7100901A96 /* HomeEmptyType.swift */; };
 		75BFA4BA28A190FA002122E8 /* AddNewPet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75BFA4B928A190FA002122E8 /* AddNewPet.storyboard */; };
 		75BFA4BC28A195CB002122E8 /* AddNewPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFA4BB28A195CB002122E8 /* AddNewPetViewController.swift */; };
 		75BFA4BE28A19A3B002122E8 /* AddNewPetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFA4BD28A19A3B002122E8 /* AddNewPetCoordinator.swift */; };
@@ -136,6 +137,7 @@
 		75A2EAA128E0AAB200901A96 /* UIImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageLoader.swift; sourceTree = "<group>"; };
 		75A2EAA328E0B07B00901A96 /* FilterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterType.swift; sourceTree = "<group>"; };
 		75A2EAA528E0EC8000901A96 /* FirebaseImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseImage.swift; sourceTree = "<group>"; };
+		75A2EAA728E1AA7100901A96 /* HomeEmptyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEmptyType.swift; sourceTree = "<group>"; };
 		75BFA4B928A190FA002122E8 /* AddNewPet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddNewPet.storyboard; sourceTree = "<group>"; };
 		75BFA4BB28A195CB002122E8 /* AddNewPetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPetViewController.swift; sourceTree = "<group>"; };
 		75BFA4BD28A19A3B002122E8 /* AddNewPetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPetCoordinator.swift; sourceTree = "<group>"; };
@@ -591,6 +593,7 @@
 			isa = PBXGroup;
 			children = (
 				75D4059A28E09D3100EDA918 /* HomeEmptyViewController.swift */,
+				75A2EAA728E1AA7100901A96 /* HomeEmptyType.swift */,
 			);
 			path = HomeEmptyState;
 			sourceTree = "<group>";
@@ -978,6 +981,7 @@
 				75CF78F2286479930011F933 /* CoordinatorDelegate.swift in Sources */,
 				75E8EF8C2878650C00FBB28D /* Theme+Dimensions.swift in Sources */,
 				75E8EF882876D46800FBB28D /* FilterView.swift in Sources */,
+				75A2EAA828E1AA7100901A96 /* HomeEmptyType.swift in Sources */,
 				75CF78DD2863717B0011F933 /* URL+Extensions.swift in Sources */,
 				75CF790928648DF60011F933 /* ApplicationCoordinator.swift in Sources */,
 				75E8EF722875D23400FBB28D /* SearchView.swift in Sources */,

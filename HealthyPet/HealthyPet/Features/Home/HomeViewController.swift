@@ -63,6 +63,20 @@ class HomeViewController: UIViewController {
     private func configureEmptyState() {
         if isFirstLoading {
             let emptyVc = HomeEmptyViewController.fromStoryboard
+            emptyVc.type = .loading
+            emptyStateContainerView.isHidden = false
+            petsTableView.isHidden = true
+            addChildViewController(emptyVc, containerView: emptyStateContainerView)
+        } else {
+            emptyStateContainerView.isHidden = true
+            petsTableView.isHidden = false
+        }
+    }
+    
+    private func setEmptyState() {
+        if (!animals.isEmpty && !searchView.isSearchBarEmpty && filteredAnimals.isEmpty) || animals.isEmpty {
+            let emptyVc = HomeEmptyViewController.fromStoryboard
+            emptyVc.type = .empty
             emptyStateContainerView.isHidden = false
             petsTableView.isHidden = true
             addChildViewController(emptyVc, containerView: emptyStateContainerView)
@@ -85,6 +99,7 @@ class HomeViewController: UIViewController {
         if !searchView.isSearchBarEmpty {
             filterContentForSearchText(searchView.searchText)
         } else {
+            setEmptyState()
             petsTableView.reloadData()
         }
     }
@@ -92,6 +107,7 @@ class HomeViewController: UIViewController {
     private func filterContentForSearchText(_ searchText: String) {
         filteredAnimals = animals.filter { $0.petName.lowercased().contains(searchText.lowercased()) }
         
+        setEmptyState()
         petsTableView.reloadData()
     }
 }

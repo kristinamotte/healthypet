@@ -9,8 +9,13 @@ import UIKit
 import Lottie
 
 class HomeEmptyViewController: UIViewController {
+    // MARK: - Outlets
     @IBOutlet weak var animationView: AnimationView!
+    @IBOutlet weak var petImageView: UIImageView!
     @IBOutlet weak var textLabel: UILabel!
+    
+    // MARK: - Type
+    var type: HomeEmptyType = .loading
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +31,9 @@ class HomeEmptyViewController: UIViewController {
         animationView.contentMode = .scaleToFill
         animationView.loopMode = .loop
         animationView.backgroundBehavior = .pauseAndRestore
+        animationView.isHidden = type.isAnimationViewHidden
+        petImageView.isHidden = type.isImageHidden
+        textLabel.text = type.text
     }
 }
 
