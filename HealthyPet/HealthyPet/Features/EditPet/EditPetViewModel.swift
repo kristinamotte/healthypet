@@ -8,11 +8,14 @@
 import UIKit
 
 class EditPetViewModel {
+    // MARK: - Navigation
     var onSelectBreeds: (([String], String) -> Void)?
     var onPreviousScreen: (() -> Void)?
     
+    // MARK: - Dependencies
     var animal: Animal
     var url: URL?
+    var isEdited: Bool = false
     
     // MARK: - Delegate
     weak var delegate: AddNewPetViewModelDelegate?
@@ -67,6 +70,7 @@ class EditPetViewModel {
             if error != nil {
                 self.delegate?.showAddAnimalError()
             } else {
+                self.isEdited = true
                 self.delegate?.showAnimalAdded()
             }
         }

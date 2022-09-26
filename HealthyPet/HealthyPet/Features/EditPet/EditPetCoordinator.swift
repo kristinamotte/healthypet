@@ -11,15 +11,15 @@ class EditPetCoordinator: NSObject, Coordinator {
     // MARK: - Dependencies
     let presenter: UINavigationController
     let controller: EditPetViewController
-    weak var delegate: CoordinatorDelegate?
     var animal: Animal
     var url: URL?
     
-    init(presenter: UINavigationController, animal: Animal, url: URL?) {
+    init(presenter: UINavigationController, animal: Animal, url: URL?, delegate: EditPetViewControllerDelegate?) {
         self.presenter = presenter
         self.animal = animal
         self.url = url
         controller = EditPetViewController.fromStoryboard
+        controller.delegate = delegate
     }
     
     func start() {

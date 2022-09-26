@@ -118,6 +118,26 @@ class AnimalDetailsViewController: UIViewController {
     }
 }
 
+extension AnimalDetailsViewController: EditPetViewControllerDelegate {
+    func didUpdate(animal: Animal, url: URL?) {
+        petNameLabel.text = animal.petName
+        petBreedLabel.text = animal.breed
+        petGenderImageView.image = animal.genderIcon
+        ageLabel.text = animal.age
+        ownerNumberLabel.text = animal.ownerNumber
+        ownerNameLabel.text = animal.ownerName
+        
+        if let url = url {
+            petImageView.isHidden = false
+            petImageView.loadImage(at: url, placeholder: nil) {
+                
+            }
+        } else {
+            petImageView.isHidden = true
+        }
+    }
+}
+
 extension AnimalDetailsViewController: StoryboardController {
     static var storyboard: Storyboard {
         .Main

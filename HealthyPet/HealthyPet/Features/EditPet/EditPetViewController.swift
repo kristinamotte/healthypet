@@ -8,6 +8,10 @@
 import UIKit
 import ToastViewSwift
 
+protocol EditPetViewControllerDelegate: AnyObject {
+    func didUpdate(animal: Animal, url: URL?)
+}
+
 class EditPetViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var contentView: UIView!
@@ -40,6 +44,9 @@ class EditPetViewController: UIViewController {
     
     // MARK: - Image Picker Controller
     let imagePicker = UIImagePickerController()
+    
+    // MARK: - Delegate
+    weak var delegate: EditPetViewControllerDelegate?
     
     // MARK: - View Model
     var viewModel: EditPetViewModel?
@@ -178,7 +185,14 @@ class EditPetViewController: UIViewController {
     }
     
     @objc private func didTapBackButton() {
-        viewModel?.onPreviousScreen?()
+        guard let viewModel = viewModel else { return }
+        
+        viewModel.onPreviousScreen?()
+        
+        if viewModel.isEdited {
+            let animal = Animal(id: viewModel.animal.id, imageUrl: nil, petName: petNameTextField.text, animalType: animalDropdown.text, breed: chooseBreedDropdown.text, birthday: birthdayTextField.text, gender: genderDropdown.text, ownerName: ownerNameTextField.text, ownerNumber: ownerNumberTextField.text)
+            delegate?.didUpdate(animal: animal, url: viewModel.url)
+        }
     }
     
     private func showAlert(for options: [String], _ completion: @escaping ((String) -> Void)) {
