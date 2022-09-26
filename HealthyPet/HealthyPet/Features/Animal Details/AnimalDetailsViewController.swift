@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import PDFGenerator
+import ToastViewSwift
 
 class AnimalDetailsViewController: UIViewController {
     // MARK: - Outlets
+    @IBOutlet var containerView: UIView!
     @IBOutlet weak var backImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var editImageView: UIImageView!
@@ -90,6 +93,20 @@ class AnimalDetailsViewController: UIViewController {
     }
     
     @IBAction private func didTapGeneratePdfButton(_ sender: UIButton) {
+        generatePDF()
+    }
+    
+    func generatePDF() {
+        do {
+            let dst = NSHomeDirectory() + "/\(viewModel?.animal.id ?? "1").pdf"
+            try PDFGenerator.generate(containerView, to: dst)
+            
+            let url = URL(fileURLWithPath: dst)
+            viewModel?.onGeneratedPdf?(url)
+        } catch {
+            let toast = Toast.default(image: #imageLiteral(resourceName: "ic_error"), title: "Can't generate PDF right now.", subtitle: "Please try again")
+            toast.show()
+        }
     }
 }
 

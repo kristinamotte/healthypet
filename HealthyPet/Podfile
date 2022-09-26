@@ -13,6 +13,8 @@ target 'HealthyPet' do
 
   pod "PromiseKit", "~> 6.8"
 
+  pod 'PDFGenerator', '~> 3.1'
+
   target 'HealthyPetTests' do
     inherit! :search_paths
     # Pods for testing

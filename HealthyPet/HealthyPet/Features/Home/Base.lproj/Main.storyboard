@@ -253,6 +253,7 @@
                         <outlet property="ageLabel" destination="pEI-hp-fZu" id="4hs-1s-XiZ"/>
                         <outlet property="backImageView" destination="r9J-gW-bJa" id="qoE-th-Aj9"/>
                         <outlet property="breedSeparatorView" destination="28u-6x-Ox9" id="C1E-OJ-pmR"/>
+                        <outlet property="containerView" destination="pQq-by-iNF" id="JKB-qt-q4d"/>
                         <outlet property="editImageView" destination="v1t-kd-mm2" id="Q4U-N4-qxl"/>
                         <outlet property="generatePdfButton" destination="YWl-IE-d9I" id="tdY-4s-szB"/>
                         <outlet property="ownerContainerView" destination="M8W-T6-aOS" id="WRA-4a-8VF"/>
@@ -270,6 +271,86 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gsK-Aa-EUn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-765.21739130434787" y="722.54464285714278"/>
+        </scene>
+        <!--Document Preview View Controller-->
+        <scene sceneID="p4v-Rg-jxW">
+            <objects>
+                <viewController storyboardIdentifier="DocumentPreviewViewController" id="Wvm-Jw-IkH" customClass="DocumentPreviewViewController" customModule="HealthyPet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8hw-Av-eIu">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="6s6-iV-FJf">
+                                <rect key="frame" x="24" y="63" width="342" height="40"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_nav_arrow_back" translatesAutoresizingMaskIntoConstraints="NO" id="SDb-RH-Vzf">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="FRy-bc-SAw"/>
+                                            <constraint firstAttribute="width" constant="40" id="UZg-mH-BSw"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Generated PDF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6e-0b-ePo">
+                                        <rect key="frame" x="56" y="9.9999999999999982" width="286" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w3f-Gt-AxV">
+                                <rect key="frame" x="0.0" y="750" width="390" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8F-kd-yRQ">
+                                        <rect key="frame" x="124.00000000000001" y="13" width="142.33333333333337" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Save document"/>
+                                        <connections>
+                                            <action selector="didTapSaveDocumentButton:" destination="Wvm-Jw-IkH" eventType="touchUpInside" id="w6A-w9-RGO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="W8F-kd-yRQ" firstAttribute="centerY" secondItem="w3f-Gt-AxV" secondAttribute="centerY" id="14z-2j-oBU"/>
+                                    <constraint firstAttribute="height" constant="60" id="Zpd-ZC-0y5"/>
+                                    <constraint firstItem="W8F-kd-yRQ" firstAttribute="centerX" secondItem="w3f-Gt-AxV" secondAttribute="centerX" id="bZw-ah-HG3"/>
+                                </constraints>
+                            </view>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rog-vl-1tm">
+                                <rect key="frame" x="0.0" y="119" width="390" height="631"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Myb-ac-eyo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Rog-vl-1tm" firstAttribute="top" secondItem="6s6-iV-FJf" secondAttribute="bottom" constant="16" id="2sx-Br-Q7D"/>
+                            <constraint firstItem="w3f-Gt-AxV" firstAttribute="top" secondItem="Rog-vl-1tm" secondAttribute="bottom" id="32H-aD-VCu"/>
+                            <constraint firstItem="Myb-ac-eyo" firstAttribute="trailing" secondItem="w3f-Gt-AxV" secondAttribute="trailing" id="5oF-p1-8HC"/>
+                            <constraint firstItem="6s6-iV-FJf" firstAttribute="top" secondItem="Myb-ac-eyo" secondAttribute="top" constant="16" id="Md5-dq-3zk"/>
+                            <constraint firstItem="6s6-iV-FJf" firstAttribute="leading" secondItem="8hw-Av-eIu" secondAttribute="leading" constant="24" id="PNg-hf-eC9"/>
+                            <constraint firstItem="w3f-Gt-AxV" firstAttribute="leading" secondItem="Myb-ac-eyo" secondAttribute="leading" id="bcq-mA-Rve"/>
+                            <constraint firstItem="Myb-ac-eyo" firstAttribute="trailing" secondItem="6s6-iV-FJf" secondAttribute="trailing" constant="24" id="e1x-Hg-V0M"/>
+                            <constraint firstItem="Rog-vl-1tm" firstAttribute="leading" secondItem="Myb-ac-eyo" secondAttribute="leading" id="vid-me-2Vr"/>
+                            <constraint firstItem="Myb-ac-eyo" firstAttribute="bottom" secondItem="w3f-Gt-AxV" secondAttribute="bottom" id="wIE-u4-Nav"/>
+                            <constraint firstItem="Myb-ac-eyo" firstAttribute="trailing" secondItem="Rog-vl-1tm" secondAttribute="trailing" id="ypP-FU-UBz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backImageView" destination="SDb-RH-Vzf" id="qhY-Oy-piG"/>
+                        <outlet property="saveDocumentButton" destination="W8F-kd-yRQ" id="S5t-gM-aIV"/>
+                        <outlet property="titleLabel" destination="O6e-0b-ePo" id="2p7-xm-ct8"/>
+                        <outlet property="webView" destination="Rog-vl-1tm" id="4FD-Rd-j0V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aMf-fw-z4h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-72" y="739"/>
         </scene>
         <!--Home Empty View Controller-->
         <scene sceneID="DXr-ia-iJa">

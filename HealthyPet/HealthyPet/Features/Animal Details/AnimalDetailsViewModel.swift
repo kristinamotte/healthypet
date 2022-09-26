@@ -9,6 +9,7 @@ import Foundation
 
 class AnimalDetailsViewModel {
     var onPreviosScreen: (() -> Void)?
+    var onGeneratedPdf: ((URL) -> Void)?
     
     let animal: Animal
     let animalImageUrl: URL?

@@ -19,6 +19,9 @@
 		75A2EAAB28E1AF5800901A96 /* AnimalDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A2EAAA28E1AF5800901A96 /* AnimalDetailsViewController.swift */; };
 		75A2EAAD28E1B7B100901A96 /* AnimalDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A2EAAC28E1B7B100901A96 /* AnimalDetailsCoordinator.swift */; };
 		75A2EAAF28E1B82200901A96 /* AnimalDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A2EAAE28E1B82200901A96 /* AnimalDetailsViewModel.swift */; };
+		75A2EAB228E2131600901A96 /* DocumentPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A2EAB128E2131600901A96 /* DocumentPreviewViewController.swift */; };
+		75A2EAB428E213EA00901A96 /* DocumentPreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A2EAB328E213EA00901A96 /* DocumentPreviewViewModel.swift */; };
+		75A2EAB628E216AD00901A96 /* DocumentPreviewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A2EAB528E216AD00901A96 /* DocumentPreviewCoordinator.swift */; };
 		75BFA4BA28A190FA002122E8 /* AddNewPet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75BFA4B928A190FA002122E8 /* AddNewPet.storyboard */; };
 		75BFA4BC28A195CB002122E8 /* AddNewPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFA4BB28A195CB002122E8 /* AddNewPetViewController.swift */; };
 		75BFA4BE28A19A3B002122E8 /* AddNewPetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BFA4BD28A19A3B002122E8 /* AddNewPetCoordinator.swift */; };
@@ -144,6 +147,9 @@
 		75A2EAAA28E1AF5800901A96 /* AnimalDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailsViewController.swift; sourceTree = "<group>"; };
 		75A2EAAC28E1B7B100901A96 /* AnimalDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailsCoordinator.swift; sourceTree = "<group>"; };
 		75A2EAAE28E1B82200901A96 /* AnimalDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailsViewModel.swift; sourceTree = "<group>"; };
+		75A2EAB128E2131600901A96 /* DocumentPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPreviewViewController.swift; sourceTree = "<group>"; };
+		75A2EAB328E213EA00901A96 /* DocumentPreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPreviewViewModel.swift; sourceTree = "<group>"; };
+		75A2EAB528E216AD00901A96 /* DocumentPreviewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPreviewCoordinator.swift; sourceTree = "<group>"; };
 		75BFA4B928A190FA002122E8 /* AddNewPet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddNewPet.storyboard; sourceTree = "<group>"; };
 		75BFA4BB28A195CB002122E8 /* AddNewPetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPetViewController.swift; sourceTree = "<group>"; };
 		75BFA4BD28A19A3B002122E8 /* AddNewPetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPetCoordinator.swift; sourceTree = "<group>"; };
@@ -302,6 +308,16 @@
 			path = "Animal Details";
 			sourceTree = "<group>";
 		};
+		75A2EAB028E212C300901A96 /* DocumentPreview */ = {
+			isa = PBXGroup;
+			children = (
+				75A2EAB128E2131600901A96 /* DocumentPreviewViewController.swift */,
+				75A2EAB328E213EA00901A96 /* DocumentPreviewViewModel.swift */,
+				75A2EAB528E216AD00901A96 /* DocumentPreviewCoordinator.swift */,
+			);
+			path = DocumentPreview;
+			sourceTree = "<group>";
+		};
 		75BFA4BF28A43A15002122E8 /* HealthyTextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -416,6 +432,7 @@
 		75CF78C128635FDD0011F933 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				75A2EAB028E212C300901A96 /* DocumentPreview */,
 				75A2EAA928E1AF3600901A96 /* Animal Details */,
 				75E099FA28CE26D4009DAAE4 /* SelectOption */,
 				75CF78F52864841E0011F933 /* TabBar */,
@@ -1002,6 +1019,7 @@
 				75CF78DD2863717B0011F933 /* URL+Extensions.swift in Sources */,
 				75CF790928648DF60011F933 /* ApplicationCoordinator.swift in Sources */,
 				75E8EF722875D23400FBB28D /* SearchView.swift in Sources */,
+				75A2EAB228E2131600901A96 /* DocumentPreviewViewController.swift in Sources */,
 				75A2EAAF28E1B82200901A96 /* AnimalDetailsViewModel.swift in Sources */,
 				75E8EF742875D41000FBB28D /* UIView+Extensions.swift in Sources */,
 				75D4058D28E06F9A00EDA918 /* GetCatBreedsRequest.swift in Sources */,
@@ -1015,6 +1033,7 @@
 				75DFCCDD28D0F8BC0079B157 /* FirebaseHelper.swift in Sources */,
 				75D4059428E079DB00EDA918 /* AnimalTableViewCell.swift in Sources */,
 				75E8EF8A2876D4F400FBB28D /* FilterButton.swift in Sources */,
+				75A2EAB628E216AD00901A96 /* DocumentPreviewCoordinator.swift in Sources */,
 				75D4FBD828D3BFAB00C6BF5E /* SelectOptionCoordinator.swift in Sources */,
 				75E8EF6F2875C07700FBB28D /* Theme+Fonts.swift in Sources */,
 				753EB7F92865BE1100C0F529 /* Theme+Constants.swift in Sources */,
@@ -1038,6 +1057,7 @@
 				75CF78DB2863705F0011F933 /* TimeInterval+Extensions.swift in Sources */,
 				75D4FBD228D3B73900C6BF5E /* BreedsService.swift in Sources */,
 				75D4FBD028D3B57300C6BF5E /* AnimalType.swift in Sources */,
+				75A2EAB428E213EA00901A96 /* DocumentPreviewViewModel.swift in Sources */,
 				75CF78D228636C200011F933 /* API.swift in Sources */,
 				75CF790228648CB00011F933 /* HomeCoordinator.swift in Sources */,
 				75A2EAA628E0EC8000901A96 /* FirebaseImage.swift in Sources */,

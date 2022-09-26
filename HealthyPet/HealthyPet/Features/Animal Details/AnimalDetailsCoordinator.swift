@@ -35,6 +35,10 @@ class AnimalDetailsCoordinator: Coordinator {
             presenter.popViewController(animated: true)
         }
         
+        viewModel.onGeneratedPdf = { [presenter] url in
+            DocumentPreviewCoordinator(presenter: presenter, url: url).start()
+        }
+        
         return viewModel
     }
 }

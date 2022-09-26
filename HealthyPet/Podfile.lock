@@ -1,5 +1,6 @@
 PODS:
   - lottie-ios (3.3.0)
+  - PDFGenerator (3.1.0)
   - PromiseKit (6.17.1):
     - PromiseKit/CorePromise (= 6.17.1)
     - PromiseKit/Foundation (= 6.17.1)
@@ -13,20 +14,23 @@ PODS:
 
 DEPENDENCIES:
   - lottie-ios
+  - PDFGenerator (~> 3.1)
   - PromiseKit (~> 6.8)
   - ToastViewSwift
 
 SPEC REPOS:
   trunk:
     - lottie-ios
+    - PDFGenerator
     - PromiseKit
     - ToastViewSwift
 
 SPEC CHECKSUMS:
   lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
+  PDFGenerator: 17d6bc525db0a3fcd156fbf00f9d1b8d5cc75d1e
   PromiseKit: ee485df3d4dc570594d7e7aecae6352697dc6a4c
   ToastViewSwift: 8fc7b518fdd834daf4b8009d09435a3fb1d8df46
 
-PODFILE CHECKSUM: 5659c75c1281a815eadf6a774610f1f378e28fc0
+PODFILE CHECKSUM: 5973bf3dfdf3b6a9ecf4074453cdffbc2858b2d1
 
 COCOAPODS: 1.11.3
